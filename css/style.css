@@ -1,0 +1,12 @@
+/* Importation de polices Google font */
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+/* Gérer les marges des div + définition de la police*/
+*{box-sizing: border-box; font-family: 'Dosis', sans-serif;}
+
+/* Aucune marge sur les côtés */
+body{margin: 0;}
+
+/* Liens non soulignés et non colorés */
+a {background-color: transparent; color: black; text-decoration: none;}
+a:hover,a:active {outline: 0;}
