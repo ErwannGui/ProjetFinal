@@ -7,8 +7,8 @@
 	</head>
 	<body>
 		<?php include "headerBack.php"; ?>
-		<div id="container">
-			
+		<div id="containerBack">
+			<h1>Administration</h1>
 		</div>
 	</body>
 </html>
