@@ -7,12 +7,12 @@
         </div>
         
         <div id="headerFrontContainerTwo">
-            <div><a href="#">ACCUEIL</a></div>
+            <div><a href="#">Accueil</a></div>
             <div><a href="#">Nos menus</a></div>
             <div><a href="#">Prestations privées</a></div>
             <div><a href="#">A propos de nous</a></div>
             <div><a href="#">Actualités</a></div>
-            <div><a href="#">CONTACT</a></div>
+            <div><a href="#">Contact</a></div>
         </div>
         
         <div id="headerFrontContainerThree">
