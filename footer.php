@@ -7,7 +7,7 @@
 			<a href="">Mentions légales</a>
 		</li>
 		<li>
-			<a href="">Administration</a>
+			<a href="back_office.php">Administration</a>
 		</li>
 	</ul>
 </footer>

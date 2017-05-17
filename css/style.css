@@ -6,6 +6,7 @@
 
 /* Aucune marge sur les côtés */
 body{margin: 0;}
+#container{margin: 0;}
 
 /* Liens non soulignés et non colorés */
 a {background-color: transparent; color: black; text-decoration: none;}
@@ -13,10 +14,10 @@ a:hover,a:active {outline: 0;}
 
 
 /*----------------------*/
-/*      HEADER .        */
+/*     HEADER FRONT     */
 /*----------------------*/
 
-header{
+#headerFront{
     position: fixed;
     background-color: #073863;
     height: 100%;
@@ -24,8 +25,8 @@ header{
 }
 
 /* Images du header : logo */
-header img{
-    width: 200px;
+#headerFront img{
+    width: 13vw;
 }
 
 /* Container total du header */
@@ -68,7 +69,28 @@ header img{
 }
 
 /*----------------------*/
-/*     FIN HEADER       */
+/*   FIN HEADER FRONT   */
+/*----------------------*/
+
+/*----------------------*/
+/*      HEADER BACK     */
+/*----------------------*/
+
+#headerBack{
+    position: fixed;
+    background-color: #073863;
+    height: 100%;
+    width: 10%;
+}
+
+/* Images du header : logo */
+#headerBack img{
+    width: 7vw;
+}
+
+
+/*----------------------*/
+/*    FIN HEADER BACK   */
 /*----------------------*/
 
 /*----------------------*/
@@ -80,7 +102,7 @@ footer{
     bottom: 0;
     right: 0;
     width: 80%;
-    height: 5vh;
+    height: 60px;
     text-align: center;
     margin: 0;
 }
