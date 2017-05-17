@@ -1,5 +1,5 @@
 <footer>
-	<ul>
+	<ul class="foot">
 		<li>
 			<p>2017 - Copyright</p>
 		</li>
