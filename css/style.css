@@ -34,41 +34,42 @@ header{
 }
 
 /* Container total du header */
-#headerContainerTotal{
+#headerFrontContainerTotal{
     display: flex;
     flex-direction: column;
 }
 
-#headerContainerOne{
+#headerFrontContainerOne{
     text-align: center;
     margin-top: 30px;
 }
 
-#headerContainerTwo{
+#headerFrontContainerTwo{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    text-transform: uppercase;
 }
 
-#headerContainerTwo div{
+#headerFrontContainerTwo div{
     text-align: center;
     margin-bottom: 10px;
     background-color: grey;
     padding: 8px 13px 8px 13px;
 }
 
-#headerContainerTwo div:hover{
+#headerFrontContainerTwo div:hover{
     
 }
 
-#headerContainerThree{
+#headerFrontContainerThree{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
 }
 
 /* SVG du header */
-#headerContainerThree svg{
+#headerFrontContainerThree svg{
     height: 5vh;
 }
 
