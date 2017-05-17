@@ -12,7 +12,7 @@
         
         <?php include "headerFront.php"; ?>
         
-        <img src="">
+        <img src="images/blog_home.png">
         
     </body>
 

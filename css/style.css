@@ -21,9 +21,10 @@ header{
     font-family: 'Unica One', cursive;
 }
 
+/* Header visible par l'utilisateur */
 #headerFront{
     position: fixed;
-    background-color: #073863;
+    background-color: #292C30;
     height: 100%;
     width: 20%;
 }
@@ -39,29 +40,46 @@ header{
     flex-direction: column;
 }
 
+/* Partie contenant le logo */
 #headerFrontContainerOne{
     text-align: center;
     margin-top: 30px;
 }
 
+/* Partie comprenant les liens */
 #headerFrontContainerTwo{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     text-transform: uppercase;
+    margin-top: 50px;
+    font-size: 2.5vh;
 }
 
+/* Couleur des liens du header */
+#headerFrontContainerTwo a{
+    color: white;
+}
+
+/* Les liens du header */
 #headerFrontContainerTwo div{
     text-align: center;
-    margin-bottom: 10px;
-    background-color: grey;
-    padding: 8px 13px 8px 13px;
+    padding: 15px 20px 15px 20px;
+    border-top: 2px grey solid;
+    border-bottom: 1px grey solid;
 }
 
+/* La div contenant les liens lors du hover */
 #headerFrontContainerTwo div:hover{
-    
+    color: #AA8C64;
+    border-right: 3px solid #AA8C64;
 }
 
+/* Changer couleur des liens lors du hover */
+#headerFrontContainerTwo div:hover a{
+    color: #AA8C64;
+}
+
+/* Partie comprenant les svg des réseaux sociaux */
 #headerFrontContainerThree{
     display: flex;
     justify-content: space-around;
