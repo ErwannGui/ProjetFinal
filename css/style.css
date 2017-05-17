@@ -1,11 +1,12 @@
 /* Importation de polices Google font */
-@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
 
 /* Gérer les marges des div + définition de la police*/
-*{box-sizing: border-box; font-family: 'Dosis', sans-serif;}
+*{box-sizing: border-box;}
 
 /* Aucune marge sur les côtés */
 body{margin: 0;}
+#container{margin: 0;}
 
 /* Liens non soulignés et non colorés */
 a {background-color: transparent; color: black; text-decoration: none;}
@@ -13,10 +14,14 @@ a:hover,a:active {outline: 0;}
 
 
 /*----------------------*/
-/*      HEADER .        */
+/*     HEADER FRONT     */
 /*----------------------*/
 
 header{
+    font-family: 'Unica One', cursive;
+}
+
+#headerFront{
     position: fixed;
     background-color: #073863;
     height: 100%;
@@ -24,49 +29,153 @@ header{
 }
 
 /* Images du header : logo */
-header img{
-    width: 200px;
+#headerFront img{
+    width: 13vw;
 }
 
 /* Container total du header */
-#headerContainerTotal{
+#headerFrontContainerTotal{
     display: flex;
     flex-direction: column;
 }
 
-#headerContainerOne{
+#headerFrontContainerOne{
     text-align: center;
     margin-top: 30px;
 }
 
-#headerContainerTwo{
+#headerFrontContainerTwo{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    text-transform: uppercase;
 }
 
-#headerContainerTwo div{
+#headerFrontContainerTwo div{
     text-align: center;
     margin-bottom: 10px;
     background-color: grey;
     padding: 8px 13px 8px 13px;
 }
 
-#headerContainerTwo div:hover{
+#headerFrontContainerTwo div:hover{
     
 }
 
-#headerContainerThree{
+#headerFrontContainerThree{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
 }
 
 /* SVG du header */
-#headerContainerThree svg{
+#headerFrontContainerThree svg{
     height: 5vh;
 }
 
 /*----------------------*/
-/*     FIN HEADER       */
+/*   FIN HEADER FRONT   */
+/*----------------------*/
+
+/*----------------------*/
+/*      HEADER BACK     */
+/*----------------------*/
+
+#headerBack{
+    position: fixed;
+    background-color: #073863;
+    height: 100%;
+    width: 10%;
+}
+
+/* Images du header : logo */
+#headerBack img{
+    width: 7vw;
+}
+
+#headerBackContainerOne{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#headerBackContainerTwo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+#headerBackContainerTwo div{
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: grey;
+    padding: 8px 13px 8px 13px;
+}
+
+#headerBackContainerTwo div:hover{
+    
+}
+
+/*----------------------*/
+/*    FIN HEADER BACK   */
+/*----------------------*/
+
+/*----------------------*/
+/*      HEADER BACK     */
+/*----------------------*/
+
+#headerBack{
+    position: fixed;
+    background-color: #073863;
+    height: 100%;
+    width: 10%;
+}
+
+/* Images du header : logo */
+#headerBack img{
+    width: 7vw;
+}
+
+
+/*----------------------*/
+/*    FIN HEADER BACK   */
+/*----------------------*/
+
+/*----------------------*/
+/*      FOOTER .        */
+/*----------------------*/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 60px;
+    text-align: center;
+    margin: 0;
+}
+
+.foot{
+    background-color: #333333;
+}
+
+.foot li{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+/*----------------------*/
+/*     FIN FOOTER       */
+/*----------------------*/
+
+/*----------------------*/
+/*      BLOG   .        */
+/*----------------------*/
+
+
+
+/*----------------------*/
+/*      FIN BLOG .      */
 /*----------------------*/
