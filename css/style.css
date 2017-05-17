@@ -70,3 +70,28 @@ header img{
 /*----------------------*/
 /*     FIN HEADER       */
 /*----------------------*/
+
+/*----------------------*/
+/*      FOOTER .        */
+/*----------------------*/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 5vh;
+    text-align: center;
+    background-color: #333333;
+}
+
+footer li{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+/*----------------------*/
+/*     FIN FOOTER       */
+/*----------------------*/

@@ -10,5 +10,6 @@
 		<div id="container">
 			
 		</div>
+		<?php include "footer.php"; ?>
 	</body>
 </html>
