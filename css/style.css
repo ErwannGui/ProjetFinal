@@ -17,12 +17,11 @@ a:hover,a:active {outline: 0;}
 /*     HEADER FRONT     */
 /*----------------------*/
 
-<<<<<<< HEAD
 header{
     font-family: 'Unica One', cursive;
-=======
+}
+
 #headerFront{
->>>>>>> origin/principal
     position: fixed;
     background-color: #073863;
     height: 100%;
@@ -98,7 +97,27 @@ header{
 /*    FIN HEADER BACK   */
 /*----------------------*/
 
-<<<<<<< Updated upstream
+/*----------------------*/
+/*      HEADER BACK     */
+/*----------------------*/
+
+#headerBack{
+    position: fixed;
+    background-color: #073863;
+    height: 100%;
+    width: 10%;
+}
+
+/* Images du header : logo */
+#headerBack img{
+    width: 7vw;
+}
+
+
+/*----------------------*/
+/*    FIN HEADER BACK   */
+/*----------------------*/
+
 /*----------------------*/
 /*      FOOTER .        */
 /*----------------------*/
@@ -126,7 +145,7 @@ footer{
 
 /*----------------------*/
 /*     FIN FOOTER       */
-=======
+/*----------------------*/
 
 /*----------------------*/
 /*      BLOG   .        */
@@ -136,5 +155,4 @@ footer{
 
 /*----------------------*/
 /*      FIN BLOG .      */
->>>>>>> Stashed changes
 /*----------------------*/
