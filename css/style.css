@@ -64,7 +64,7 @@ header{
 /* Partie contenant le logo */
 #headerFrontContainerOne{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10%;
 }
 
 /* Partie comprenant les liens */
@@ -72,7 +72,7 @@ header{
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    margin-top: 50px;
+    margin-top: 15%;
     font-size: 2.5vh;
 }
 
@@ -85,24 +85,30 @@ header{
 #headerFrontContainerTwo div{
     text-align: center;
     padding: 15px 20px 15px 20px;
+}
+
+/* Les traits au dessous et en dessous des liens du header */
+#headerFrontContainerTwo div:first-child{
+    color: #AA8C64;
     border-top: 1px #313539 solid;
     border-bottom: 1px #313539 solid;
 }
 
+#headerFrontContainerTwo div:nth-child(3){
+    color: #AA8C64;
+    border-right: 4px solid #AA8C64;
+    border-top: 1px solid #313539;
+    border-bottom: 1px #313539 solid;
+}
 
-#headerFrontContainerTwo div:first-child{
-    border-top: 1px #313539 solid;
+#headerFrontContainerTwo div:nth-child(5){
+    border-top: 1px solid #313539;
+    border-bottom: 1px #313539 solid;
 }
 
 #headerFrontContainerTwo div:last-child{
     border-bottom: 1px #313539 solid;
 } 
-
-/* La div contenant les liens lors du hover */
-#headerFrontContainerTwo div:nth-child(2){
-    color: #AA8C64;
-    border-right: 4px solid #AA8C64;
-}
 
 /* Changer couleur des liens lors du hover */
 #headerFrontContainerTwo div:hover a{
@@ -112,13 +118,30 @@ header{
 /* Partie comprenant les svg des réseaux sociaux */
 #headerFrontContainerThree{
     display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+#headerFrontContainerThree div:nth-child(1), #headerFrontContainerThree div:nth-child(2), #headerFrontContainerThree div:nth-child(3){
+    margin-right: 10px;
 }
 
 /* SVG du header */
 #headerFrontContainerThree svg{
-    height: 5vh;
+    height: 5.3vh;
+    fill: grey;
+}
+
+#headerFrontContainerThree svg:hover{
+    fill: white;
+}
+
+/* Partie 2017 Copyright */
+#headerFrontContainerFour{
+    text-align: center;
+    color: grey;
+    margin-top: 15%;
+    
 }
 
 /*----------------------*/
