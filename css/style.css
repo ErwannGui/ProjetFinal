@@ -93,6 +93,28 @@ header{
     width: 7vw;
 }
 
+#headerBackContainerOne{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#headerBackContainerTwo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+#headerBackContainerTwo div{
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: grey;
+    padding: 8px 13px 8px 13px;
+}
+
+#headerBackContainerTwo div:hover{
+    
+}
 
 /*----------------------*/
 /*    FIN HEADER BACK   */

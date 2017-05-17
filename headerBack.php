@@ -1,8 +1,8 @@
 <header id="headerBack">
-    <div id="headerContainerOne">
+    <div id="headerBackContainerOne">
         <img src="images/logo.png" alt="logo" title="Logo Chez Fifi">
     </div>
-    <div id="headerContainerTwo">
+    <div id="headerBackContainerTwo">
             <div><a href="#">Menus</a></div>
             <div><a href="#">Articles</a></div>
             <div><a href="#">Patenaires</a></div>
