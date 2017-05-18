@@ -12,7 +12,17 @@
         
         <?php include "headerFront.php"; ?>
         
-        <img src="images/blog_home.png">
+        <div id="container">
+            
+            <div id="blogBackground">
+                <img src="images/blog_home.png" alt="Food truck" title="Food truck">
+                <h1>BIENVENUE CHEZ FIFI</h1>
+            </div>
+        
+        
+         
+            
+        </div>
         
     </body>
 

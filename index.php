@@ -6,10 +6,14 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	</head>
 	<body>
+        
 		<?php include "headerFront.php"; ?>
-		<div id="container">
+		
+        <div id="container">
 			
 		</div>
+        
 		<?php include "footer.php"; ?>
+        
 	</body>
 </html>

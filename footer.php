@@ -1,13 +1,7 @@
 <footer>
-	<ul class="foot">
-		<li>
-			<p>2017 - Copyright</p>
-		</li>
-		<li>
-			<a href="">Mentions légales</a>
-		</li>
-		<li>
-			<a href="back_office.php">Administration</a>
-		</li>
-	</ul>
+	<nav class="foot">
+		<p>2017 - Copyright</p>
+		<a href="">Mentions légales</a>
+		<a href="back_office.php">Administration</a>
+	</nav>
 </footer>

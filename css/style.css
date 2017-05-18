@@ -141,6 +141,7 @@ header{
     text-align: center;
     color: grey;
     margin-top: 15%;
+    text-transform: uppercase;
     
 }
 
@@ -215,7 +216,7 @@ header{
 /*----------------------*/
 
 /*----------------------*/
-/*      FOOTER .        */
+/*      FOOTER          */
 /*----------------------*/
 
 footer{
@@ -244,11 +245,18 @@ footer{
 /*----------------------*/
 
 /*----------------------*/
-/*      BLOG   .        */
+/*      BLOG            */
 /*----------------------*/
 
+#blogBackground{
 
+}
+
+#blogBackground img{
+    filter: brightness(50%);
+    width: 100%;
+}
 
 /*----------------------*/
-/*      FIN BLOG .      */
+/*      FIN BLOG        */
 /*----------------------*/
