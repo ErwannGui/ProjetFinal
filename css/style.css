@@ -296,6 +296,7 @@ footer{
 #blogArticles{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: #313539;
     margin-top: -5px;
 }
@@ -309,7 +310,21 @@ footer{
 
 /* Les catégories */
 #blogCategories{
-    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Boutons pour changer de catégorie */
+.category{
+   	border:none;
+	padding:6px 10px 6px 10px;
+	background:#ffffff;
+	color:#555; 
+}
+
+.category:hover{
+	background: #C1C1C1;
+    
 }
 
 /* Partie qui affiche les articles */
