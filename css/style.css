@@ -64,7 +64,7 @@ header{
 /* Partie contenant le logo */
 #headerFrontContainerOne{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 2vh;
 }
 
 /* Partie comprenant les liens */
@@ -72,8 +72,8 @@ header{
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    margin-top: 15%;
-    font-size: 2.5vh;
+    margin-top: 3vh;
+    font-size: 1.3vw;
 }
 
 /* Couleur des liens du header */
@@ -119,7 +119,7 @@ header{
 #headerFrontContainerThree{
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 10vh;
 }
 
 #headerFrontContainerThree div:nth-child(1), #headerFrontContainerThree div:nth-child(2), #headerFrontContainerThree div:nth-child(3){
