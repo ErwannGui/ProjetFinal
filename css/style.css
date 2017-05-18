@@ -72,7 +72,7 @@ header{
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    margin-top: 3vh;
+    margin-top: 7.5vh;
     font-size: 1.3vw;
 }
 
@@ -119,7 +119,9 @@ header{
 #headerFrontContainerThree{
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    position: absolute;
+    bottom: 10vh;
+    width: 20vw;
 }
 
 #headerFrontContainerThree div:nth-child(1), #headerFrontContainerThree div:nth-child(2), #headerFrontContainerThree div:nth-child(3){
@@ -140,9 +142,10 @@ header{
 #headerFrontContainerFour{
     text-align: center;
     color: grey;
-    margin-top: 15%;
+    position: absolute;
+    bottom: 1.5vh;
     text-transform: uppercase;
-    
+    width: 20vw;
 }
 
 /*----------------------*/
