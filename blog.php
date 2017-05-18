@@ -15,13 +15,14 @@
         <div id="container">
             
             <div id="blogBackground">
-                <img src="images/blog_home.png" alt="Food truck" title="Food truck">
-                <h1>BIENVENUE CHEZ FIFI</h1>
+                <div id="blogBackgroundImage">
+                    <img src="images/camtar.png" alt="Food truck" title="Food truck">
+                </div>
+                <div id="blogBackgroundTitle">
+                    <h1>BIENVENUE CHEZ FIFI</h1>
+                </div>
             </div>
-        
-        
-         
-            
+                 
         </div>
         
     </body>
