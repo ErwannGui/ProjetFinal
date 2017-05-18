@@ -30,6 +30,13 @@ body{
     font-weight: normal;
 }
 
+/* Image de fond accueil blog */
+#backgroundImage img{
+    filter: brightness(40%);
+    width: 100%;
+    height: 100vh;
+}
+
 /* Liens non soulignés et non colorés */
 a {background-color: transparent; color: black; text-decoration: none;}
 a:hover,a:active {outline: 0;}
@@ -255,13 +262,6 @@ footer{
 
 #blogBackground img{
     position: relative:
-}
-
-/* Image de fond accueil blog */
-#blogBackgroundImage img{
-    filter: brightness(40%);
-    width: 100%;
-    height: 100vh;
 }
 
 /* Titre sur la photo de fond accueil blog */

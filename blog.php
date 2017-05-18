@@ -19,7 +19,7 @@
             
             <div id="blogBackground">
                 
-                <div id="blogBackgroundImage">
+                <div id="backgroundImage">
                     <img src="images/blog_home.png" alt="Food truck" title="Food truck">
                 </div>
                 <div id="blogBackgroundTitle">
