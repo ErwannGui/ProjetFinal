@@ -1,5 +1,6 @@
 /* Importation de polices Google font */
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 /* Gérer les marges des div + définition de la police*/
 *{box-sizing: border-box;}
@@ -7,6 +8,7 @@
 /* Aucune marge sur les côtés */
 body{
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 #container{
@@ -292,11 +294,20 @@ footer{
 #blogArticles{
     display: flex;
     flex-direction: column;
+    background-color: #313539;
+    margin-top: -5px;
 }
 
 /* Titre de la catégorie des articles */
 #blogArticlesTitle{
     text-align: center;
+    color: white;
+    margin-top: 4vh;
+}
+
+/* Les catégories */
+#blogCategories{
+    justify-content: center;
 }
 
 /* Partie qui affiche les articles */
@@ -304,11 +315,23 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 30px 50px 30px 50px;
+    margin: 1.5vh 2.5vw 1.5vh 2.5vw;
 }
 
-#blogArticlesArticles div{
+/* Gérer chaque article */
+#blogArticlesArticles a{
     margin: 15px 10px 15px 10px;
+    background-color: white;
+}
+
+#blogArticlesArticles img:hover{
+    filter: brightness(70%);
+}
+
+#blogArticlesArticles p{
+    margin-left: 20px;
+    max-width: 250px;
+    text-align: center;
 }
 /*----------------------*/
 /*      FIN BLOG        */

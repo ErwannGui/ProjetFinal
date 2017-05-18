@@ -10,6 +10,9 @@
 
     <body>
         
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="js/filtrage.js"></script>
+        
         <?php include "headerFront.php"; ?>
         
         <div id="container">
@@ -33,28 +36,59 @@
                 <div id="blogArticlesTitle">
                     <h2>Actualités</h2>
                 </div>
-                <div id="blogArticlesArticles">
-                    <div>
-                        <a href="#"><img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck"></a>
-                        <a href="#"><p>Conseils pour bien gérer son food truck</p></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck"></a>
-                        <a href="#"><p>Etre traiteur en food truck</p></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck"></a>
-                        <a href="#"><p>La cuisine créole : nouvelle à Nantes</p></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="images/articles/articleFour.jpg" alt="Food truck" title="Food truck"></a>
-                        <a href="#"><p>Points stratégiques de l’activité d’un food truck</p></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="images/articles/articleFive.jpg" alt="Food truck" title="Food truck"></a>
-                        <a href="#"><p>L’évolution du marché des food trucks</p></a>
-                    </div>
+                
+                <div id="blogCategories">
+                    <div><p>Afficher les résultats par catégories</p></div>
+                    <div><ul>
+                        <button class="cat" data-rel="tout">Tout</button>
+                        <button class="cat" data-rel="agence">Agence</button>
+                        <button class="cat" data-rel="entreprise">Entreprise</button>
+                        <button class="cat" data-rel="tendances">Tendances</button>
+                    </ul></div>
                 </div>
+                
+                <div id="blogArticlesArticles">
+                    
+                    <a href="#">
+                        <div>
+                            <img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck">
+                            <p>Conseils pour bien gérer son food truck</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div>
+                            <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
+                            <p>Etre traiteur en food truck</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div>
+                            <img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck">
+                            <p>La cuisine créole : nouvelle à Nantes</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div>
+                            <img src="images/articles/articleFour.jpg" alt="Food truck" title="Food truck">
+                            <p>Points stratégiques de l’activité d’un food truck</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div>
+                            <img src="images/articles/articleFive.jpg" alt="Food truck" title="Food truck">
+                            <p>L’évolution du marché des food trucks</p>
+                        </div>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div id="blogTestimony">
                 
             </div>
                  
