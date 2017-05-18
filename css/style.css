@@ -25,6 +25,7 @@ body{
     text-align: center;
     font-size: 6vh;
     margin-top: 4vh;
+    font-weight: normal;
 }
 
 /* Liens non soulignés et non colorés */
@@ -46,13 +47,12 @@ header{
     background-color: #292C30;
     height: 100%;
     width: 20%;
-    top: 0;
-    left: 0;
 }
 
 /* Images du header : logo */
 #headerFront img{
     width: 13vw;
+    margin-top: 3vh;
 }
 
 /* Container total du header */
@@ -251,27 +251,65 @@ footer{
 /*      BLOG            */
 /*----------------------*/
 
-#blogBackgroundImage img{
+#blogBackground img{
     position: relative:
 }
 
+/* Image de fond accueil blog */
 #blogBackgroundImage img{
     filter: brightness(40%);
     width: 100%;
     height: 100vh;
 }
 
+/* Titre sur la photo de fond accueil blog */
 #blogBackgroundTitle{
     position: absolute;
     text-align: center;
     color: white;
     top: 35%;
     left: 50vw;
-    /*margin-right: ;*/
     width: 20vw;
     font-family: 'Unica One', cursive;
 }
 
+/* SVG flèche vers le bas */
+#blogBackgroundArrow svg{
+    position: absolute;
+    height: 5vh;
+    bottom: 3%;
+    fill: grey;
+    left: 50vw;
+    width: 20vw;
+}
+
+/* SVG flèche vers le bas lors du survol souris */
+#blogBackgroundArrow svg:hover{
+    fill: white;
+}
+
+/* Conteneur principal pour les articles */
+#blogArticles{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titre de la catégorie des articles */
+#blogArticlesTitle{
+    text-align: center;
+}
+
+/* Partie qui affiche les articles */
+#blogArticlesArticles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 50px 30px 50px;
+}
+
+#blogArticlesArticles div{
+    margin: 15px 10px 15px 10px;
+}
 /*----------------------*/
 /*      FIN BLOG        */
 /*----------------------*/
