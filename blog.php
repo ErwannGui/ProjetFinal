@@ -12,6 +12,7 @@
 
         <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="js/filtrage.js"></script>
+        <script src="js/scroll.js"></script>
 
         <?php include "headerFront.php"; ?>
 
@@ -36,11 +37,9 @@
 
                 <div id="blogCategories">
                     <p>Afficher les résultats par catégories</p>
-                    <ul>
-                        <button class="category" data-rel="all">Tout</button>
-                        <button class="category" data-rel="cook">Cuisine</button>
-                        <button class="category" data-rel="foodtruck">Food truck</button>
-                    </ul>
+                    <button class="category" data-rel="all">Tout</button>
+                    <button class="category" data-rel="cook">Cuisine</button>
+                    <button class="category" data-rel="foodtruck">Food truck</button>
                 </div>
 
 
