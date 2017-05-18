@@ -37,9 +37,10 @@
 
                 <div id="blogCategories">
                     <p>Afficher les résultats par catégories</p>
-                        <button class="category" data-rel="all">Tout</button>
-                        <button class="category" data-rel="cook">Cuisine</button>
-                        <button class="category" data-rel="foodtruck">Food truck</button>
+
+                    <button class="category" data-rel="all">Tout</button>
+                    <button class="category" data-rel="cook">Cuisine</button>
+                    <button class="category" data-rel="foodtruck">Food truck</button>
                 </div>
 
 
