@@ -6,7 +6,8 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	</head>
 	<body>
-		<?php include "headerFront.php"; ?>
+		<?php $page = 1;
+        include "headerFront.php"; ?>
 		<div id="container">
 			
 		</div>

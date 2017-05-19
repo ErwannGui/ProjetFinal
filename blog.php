@@ -14,7 +14,8 @@
         <script src="js/filtrage.js"></script>
         <script src="js/scroll.js"></script>
 
-        <?php include "headerFront.php"; ?>
+        <?php $page = 4;
+        include "headerFront.php"; ?>
 
         <div id="container">
 
