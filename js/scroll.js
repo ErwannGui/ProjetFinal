@@ -1,7 +1,9 @@
-$(document).on('click', 'a', function(event){
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 700);
+$(document).ready(function() {
+    $('.js-scroll').on('click', function() {
+        var page = $(this).attr('href');
+        var speed = 750; 
+        $('html, body').animate( { scrollTop: $(page).offset().top
+        }, speed ); 
+        return false;
+    });
 });

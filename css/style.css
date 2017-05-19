@@ -325,7 +325,7 @@ footer{
 }
 
 /* Conteneur principal pour les articles */
-#blogArticles{
+.blogArticles{
     display: flex;
     flex-direction: column;
     justify-content: center;
