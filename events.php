@@ -28,7 +28,11 @@
                 </div>
             </div>
 
+            <div id="EventsInterdiv01">
 
+                <div id="EventsInterdiv01Container">
+                    <h2>Explication de nos interventions</h2>
+              
 
                 <div id="blogCategories">
                     <p>Afficher les résultats par catégories</p>
