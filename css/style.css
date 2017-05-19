@@ -113,6 +113,10 @@ header{
     border-bottom: 1px #313539 solid;
 }
 
+.active{
+     border-right: 4px solid #AA8C64;
+}
+
 #headerFrontContainerTwo div:nth-child(5){
     border-top: 1px solid #313539;
     border-bottom: 1px #313539 solid;
