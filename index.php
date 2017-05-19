@@ -15,7 +15,7 @@
 
                 <div id="backgroundImage">
                 </div>
-                <div id="blogBackgroundTitle">
+                <div class="backgroundTitle">
                     <h1>Acceuil</h1>
                 </div>
                 <div id="blogBackgroundArrow">
