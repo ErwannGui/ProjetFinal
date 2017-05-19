@@ -6,6 +6,7 @@
         <title>À propos de nous</title>
         <meta charset="utf-8" />
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
     </head>
 
     <body>
@@ -13,7 +14,10 @@
         <!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="js/filtrage.js"></script>-->
 
-        <?php include "headerFront.php"; ?>
+        <?php 
+            $page = 3;
+            include "headerFront.php"; 
+        ?>
 
         <div id="container">
 
@@ -105,3 +109,4 @@
     </body>
 
 </html>
+

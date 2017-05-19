@@ -1,6 +1,7 @@
 /* Importation de polices Google font */
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 /* Gérer les marges des div + définition de la police*/
 *{box-sizing: border-box;}
@@ -44,6 +45,33 @@ body{
 a {background-color: transparent; color: black; text-decoration: none;}
 a:hover,a:active {outline: 0;}
 
+/* Titre sur la photo de fond accueil blog */
+.backgroundTitle{
+    position: fixed;
+    text-align: center;
+    color: white;
+    top: 35%;
+    left: 50vw;
+    width: 20vw;
+    font-family: 'Unica One', cursive;
+    display: block;
+    text-transform: uppercase;
+}
+
+/* SVG flèche vers le bas */
+.backgroundArrow svg{
+    position: absolute;
+    height: 5vh;
+    bottom: 3%;
+    fill: grey;
+    left: 50vw;
+    width: 20vw;
+}
+
+/* SVG flèche vers le bas lors du survol souris */
+.backgroundArrow svg:hover{
+    fill: white;
+}
 
 /*----------------------*/
 /*     HEADER FRONT     */
@@ -108,9 +136,12 @@ header{
 
 #headerFrontContainerTwo div:nth-child(3){
     color: #AA8C64;
-    border-right: 4px solid #AA8C64;
     border-top: 1px solid #313539;
     border-bottom: 1px #313539 solid;
+}
+
+.active{
+     border-right: 4px solid #AA8C64;
 }
 
 #headerFrontContainerTwo div:nth-child(5){
@@ -201,31 +232,17 @@ header{
     padding: 8px 13px 8px 13px;
 }
 
-#headerBackContainerTwo div:hover{
-    
+#headerBackContainerTwo a{
+    font-size: 1.2vw;
 }
 
-/*----------------------*/
-/*    FIN HEADER BACK   */
-/*----------------------*/
-
-/*----------------------*/
-/*      HEADER BACK     */
-/*----------------------*/
-
-#headerBack{
-    position: fixed;
-    background-color: #073863;
-    height: 100%;
-    width: 10%;
+#headerBackContainerTwo div:hover a{
+    color: white;
 }
 
-/* Images du header : logo */
-#headerBack img{
-    width: 7vw;
+.actif a{
+    color: white;
 }
-
-
 /*----------------------*/
 /*    FIN HEADER BACK   */
 /*----------------------*/
@@ -238,8 +255,8 @@ footer{
     position: relative;
     width: 80%;
     text-align: center;
-    margin: 0;
     margin-left: 20%;
+    color: white;
 }
 
 .foot{
@@ -251,6 +268,7 @@ footer{
     display: inline-block;
     margin-left: 1vw;
     margin-right: 1vw;
+    color: white;
 }
 
 /*----------------------*/
@@ -275,20 +293,18 @@ footer{
 /*      BLOG            */
 /*----------------------*/
 
-#blogBackground img{
-    position: relative;
+/* Image de fond accueil */
+#blogBackgroundImage{
+    background:url(../images/bg_blog.png) fixed;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    filter: brightness(40%);
+    height: 100vh; 
 }
 
-/* Titre sur la photo de fond accueil blog */
-#blogBackgroundTitle{
-    position: fixed;
-    text-align: center;
-    color: white;
-    top: 35%;
-    left: 50vw;
-    width: 20vw;
-    font-family: 'Unica One', cursive;
-    display: block;
+#blogBackground img{
+    position: relative;
 }
 
 /* SVG flèche vers le bas */
@@ -307,7 +323,7 @@ footer{
 }
 
 /* Conteneur principal pour les articles */
-#blogArticles{
+.blogArticles{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -337,11 +353,12 @@ footer{
 	padding:6px 10px 6px 10px;
 	background:#ffffff;
 	color:#555; 
+    border-radius: 5px;
+    width: 100px;
 }
 
 .category:hover{
 	background: #C1C1C1;
-    
 }
 
 /* Partie qui affiche les articles */
@@ -358,15 +375,103 @@ footer{
     background-color: white;
 }
 
+/* Hover des images des articles */
 #blogArticlesArticles img:hover{
     filter: brightness(70%);
 }
 
+/* Titre des articles    */
 #blogArticlesArticles p{
     margin-left: 20px;
     max-width: 250px;
     text-align: center;
 }
+
+#blogTestimony{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    z-index: 1000;
+}
+
+#blogTestimonyTitle{
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#blogTestimonyTestimonials{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+
+#blogTestimonyTestimonials p{
+    font-size: 15px;
+    font-family: 'Indie Flower', cursive;
+    background-color: #E0E0E0;
+    padding: 20px;
+}
+
+#blogTestimonyTestimonials div{
+    width: 18vw;
+    text-align: justify;
+}
+
+#blogTestimonyTestimonials img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 30px;
+}
+
+#blogInformations{
+    display: flex;
+    flex-direction: column;
+    background-color: #313539;
+    padding-bottom: 4vh;
+    color: white;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4vh;
+    text-align: center;
+}
+
+#blogInformations a{
+    color: white;
+}
+
+#blogInformations svg{
+    fill: white;
+    height: 4vh;
+}
+
+.blogTestimonyTestimonialsImage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogTestimonyTestimonialsImage div{
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.blogTestimonyTestimonialsImage div:nth-child(2){
+    margin-top: -8vh;
+}
+
+.blogTestimonyTestimonialsImage h3{
+    font-size: 1.2vw;
+}
+
+.blogTestimonyTestimonialsImage h4{
+    font-size: 0.8vw;
+}
+
 /*----------------------*/
 /*      FIN BLOG        */
 /*----------------------*/
@@ -416,4 +521,153 @@ footer{
 
 /*----------------------*/
 /*        EVENTS        */
+/*----------------------*/
+
+
+/*----------------------*/
+/*      BACK-OFFICE     */
+/*----------------------*/
+
+#background_back{
+    background-image: url(../images/bg_admin.png);
+    background-size: cover;
+}
+
+#containerBack{
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 10%;
+} 
+
+#containerBack h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 4vh;
+    color: white;
+}
+
+#containerBack .active{
+    display: block;
+}
+
+.back_content{
+    border-radius: 1vw;
+    background-color: #071428;
+    opacity: 0.7;
+    color: white;
+    width: 80%;
+    height: 80vh;
+    border: solid 2px black;
+    margin-left: 10%;
+    display: none;
+    padding: 1vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.back_content div{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.back_content h2:not(:first-child){
+    margin-top: 0;
+}
+
+.back_top_left_content, .back_bottom_left_content, .back_top_right_content, .back_bottom_right_content{
+    /*border: solid 2px;*/
+    width: 100%;
+    padding: 1vw;
+    padding-top: 0;
+}
+
+.back_top_left_content, .back_top_right_content{
+    margin-bottom: 1vh;
+}
+
+.back_menu .back_bottom_left_content input[name='Valider'], .back_article .back_top_right_content input[name='Valider'], .back_partenaire .back_top_right_content input[name='Valider'], .back_equipe .back_top_right_content input[name='Valider'], .back_evenement .back_top_right_content input[name='Valider']{
+    margin-left: 8%!important;
+}
+
+.back_content input[name='MenuId'], .back_content input[name='ArticleId'], .back_content input[name='PartenaireId'], .back_content input[name='CollegueId'], .back_content input[name='EventId']{
+    width: 40px!important;
+    height: 35px!important;
+}
+
+.back_content label{
+    width: 50%;
+}
+
+.back_content label, .back_content input{
+    display: inline-block!important;
+    vertical-align: top;
+}
+
+.back_right_content label, .back_right_content input{
+    display: inline-block!important;
+    vertical-align: top;
+}
+
+.back_left_content, .back_right_content{
+    width: 49%;
+    height: 100%;
+    border: none;
+    padding: 0;
+}
+
+#containerBack input, #containerBack select, #containerBack textarea{
+    width: 95%;
+    height: 25px;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border: solid 1.5px grey;
+}
+
+#containerBack textarea{
+    height: 30vh;
+}
+
+#containerBack input[name='Valider']{
+    width: 25%;
+    margin-left: 70%;
+}
+
+#boite_mail{
+    width: 100%;
+    height: 100%;
+}
+
+.back_reseau span{
+    text-transform: uppercase;
+}
+
+/*----------------------*/
+/*    FIN BACK-OFFICE   */
+/*----------------------*/
+
+/*----------------------*/
+/*      NOS MENUS       */
+/*----------------------*/
+
+/* Image de fond accueil */
+#menusBackgroundImage{
+    background:url(../images/bg_menu.png) fixed;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    filter: brightness(40%);
+    height: 100vh; 
+}
+
+#menusBackground img{
+    position: relative;
+}
+
+/*----------------------*/
+/*    FIN NOS MENUS     */
 /*----------------------*/

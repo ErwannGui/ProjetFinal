@@ -13,7 +13,10 @@
         <!--<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="js/filtrage.js"></script>-->
 
-        <?php include "headerFront.php"; ?>
+        <?php 
+            $page = 2;
+            include "headerFront.php"; 
+        ?>
 
         <div id="container">
 
@@ -91,17 +94,15 @@
                     </a>
 
                 </div>
-            </div>
+                </div>
 
+            </div>
         </div>
 
         <div id="blogTestimony">
 
         </div>
-
-
-
-
     </body>
-    
+
 </html>
+
