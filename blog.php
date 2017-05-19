@@ -56,7 +56,7 @@
 
                     <a href="#">
                         <div>
-                            <article class="all foodtruck">
+                            <article class="all foodtruck cook">
                                 <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
                                 <p>Etre traiteur en food truck</p>
                             </article>
