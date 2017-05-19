@@ -394,7 +394,7 @@ footer{
 }
 
 #blogTestimonyTestimonials p{
-    font-size: 2vh;
+    font-size: 15px;
     font-family: 'Indie Flower', cursive;
     background-color: #E0E0E0;
     padding: 20px 20px 20px 20px;
@@ -426,6 +426,7 @@ footer{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 4vh;
+    text-align: center;
 }
 
 #blogInformations a{
@@ -437,15 +438,24 @@ footer{
     height: 4vh;
 }
 
-#blogTestimonyTestimonialsImageOne, #blogTestimonyTestimonialsImageTwo, #blogTestimonyTestimonialsImageThree{
+.blogTestimonyTestimonialsImage{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#blogTestimonyTestimonialsImageOne div, #blogTestimonyTestimonialsImageTwo div, #blogTestimonyTestimonialsImageThree div{
+.blogTestimonyTestimonialsImage div{
     margin-left: 5px;
     margin-right: 5px;
+    vertical-align: top;
+}
+
+.blogTestimonyTestimonialsImage div:nth-child(2){
+    margin-top: -2.5vh;
+}
+
+.blogTestimonyTestimonialsImage h4{
+    font-size: 0.8em;
 }
 
 /*----------------------*/

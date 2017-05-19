@@ -111,39 +111,39 @@
                 <div id="blogTestimonyTestimonials">
 
                     <div>
-                        <div id="blogTestimonyTestimonialsImageOne">
+                        <div class="blogTestimonyTestimonialsImage">
                             <div>
                                 <img src="images/testimonials/testimonyOne.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Vald</h3>
-                                <h5>Le 18/05/2017</h5>
+                                <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
                     </div>
                     
                     <div>
-                        <div id="blogTestimonyTestimonialsImageTwo">
+                        <div class="blogTestimonyTestimonialsImage">
                             <div>
                                 <img src="images/testimonials/testimonyTwo.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Lorenzo</h3>
-                                <h5>Le 18/05/2017</h5>
+                                <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
                     </div>
                     
                     <div>
-                        <div id="blogTestimonyTestimonialsImageThree">
+                        <div class="blogTestimonyTestimonialsImage">
                             <div>
                                 <img src="images/testimonials/testimonyThree.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Columbine</h3>
-                                <h5>Le 18/05/2017</h5>
+                                <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
