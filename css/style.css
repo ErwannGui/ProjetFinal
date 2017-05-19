@@ -236,6 +236,7 @@ header{
 
 footer{
     position: relative;
+    width: 80%;
     text-align: center;
     margin-left: 20%;
     color: white;
@@ -258,22 +259,37 @@ footer{
 /*----------------------*/
 
 /*----------------------*/
+/*      INDEX           */
+/*----------------------*/
+
+.index-container{
+    margin-top: -5px;
+    position:relative;
+    z-index: 1000;
+}
+
+/*----------------------*/
+/*      FIN INDEX       */
+/*----------------------*/
+
+/*----------------------*/
 /*      BLOG            */
 /*----------------------*/
 
 #blogBackground img{
-    position: relative:
+    position: relative;
 }
 
 /* Titre sur la photo de fond accueil blog */
 #blogBackgroundTitle{
-    position: absolute;
+    position: fixed;
     text-align: center;
     color: white;
     top: 35%;
     left: 50vw;
     width: 20vw;
     font-family: 'Unica One', cursive;
+    display: block;
 }
 
 /* SVG flèche vers le bas */
@@ -298,6 +314,8 @@ footer{
     justify-content: center;
     background-color: #313539;
     margin-top: -5px;
+    position:relative;
+    z-index: 1000;
     padding-bottom: 4vh;
 }
 
@@ -352,9 +370,12 @@ footer{
 }
 
 #blogTestimony{
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position:relative;
+    z-index: 1000;
 }
 
 #blogTestimonyTitle{
@@ -410,6 +431,16 @@ footer{
 #blogInformations svg{
     fill: white;
     height: 4vh;
+}
+
+#blogTestimonyTestimonialsImageOne, #blogTestimonyTestimonialsImageTwo, #blogTestimonyTestimonialsImageThree{
+    display: flex;
+    justify-content: space-between;
+}
+
+#blogTestimonyTestimonialsImageOne div, #blogTestimonyTestimonialsImageTwo div, #blogTestimonyTestimonialsImageThree div{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /*----------------------*/
