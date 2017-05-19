@@ -243,6 +243,15 @@ header{
 .actif a{
     color: white;
 }
+
+#headerBackContainerFour{
+    text-align: center;
+    color: grey;
+    position: absolute;
+    bottom: 1.5vh;
+    text-transform: uppercase;
+    width: 10vw;
+}
 /*----------------------*/
 /*    FIN HEADER BACK   */
 /*----------------------*/
