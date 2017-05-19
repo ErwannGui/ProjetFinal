@@ -1,6 +1,7 @@
 /* Importation de polices Google font */
 @import url('https://fonts.googleapis.com/css?family=Unica+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 /* Gérer les marges des div + définition de la police*/
 *{box-sizing: border-box;}
@@ -108,7 +109,6 @@ header{
 
 #headerFrontContainerTwo div:nth-child(3){
     color: #AA8C64;
-    border-right: 4px solid #AA8C64;
     border-top: 1px solid #313539;
     border-bottom: 1px #313539 solid;
 }
@@ -235,12 +235,10 @@ header{
 /*----------------------*/
 
 footer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 80%;
+    position: relative;
     text-align: center;
-    margin: 0;
+    margin-left: 20%;
+    color: white;
 }
 
 .foot{
@@ -252,6 +250,7 @@ footer{
     display: inline-block;
     margin-left: 1vw;
     margin-right: 1vw;
+    color: white;
 }
 
 /*----------------------*/
@@ -351,6 +350,68 @@ footer{
     max-width: 250px;
     text-align: center;
 }
+
+#blogTestimony{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#blogTestimonyTitle{
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#blogTestimonyTestimonials{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+
+#blogTestimonyTestimonials p{
+    font-size: 2vh;
+    font-family: 'Indie Flower', cursive;
+    background-color: #E0E0E0;
+    padding: 20px 20px 20px 20px;
+}
+
+#blogTestimonyTestimonials h5{
+    font-size: 1.5vh;
+}
+
+#blogTestimonyTestimonials div{
+    width: 18vw;
+    text-align: justify;
+}
+
+#blogTestimonyTestimonials img{
+    max-width: 150px;
+    max-height: 200px;
+    border-radius: 30px;
+}
+
+#blogInformations{
+    display: flex;
+    flex-direction: column;
+    background-color: #313539;
+    padding-bottom: 4vh;
+    color: white;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4vh;
+}
+
+#blogInformations a{
+    color: white;
+}
+
+#blogInformations svg{
+    fill: white;
+    height: 4vh;
+}
+
 /*----------------------*/
 /*      FIN BLOG        */
 /*----------------------*/
