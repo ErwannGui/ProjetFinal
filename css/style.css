@@ -536,7 +536,7 @@ footer{
 }
 
 .back_content input[name='MenuId'], .back_content input[name='ArticleId'], .back_content input[name='PartenaireId'], .back_content input[name='CollegueId'], .back_content input[name='EventId']{
-    width: 10%!important;
+    width: 40px!important;
     height: 35px!important;
 }
 
