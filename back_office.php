@@ -43,28 +43,28 @@
 							<input type="number" name="MenuPrixXL" placeholder="Prix XL">
 							<select name="MenuEntree">
 								<optgroup label="Entrée">
-									<option value="">Samoussa</option>
-									<option value="">Bonbon piment</option>
+									<option value="Samoussa">Samoussa</option>
+									<option value="Bonbon">Bonbon piment</option>
 								</optgroup>
 							</select>
 							<select name="MenuPlat">
 								<optgroup label="Plat">
-									<option value="">Rougail saucisse</option>
-									<option value="">Carry poulet</option>
+									<option value="Rougail">Rougail saucisse</option>
+									<option value="Carry">Carry poulet</option>
 								</optgroup>
 							</select>
 							<select name="MenuDessert">
 								<optgroup label="Dessert">
-									<option value="">Fruits exotiques</option>
-									<option value="">Pâtisserie</option>
+									<option value="Fruits">Fruits exotiques</option>
+									<option value="Patisserie">Pâtisserie</option>
 								</optgroup>
 							</select>
 							<select name="MenuBoisson">
 								<optgroup label="Boisson">
-									<option value="">Bière Dodo</option>
-									<option value="">Vin de Loire</option>
-									<option value="">Eau</option>
-									<option value="">Soda</option>
+									<option value="Bière">Bière Dodo</option>
+									<option value="Vin">Vin de Loire</option>
+									<option value="Eau">Eau</option>
+									<option value="Soda">Soda</option>
 								</optgroup>
 							</select>
 							<input type="submit" name="Valider" value="Valider">
@@ -188,12 +188,12 @@
 						<form method="post" action="">
 							<select name="PageText">
 								<optgroup label="Page concernée">
-									<option value="">Accueil</option>
-									<option value="">Nos menus</option>
-									<option value="">Prestations privées</option>
-									<option value="">A propos de nous</option>
-									<option value="">Actualités</option>
-									<option value="">Contact</option>
+									<option value="Accueil">Accueil</option>
+									<option value="Menu">Nos menus</option>
+									<option value="Event">Prestations privées</option>
+									<option value="About">A propos de nous</option>
+									<option value="Blog">Actualités</option>
+									<option value="Contact">Contact</option>
 								</optgroup>
 							</select>
 							<textarea name="AutreTextContenu" placeholder="Contenu"></textarea>
@@ -205,19 +205,19 @@
 						<form method="post" action="">
 							<select name="PageText">
 								<optgroup label="Page concernée">
-									<option value="">Accueil</option>
-									<option value="">Nos menus</option>
-									<option value="">Prestations privées</option>
-									<option value="">A propos de nous</option>
-									<option value="">Actualités</option>
-									<option value="">Contact</option>
+									<option value="Accueil">Accueil</option>
+									<option value="Menu">Nos menus</option>
+									<option value="Event">Prestations privées</option>
+									<option value="About">A propos de nous</option>
+									<option value="Blog">Actualités</option>
+									<option value="Contact">Contact</option>
 								</optgroup>
 							</select>
 							<select name="DebutText">
 								<optgroup label="Texte concerné">
-									<option value="">1 - "Début du premier texte ..."</option>
-									<option value="">2 - "Début du deuxième texte ..."</option>
-									<option value="">3 - "Début du troisième texte ..."</option>
+									<option value="Id1">1 - "Début du premier texte ..."</option>
+									<option value="Id2">2 - "Début du deuxième texte ..."</option>
+									<option value="Id3">3 - "Début du troisième texte ..."</option>
 								</optgroup>
 							</select>
 							<textarea name="AutreTextContenu">Contenu du texte existant (à modifier)</textarea>
@@ -231,12 +231,12 @@
 						<form method="post" action="">
 							<select name="PageImg">
 								<optgroup label="Page concernée">
-									<option value="">Accueil</option>
-									<option value="">Nos menus</option>
-									<option value="">Prestations privées</option>
-									<option value="">A propos de nous</option>
-									<option value="">Actualités</option>
-									<option value="">Contact</option>
+									<option value="Accueil">Accueil</option>
+									<option value="Menu">Nos menus</option>
+									<option value="Event">Prestations privées</option>
+									<option value="About">A propos de nous</option>
+									<option value="Blog">Actualités</option>
+									<option value="Contact">Contact</option>
 								</optgroup>
 							</select>
 							<input type="text" name="ImgSource" placeholder="Source">
@@ -249,19 +249,19 @@
 						<form method="post" action="">
 							<select name="PageImg">
 								<optgroup label="Page concernée">
-									<option value="">Accueil</option>
-									<option value="">Nos menus</option>
-									<option value="">Prestations privées</option>
-									<option value="">A propos de nous</option>
-									<option value="">Actualités</option>
-									<option value="">Contact</option>
+									<option value="Accueil">Accueil</option>
+									<option value="Menu">Nos menus</option>
+									<option value="Event">Prestations privées</option>
+									<option value="About">A propos de nous</option>
+									<option value="Blog">Actualités</option>
+									<option value="Contact">Contact</option>
 								</optgroup>
 							</select>
 							<select name="ImgNom">
 								<optgroup label="Image concernée">
-									<option value="">1 - "Nom de la première image"</option>
-									<option value="">2 - "Nom de la deuxième image"</option>
-									<option value="">3 - "Nom de la troisième image"</option>
+									<option value="Id1">1 - "Nom de la première image"</option>
+									<option value="Id2">2 - "Nom de la deuxième image"</option>
+									<option value="Id3">3 - "Nom de la troisième image"</option>
 								</optgroup>
 							</select>
 							<input type="text" name="ImgSource" placeholder="Source de l'image existante">
