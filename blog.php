@@ -89,6 +89,15 @@
                             </article>
                         </div>
                     </a>
+                    
+                    <a href="#">
+                        <div>
+                            <article class="all foodtruck">
+                                <img src="images/articles/articleSix.jpg" alt="Food truck" title="Food truck">
+                                <p>Le food truck de demain</p>
+                            </article>
+                        </div>
+                    </a>
 
                 </div>
             </div>

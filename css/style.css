@@ -440,6 +440,7 @@ footer{
 #blogTestimonyTestimonialsImageOne, #blogTestimonyTestimonialsImageTwo, #blogTestimonyTestimonialsImageThree{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #blogTestimonyTestimonialsImageOne div, #blogTestimonyTestimonialsImageTwo div, #blogTestimonyTestimonialsImageThree div{
