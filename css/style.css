@@ -397,11 +397,7 @@ footer{
     font-size: 15px;
     font-family: 'Indie Flower', cursive;
     background-color: #E0E0E0;
-    padding: 20px 20px 20px 20px;
-}
-
-#blogTestimonyTestimonials h5{
-    font-size: 1.5vh;
+    padding: 20px;
 }
 
 #blogTestimonyTestimonials div{
@@ -410,8 +406,8 @@ footer{
 }
 
 #blogTestimonyTestimonials img{
-    max-width: 150px;
-    max-height: 200px;
+    width: 10vw;
+    height: 10vw;
     border-radius: 30px;
 }
 
@@ -451,11 +447,15 @@ footer{
 }
 
 .blogTestimonyTestimonialsImage div:nth-child(2){
-    margin-top: -2.5vh;
+    margin-top: -8vh;
+}
+
+.blogTestimonyTestimonialsImage h3{
+    font-size: 1.2vw;
 }
 
 .blogTestimonyTestimonialsImage h4{
-    font-size: 0.8em;
+    font-size: 0.8vw;
 }
 
 /*----------------------*/
