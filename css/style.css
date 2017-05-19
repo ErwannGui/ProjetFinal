@@ -323,7 +323,7 @@ footer{
 }
 
 /* Conteneur principal pour les articles */
-.blogArticles{
+.blogArticles, #EventsInterdiv01{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,7 +335,7 @@ footer{
 }
 
 /* Titre de la catégorie des articles */
-#blogArticlesTitle{
+#blogArticlesTitle, #EventsInterdiv01Container{
     text-align: center;
     color: white;
     margin-top: 4vh;

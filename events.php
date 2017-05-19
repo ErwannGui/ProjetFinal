@@ -23,7 +23,7 @@
             <div id="blogBackground_Events">
 
                 <div id="backgroundImage_Events"></div>
-                <div id="blogBackgroundTitle">
+                <div class="backgroundTitle">
                     <h1>PRESTATIONS PRIVÉES</h1>
                 </div>
                 <div id="blogBackgroundArrow">
@@ -35,7 +35,7 @@
 
                 <div id="EventsInterdiv01Container">
                     <h2>Explication de nos interventions</h2>
-              
+                </div>
 
                 <div id="blogCategories">
                     <p>Afficher les résultats par catégories</p>
@@ -93,7 +93,6 @@
                         </div>
                     </a>
 
-                </div>
                 </div>
 
             </div>

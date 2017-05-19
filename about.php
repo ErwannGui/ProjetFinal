@@ -24,7 +24,7 @@
             <div id="blogBackground_APropos">
 
                 <div id="backgroundImage_APropos"></div>
-                <div id="blogBackgroundTitle">
+                <div class="backgroundTitle">
                     <h1>À PROPOS DE NOUS</h1>
                 </div>
                 <div id="blogBackgroundArrow">
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div id="blogArticles">
+            <div class="blogArticles">
 
                 <div id="blogArticlesTitle">
                     <h2>Actualités</h2>
