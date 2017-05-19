@@ -7,12 +7,12 @@
         <title>Actualités</title>
         <link href="css/style.css" rel="stylesheet">
     </head>
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/filtrage.js"></script>
+    <script src="js/scroll.js"></script>
 
     <body>
-
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="js/filtrage.js"></script>
-        <script src="js/scroll.js"></script>
 
         <?php $page = 4;
         include "headerFront.php"; ?>
@@ -21,11 +21,11 @@
 
             <div id="blogBackground">
 
-                <div id="backgroundImage"></div>
-                <div id="blogBackgroundTitle">
+                <div id="blogBackgroundImage"></div>
+                <div class="backgroundTitle">
                     <h1>BLOG ET ACTUALITES</h1>
                 </div>
-                <div id="blogBackgroundArrow">
+                <div class="backgroundArrow">
                     <a href="#blogArticles"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
                 </div>
             </div>

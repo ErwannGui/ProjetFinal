@@ -1,7 +1,7 @@
-$('a[href^="#"]').click(function() {
-    var the_id = $(this).attr('href');
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
 
     $('html, body').animate({
-        scrollTop:$(the_id).offset().top - 100
-    }, 'slow');
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
 });
