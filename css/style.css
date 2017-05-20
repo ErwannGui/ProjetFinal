@@ -234,6 +234,7 @@ header{
 
 #headerBackContainerTwo a{
     font-size: 1.2vw;
+    cursor: pointer;
 }
 
 #headerBackContainerTwo div:hover a{

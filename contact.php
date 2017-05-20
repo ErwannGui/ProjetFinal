@@ -72,21 +72,41 @@
             <section class="formContact">
             	<p>Contactez nous par mail sur <a href="mailto:chezfifi.resto@gmail.com">chezfifi.resto@gmail.com</a> ou par télephone au <a href="tel:0600000000">06 00 00 00 00</a>.</p>
             	<p>Vous pouvez aussi nous contacter directement via ce formulaire.</p>
-            	<form method="post" action="">
+            	<form method="post" action="trait_form_contact.php" enctype="multipart/form-data">
+            		<?php
+	                    if (isset($_POST['Nom'])) {
+	                        setcookie($_POST['nom']);
+	                    }
+	                    if (isset($_POST['Prenom'])) {
+	                        setcookie($_POST['prenom']);
+	                    }
+	                    if (isset($_POST['Mail'])) {
+	                        setcookie($_POST['mail']);
+	                    }
+	                    if (isset($_POST['Tel'])) {
+	                        setcookie($_POST['tel']);
+	                    }
+	                    if (isset($_POST['Objet'])) {
+	                        setcookie($_POST['obejt']);
+	                    }
+	                    if (isset($_POST['Message'])) {
+	                        setcookie($_POST['message']);
+	                    }
+                    ?>
             		<div class="leftForm">
-            			<input type="text" name="Nom" placeholder="Nom">
-            			<input type="text" name="Prenom" placeholder="Prénom">
-            			<input type="email" name="Mail" placeholder="Adresse mail">
-            			<input type="tel" name="Tel" placeholder="Numéro de téléphone">
-            			<select name="objet">
+            			<input type="text" name="Nom" placeholder="Nom" required="required">
+            			<input type="text" name="Prenom" placeholder="Prénom" required="required">
+            			<input type="email" name="Mail" placeholder="Adresse mail" required="required">
+            			<input type="tel" name="Tel" placeholder="Numéro de téléphone" required="required">
+            			<select name="Objet">
 							<optgroup label="Objet du message">
-								<option value="Event">Prestation privée</option>
+								<option value="Prestation privée">Prestation privée</option>
 								<option value="Autre">Autre</option>
 							</optgroup>
 						</select>
             		</div>
             		<div class="rightForm">
-            			<textarea placeholder="Message"></textarea>
+            			<textarea name="Message" placeholder="Message" required="required"></textarea>
             			<input type="submit" name="Envoyer" value="Envoyer">
             		</div>
             	</form>

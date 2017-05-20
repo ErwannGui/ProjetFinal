@@ -13,7 +13,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 						<h2>Ajouter un nouvel aliment</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_menu.php" enctype="multipart/form-data">
 							<input type="text" name="AlimentNom" placeholder="Nom du plat">
 							<input type="text" name="AlimentIngredients" placeholder="Ingrédients (séparés par une virgule)">
 							<input type="number" name="AlimentPrixL" placeholder="Prix L">
@@ -24,7 +24,7 @@
 					</div>
 					<div class="back_bottom_left_content">
 						<h2>Supprimer un menu existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_menu.php" enctype="multipart/form-data">
 							<span class="diff_menus"></span>
 							<span class="diff_menus"></span>
 							<span class="diff_menus"></span>
@@ -37,7 +37,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 						<h2>Ajouter un nouveau menu</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_menu.php" enctype="multipart/form-data">
 							<input type="text" name="MenuNom" placeholder="Nom de la formule">
 							<input type="number" name="MenuPrixL" placeholder="Prix L">
 							<input type="number" name="MenuPrixXL" placeholder="Prix XL">
@@ -76,7 +76,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 						<h2>Ajouter un nouvel article</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_article.php" enctype="multipart/form-data">
 							<input type="text" name="ArticleTitre" placeholder="Titre de l'article">
 							<input type="text" name="ArticleImgSource" placeholder="Source de l'image">
 							<input type="text" name="ArticleAuteur" placeholder="Auteur">
@@ -89,7 +89,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 						<h2>Supprimer un article existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_article.php" enctype="multipart/form-data">
 							<span class="diff_articles"></span>
 							<span class="diff_articles"></span>
 							<span class="diff_articles"></span>
@@ -104,7 +104,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 					<h2>Ajouter un nouveau partenaire</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_partenaire.php" enctype="multipart/form-data">
 							<input type="text" name="PartenaireNom" placeholder="Nom du partenaire">
 							<input type="text" name="PartenaireLogoSource" placeholder="Source du Logo partenaire (si existant)">
 							<input type="text" name="PartenaireAdresse" placeholder="Adresse du partenaire">
@@ -116,7 +116,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 						<h2>Supprimer un partenaire existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_partenaire.php" enctype="multipart/form-data">
 							<span class="diff_partenaires"></span>
 							<span class="diff_partenaires"></span>
 							<span class="diff_partenaires"></span>
@@ -131,7 +131,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 					<h2>Ajouter un collègue</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_equipe.php" enctype="multipart/form-data">
 							<input type="text" name="CollegueNom" placeholder="Nom du collègue">
 							<input type="text" name="ColleguePrenom" placeholder="Prénom du collègue">
 							<input type="text" name="CollegueImgSource" placeholder="Source de l'image de profil">
@@ -143,7 +143,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 						<h2>Supprimer un collègue existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_equipe.php" enctype="multipart/form-data">
 							<span class="diff_collegues"></span>
 							<span class="diff_collegues"></span>
 							<span class="diff_collegues"></span>
@@ -158,7 +158,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 						<h2>Ajouter un nouvel évenement</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_event.php" enctype="multipart/form-data">
 							<input type="text" name="EventTitre" placeholder="Titre de l'évenement">
 							<input type="text" name="EventImgSource" placeholder="Source de l'image">
 							<input type="date" name="EventType" placeholder="Type d'évenement">
@@ -170,7 +170,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 						<h2>Supprimer un évenement existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_event.php" enctype="multipart/form-data">
 							<span class="diff_events"></span>
 							<span class="diff_events"></span>
 							<span class="diff_events"></span>
@@ -185,7 +185,7 @@
 				<div class="back_left_content">
 					<div class="back_top_left_content">
 						<h2>Ajouter un nouveau texte</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_texte.php" enctype="multipart/form-data">
 							<select name="PageText">
 								<optgroup label="Page concernée">
 									<option value="Accueil">Accueil</option>
@@ -202,7 +202,7 @@
 					</div>
 					<div class="back_bottom_left_content">
 						<h2>Modifier un texte existant</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_texte.php" enctype="multipart/form-data">
 							<select name="PageText">
 								<optgroup label="Page concernée">
 									<option value="Accueil">Accueil</option>
@@ -228,7 +228,7 @@
 				<div class="back_right_content">
 					<div class="back_top_right_content">
 					<h2>Ajouter une nouvelle image</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_image.php" enctype="multipart/form-data">
 							<select name="PageImg">
 								<optgroup label="Page concernée">
 									<option value="Accueil">Accueil</option>
@@ -246,7 +246,7 @@
 					</div>
 					<div class="back_bottom_right_content">
 					<h2>Modifier une image existante</h2>
-						<form method="post" action="">
+						<form method="post" action="trait_form_image.php" enctype="multipart/form-data">
 							<select name="PageImg">
 								<optgroup label="Page concernée">
 									<option value="Accueil">Accueil</option>
