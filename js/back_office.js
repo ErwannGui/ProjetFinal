@@ -1,0 +1,53 @@
+/* --- Script header --- */
+$('.btn_back_menu').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_menu').addClass('active');
+});
+$('.btn_back_article').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_article').addClass('active');
+});
+$('.btn_back_partenaire').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_partenaire').addClass('active');
+});
+$('.btn_back_equipe').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_equipe').addClass('active');
+});
+$('.btn_back_evenement').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_evenement').addClass('active');
+});
+$('.btn_back_autre').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_autre').addClass('active');
+});
+$('.btn_back_contact').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_contact').addClass('active');
+});
+$('.btn_back_reseau').click(function(){
+	$('.btn_header_back').removeClass('actif');
+	$(this).addClass('actif');
+	$('.back_content').removeClass('active');
+	$('.back_reseau').addClass('active');
+});
+/* --- Script Contact --- */
+$('.contactMessage').click(function(){
+	$(this).toggleClass('visibleBody');
+});

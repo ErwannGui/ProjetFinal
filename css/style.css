@@ -602,7 +602,7 @@ footer{
     margin-bottom: 1vh;
 }
 
-.back_menu .back_bottom_left_content input[name='Valider'], .back_article .back_top_right_content input[name='Valider'], .back_partenaire .back_top_right_content input[name='Valider'], .back_equipe .back_top_right_content input[name='Valider'], .back_evenement .back_top_right_content input[name='Valider']{
+.back_menu .back_bottom_left_content input[name='btn-suppr_menu'], .back_article .back_top_right_content input[name='btn-suppr_article'], .back_partenaire .back_top_right_content input[name='btn-suppr_partenaire'], .back_equipe .back_top_right_content input[name='btn-suppr_equipe'], .back_evenement .back_top_right_content input[name='btn-suppr_event']{
     margin-left: 8%!important;
 }
 

@@ -92,3 +92,8 @@ text-align: center;
 #back_office textarea{
     height: 60px;
 }
+
+.alert{
+    color: white;
+    font-size: 0.8vw;
+}
