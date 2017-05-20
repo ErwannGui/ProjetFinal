@@ -581,7 +581,7 @@ footer{
     overflow-x: hidden;
 }
 
-.back_content div{
+.back_content:not(.back_contact) div{
     display: inline-block;
     vertical-align: top;
     text-align: left;
@@ -658,6 +658,79 @@ footer{
 .back_reseau span{
     text-transform: uppercase;
 }
+
+
+/*----------------------*/
+/*  BACK-OFFICE-CONTACT */
+/*----------------------*/
+
+.back_contact div{
+    text-align: left;
+}
+
+.contactMessage{
+    width: 90%;
+    height: auto;
+    border: solid 2px black;
+    margin-bottom: 3px;
+    margin-left: 5%;
+}
+
+.contactMessage a, .contactMessage p{
+    color: white!important;
+}
+
+.messageHeader{
+    width: 100%;
+    border-bottom: solid 1px black;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.messageHeaderLeft, .messageHeaderRight{
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 2%;
+    margin: 0;
+    height: 3.5vw;
+    margin-top: -0.5vw;
+}
+
+.messageHeaderLeft p, .messageHeaderRight p{
+    font-size: 1.2vw;
+}
+
+.messageHeaderLeft{
+    width: 35%;
+    border-right: solid 1px black;
+}
+
+.messageHeaderRight{
+    width: 50%;
+}
+
+.visibleBody .messageBody{
+    display: block!important;
+}
+
+.messageBody{
+    display: none;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.messageBodyInfos{
+    width: 100%;
+    height: 30px;
+    font-size: 0.8vw;
+}
+
+.messageBodyContent{
+    width: 100%;
+    height: auto;
+    font-size: 1vw;
+}
+
 
 /*----------------------*/
 /*    FIN BACK-OFFICE   */
