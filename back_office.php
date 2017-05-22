@@ -4,7 +4,7 @@
     include_once 'dbconnect.php';
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 	<head>
 		<title>Back-office</title>
         <meta charset="utf-8"/>
