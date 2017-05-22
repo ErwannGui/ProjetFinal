@@ -122,17 +122,13 @@
                                 <p>19h30 - 22h30</p>
                             </div>
                         </div>
-                        <div class="contactacceuil">
-                            <h2>Informations pratiques</h2>
-                            <p>Mail : chezfifi@contact.com</p>
-                            <p> Tel : 06 - 00 - 00 - 00 - 00 </p>
-                        </div>
                     </div>
                     <div class="Mapacceuil">
                         <p> MAP </p>
                     </div>
             </div>
 		</div>
+        <?php include "infos_comp.php"; ?>
         </div>
         
 		<?php include "footer.php"; ?>

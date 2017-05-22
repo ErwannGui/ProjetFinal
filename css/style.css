@@ -777,6 +777,8 @@ h2 {
 /* Liens de la partie informations */
 #blogInformations a{
     color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* SVG de la partie informations */
@@ -1521,6 +1523,15 @@ th, td {
 /*----------------------*/
 /*      PAGE ARTICLE    */
 /*----------------------*/
+
+#articleTotal{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#articleTitle{
+    
+}
 
 #articleContent{
     width: 40vw;

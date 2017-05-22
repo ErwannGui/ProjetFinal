@@ -6,3 +6,4 @@ Disallow: /bdd
 Disallow: /connection.php
 Disallow: /dbconnect.php
 Disallow: /logout.php
+Disallow: /back_office.php
