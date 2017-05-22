@@ -299,7 +299,7 @@ footer{
 
 
 #backgroundImage{
-    background:url(../images/blog_home.png) fixed;
+    background:url(../images/bg_home.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 80% 100%;
@@ -364,7 +364,6 @@ footer{
     margin-right: 7.5%;
     margin-left: 7.5%;
     line-height: 4vh;
-    padding-top:4%;
     color:#aaa9a9;
 }
 
@@ -403,7 +402,7 @@ h2 {
 .carousel{
     width: 100%;
     filter: brightness(0.5);
-    height:75vh;
+    height:85vh;
 }
 .single-item{
 
