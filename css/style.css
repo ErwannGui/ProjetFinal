@@ -460,7 +460,7 @@ h2 {
     padding: 2% 3% 2% 3%;
     color:white;
     text-transform: uppercase;
-    border-width: 1px;
+    border-width: 2px;
 }
 
 .description > a:hover{
@@ -513,7 +513,7 @@ h2 {
 }
 
 .SvgIntervention svg{
-    width: 33.33%;
+    width: 11%;
     fill: #aaa9a9;
 }
 
