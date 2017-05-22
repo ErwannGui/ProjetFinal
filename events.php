@@ -42,13 +42,19 @@
             </section>
 
             <section class="Interventions">
-                <div class="TeamTitle">
+                <div class="InterTitle">
                     <h2>Interventions</h2>
                 </div>
-                <div class="TeamMembers">
-                    <div class="InterventionBox" id="Intervention01"></div>
-                    <div cl3ass="InterventionBox" id="Intervention02"></div>
-                    <div class="InterventionBox" id="Intervention03"></div>
+                <div class="Inter">
+                    <div class="InterBox" id="Inter01">
+                        <img alt="Logo Distram" title="Distram" src="images/logos/logo-vertical-distram.png">
+                    </div>
+                    <div class="InterBox" id="Inter02">
+                        <img alt="Logo Distram" title="Distram" src="images/logos/logo-vertical-distram.png">
+                    </div>
+                    <div class="InterBox" id="Inter03">
+                        <img alt="Logo Distram" title="Distram" src="images/logos/logo-vertical-distram.png">
+                    </div>
                 </div>
                     
             </section>
