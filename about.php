@@ -39,7 +39,7 @@
                             <h2>Un food-truck, c'est quoi ?</h2>
                         </div>
                         <div class="InfosContainer">
-                            <p>Paragraphe traitant de l'évolution des food-trucks, à Nantes notamment.</p>
+                            <p>Largement inspiré de la street food en provenance des Etats Unis, le food truck est un nouveau concept de restauration nomade qui propose un service de restauration de qualité à emporter à bord d'un camion dit « truck ».</p>
                         </div>
                     </div>
                 </section>

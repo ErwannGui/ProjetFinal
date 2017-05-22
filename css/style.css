@@ -752,6 +752,7 @@ h2 {
     justify-content: center;
     position:relative;
     z-index: 1000;
+    margin-bottom: 4vh;
 }
 
 /* Titres des témoignages */
@@ -855,7 +856,7 @@ h2 {
 }
 
 #AProposBackgroundImage{
-    background:url(../images/bg_apropos.png) fixed;
+    background:url(../images/bg/bg_apropos.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1144,7 +1145,10 @@ h2 {
     align-content: space-around;
 }
 
-#Intervention01{
+.IntroContainer{
+    width: 500px;
+    text-align: center;
+    margin: auto;
     
 }
 
@@ -1398,16 +1402,24 @@ h2 {
     padding: 3px 3px 3px 3px;
     background-color: #A8A8A8;
     margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px white solid;
 }
 
 #menuSetMenuContainerOneBottom, #menuSetMenuContainerTwoBottom, #menuSetMenuContainerThreeBottom{
     text-align: center;
-    padding: 3px 3px 3px 3px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(168,168,168, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
+    min-height: 70vh;
+    border-radius: 10px;
+    border: 3px white solid;
+}
+
+#menuSetMenuContainerOneBottom div, #menuSetMenuContainerTwoBottom div, #menuSetMenuContainerThreeBottom div{
+    margin-top: 20px;
 }
 
 #menuSetMenuContainerOne, #menuSetMenuContainerTwo, #menuSetMenuContainerThree{
@@ -1416,7 +1428,9 @@ h2 {
 
 #menuSetMenuContainerOne span, #menuSetMenuContainerTwo span, #menuSetMenuContainerThree span{
     font-weight: 900;
+    font-size: 17px;
     color: #AA8C64;
+    text-transform: uppercase;
 }
 
 #menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{

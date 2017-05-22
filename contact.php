@@ -27,7 +27,7 @@
             	<div class="adress_table">
             		<div class="day mardi">
             			<h3>Mardi</h3>
-            			<h4>Adresse complète </h4>
+            			<h4>141 Route de Clisson, 44230 Saint-Sébastien-sur-Loire</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
@@ -35,7 +35,7 @@
             		</div>
             		<div class="day mercredi">
             			<h3>Mercredi</h3>
-            			<h4>Adresse complète </h4>
+            			<h4>Boulevard Salvador Allende, 44800 Saint-Herblain</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
@@ -43,7 +43,7 @@
             		</div>
             		<div class="day jeudi">
             			<h3>Jeudi</h3>
-            			<h4>Adresse complète </h4>
+            			<h4>Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
@@ -51,7 +51,7 @@
             		</div>
             		<div class="day vendredi">
             			<h3>Vendredi</h3>
-            			<h4>Adresse complète </h4>
+            			<h4>1 Rue Ordronneau, 44400 Rezé</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
