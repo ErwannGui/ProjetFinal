@@ -221,7 +221,7 @@ header{
 #headerBackContainerTwo{
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 40px;
     text-transform: uppercase;
 }
 
@@ -253,9 +253,13 @@ header{
     text-align: center;
     color: grey;
     position: absolute;
-    bottom: 1.5vh;
+    bottom: 1vh;
     text-transform: uppercase;
     width: 10vw;
+}
+
+#headerBackContainerFour a{
+    font-size: 1.2vw;
 }
 /*----------------------*/
 /*    FIN HEADER BACK   */
@@ -1343,7 +1347,7 @@ h2 {
     height: 30vh;
 }
 
-#containerBack input[name='Valider']{
+#containerBack input[type='submit']{
     width: 25%;
     margin-left: 70%;
 }

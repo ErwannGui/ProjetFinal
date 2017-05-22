@@ -8,7 +8,7 @@
         <div class="btn_header_back btn_back_partenaire "><a>Patenaires</a></div>
         <div class="btn_header_back btn_back_equipe"><a>Equipe</a></div>
         <div class="btn_header_back btn_back_evenement "><a>Evenements</a></div>
-        <div class="btn_header_back btn_back_autre "><a>Autres</a></div>
+        <div class="btn_header_back btn_back_autre "><a>Textes - Images</a></div>
         <div class="btn_header_back btn_back_contact "><a>Contact</a></div>
         <div class="btn_header_back btn_back_reseau "><a>Réseaux</a></div>
     </div>

@@ -6,21 +6,20 @@
         $imgPathArticle = htmlspecialchars($_POST['ArticleImgSource']);
         $authorArticle = htmlspecialchars($_POST['ArticleAuteur']);
         //$dateArticle = htmlspecialchars($_POST['ArticleDate']);
-        $idBis = htmlspecialchars($_POST['ArticleIdBis']);
         $contentArticle = htmlspecialchars($_POST['ArticleContenu']);
 
-        $query = "INSERT INTO texte(texteContenu,textePage,texteIdBis) VALUES('$contentArticle','Actualités','$idBis')";
+        $query = "INSERT INTO texte(texteContenu,textePage) VALUES('$contentArticle','Actualites')";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
-        $query = "INSERT INTO image(imageSource,imagePage,imageIdBis) VALUES('$imgPathArticle','Actualités','$idBis')";
+        $query = "INSERT INTO image(imageSource,imagePage) VALUES('$imgPathArticle','Actualites')";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
-        $query = "SELECT texteId FROM texte WHERE texteIdBis = $idBis";
+        $query = "SELECT texteId FROM texte WHERE texteId = (SELECT MAX(texteId) FROM texte)";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
         $texte = mysql_fetch_array($res);
 		$texteId = $texte['texteId'];
 
-        $query = "SELECT imageId FROM image WHERE imageIdBis = $idBis";
+        $query = "SELECT imageId FROM image WHERE imageId = (SELECT MAX(imageId) FROM image)";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
         $image = mysql_fetch_array($res);
 		$imageId = $image['imageId'];
@@ -34,7 +33,6 @@
             unset($titreArticle);
             unset($imgPathArticle);
             unset($auteurArticle);
-            unset($idBis);
             unset($contentArticle);
         } else {
             $errTyp = "danger";
@@ -59,7 +57,6 @@
 				<input type="text" name="ArticleTitre" placeholder="Titre de l'article">
 				<input type="text" name="ArticleImgSource" placeholder="Source de l'image">
 				<input type="text" name="ArticleAuteur" placeholder="Auteur">
-				<input type="number" name="ArticleIdBis" placeholder="Numéro de l'article (à définir)">
 				<!--<input type="date" name="ArticleDate" placeholder="Date de l'article">-->
 				<textarea name="ArticleContenu" placeholder="Contenu de votre article"></textarea>
 				<input type="submit" name="btn-add_article" value="Valider">
@@ -80,13 +77,25 @@
 				mysql_free_result ($req);
 				//mysql_close ();
 
-				/* --- traitement du formulaire suppression de menu --- */
+				/* --- traitement du formulaire suppression d'article --- */
 			    if(isset($_POST['btn-suppr_article'])) {
 				    if(! $conn ) {
 				        die('Impossible de se connecter a la base de donnée: ' . mysql_error());
 				    }
 
 				    $articleId = $_POST['ArticleId'];
+
+				    $sql = "SELECT texteId,imageId FROM article WHERE articleId = $articleId";
+				    $res = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+				    $texteId_imageId = mysql_fetch_array($res);
+				    $texteId = $texteId_imageId['texteId'];
+					$imageId = $texteId_imageId['imageId'];
+
+					$sql = "DELETE FROM texte WHERE texteId = $texteId" ;
+				    $retval = mysql_query( $sql, $conn );
+
+				    $sql = "DELETE FROM image WHERE imageId = $imageId" ;
+				    $retval = mysql_query( $sql, $conn );
 
 				    $sql = "DELETE FROM article WHERE articleId = $articleId" ;
 				    $retval = mysql_query( $sql, $conn );
