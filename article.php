@@ -9,14 +9,14 @@
     </head>
 
     <body>
-       
+
         <?php $page = 4;
-        include "headerFront.php"; ?>
-        
+            include "headerFront.php"; ?>
+
         <div id="container">
-        
+
             <div id="articleTotal">
-                
+
                 <div id="articleTitle">
                     <h1>L’évolution du marché des food trucks</h1>
                 </div>
@@ -32,19 +32,47 @@
 
                     <p>Aujourd’hui le food truck est en perpétuel mouvement, de nouveaux food truck sont créés chaque semaine avec de nouveaux concepts pour être orignal et ainsi récupérer de nouveaux clients.</p>
                 </div>
-                
+
                 <div id="articleBack">
                     <a href="blog.php">Retour à la liste des articles</a>
                 </div>
-            
-            </div>
+                <div class="blogArticlesArticles">
+                    <a href="article.php">
+                        <div>
+                            <article class="all foodtruck">
+                                <img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck">
+                                <p>Conseils pour bien gérer son food truck</p>
+                            </article>
+                        </div>
+                    </a>
 
-            <?php include "infos_comp.php"; ?>
-            
+                    <a href="article.php">
+                        <div>
+                            <article class="all foodtruck cook">
+                                <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
+                                <p>Etre traiteur en food truck</p>
+                            </article>
+                        </div>
+                    </a>
+
+                    <a href="article.php">
+                        <div>
+                            <article class="all cook">
+                                <img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck">
+                                <p>La cuisine créole : nouvelle à Nantes</p>
+                            </article>
+                        </div>
+                    </a>
+
+                </div>
+
+                <?php include "infos_comp.php"; ?>
+
+            </div>
         </div>
-        
-        <?php include "footer.php"; ?> 
-        
+
+        <?php include "footer.php"; ?>
+
     </body>
-    
+
 </html>

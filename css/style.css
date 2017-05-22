@@ -692,7 +692,7 @@ h2 {
 }
 
 /* Partie qui affiche les articles */
-#blogArticlesArticles{
+.blogArticlesArticles{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -700,24 +700,24 @@ h2 {
 }
 
 /* Gérer chaque article */
-#blogArticlesArticles a{
+.blogArticlesArticles a{
     margin: 15px 10px 15px 10px;
     background-color: white;
     border-radius: 10px;
 }
 
 /* Hover des images des articles */
-#blogArticlesArticles img:hover{
+.blogArticlesArticles img:hover{
     filter: brightness(70%);
 }
 
-#blogArticlesArticles img{
+.blogArticlesArticles img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 /* Titre des articles    */
-#blogArticlesArticles p{
+.blogArticlesArticles p{
     margin-left: 20px;
     max-width: 250px;
     text-align: center;
@@ -1398,6 +1398,7 @@ h2 {
 
 #menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
     font-size: 20px;
+    color: #AA8C64;
 }
 
 #menuBoardContainer{
@@ -1545,6 +1546,10 @@ th, td {
     width: 40vw;
     text-align: center;
     margin: auto;
+}
+
+#articleBack{
+    
 }
 
 /*----------------------*/
