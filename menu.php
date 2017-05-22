@@ -45,7 +45,7 @@
                         <div id="menuSetMenuContainerOneBottom">
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - curi poulet</p>
+                                <p>rougail saucisse - cari poulet</p>
                             </div>
                             <div>
                                 <p><span>Boisson :</span></p>
@@ -67,7 +67,7 @@
                             </div>
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - curi poulet</p>
+                                <p>rougail saucisse - cari poulet</p>
                             </div>
                             <div>    
                                 <p><span>Dessert :</span></p>
@@ -93,7 +93,7 @@
                             </div>
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - curi poulet</p>
+                                <p>rougail saucisse - cari poulet</p>
                             </div>
                             <div>
                                 <p><span>Dessert :</span></p>
@@ -139,7 +139,7 @@
                             <td class="menuBoardBoardTD">9€</td>
                         </tr>
                         <tr>
-                            <td>Curi</td>
+                            <td>Cari</td>
                             <td class="menuBoardBoardTD">7€</td>
                             <td class="menuBoardBoardTD">9€</td>
                         </tr>
