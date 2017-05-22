@@ -40,7 +40,7 @@
                 </div>
 
 
-                <div id="blogArticlesArticles">
+                <div class="blogArticlesArticles">
                     <a href="article.php">
                         <div>
                             <article class="all foodtruck">
