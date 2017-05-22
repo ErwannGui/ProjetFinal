@@ -125,10 +125,8 @@
                             </div>
                         </div>
                     </div>
-                    <section class="map">
-                        <div id="map">
+                        <div id="map" class="index-map">
                         </div>
-                    </section>
 
             </div>
 		</div>
