@@ -1152,16 +1152,14 @@ h2 {
 
 #EventsBackgroundImage{
     background:url(../images/bg/bg_events.png) fixed;
-    background-position: 100% 50%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     filter: brightness(50%);    
     height: 100vh; 
 }
 
 .Intro, .Interventions{
     width: 100%;
-    
     text-align: center;
     position:relative;
     z-index: 1000;
@@ -1179,14 +1177,17 @@ h2 {
     padding: 0px;
 }
 
-#IntroBloc svg{
+.Intro svg{
     stroke: grey;
     fill: #A98C64;
     padding-bottom: 30px;
+    width: 8vw;
+    height: 8vw;
 }
 
 .Interventions{
     background-color: #A98C64;
+    margin-top: -42.5px;
 }
 
 .InterBox{
@@ -1207,7 +1208,6 @@ h2 {
 .Inter{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
     border-style: dotted;
     border-width: thin;
     border-color: aliceblue;
