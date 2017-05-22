@@ -39,7 +39,7 @@
                             <h2>Un food-truck, c'est quoi ?</h2>
                         </div>
                         <div class="InfosContainer">
-                            <p>Paragraphe traitant de l'évolution des food-trucks, à Nantes notamment.</p>
+                            <p>Largement inspiré de la street food en provenance des Etats Unis, le food truck est un nouveau concept de restauration nomade qui propose un service de restauration de qualité à emporter à bord d’un camion dit « truck ».</p>
                         </div>
                     </div>
                 </section>
@@ -51,27 +51,35 @@
                         </div>
                         <div class="PartnersContainer">
                             <div class="PartnersBox" id="Partner01">
+                                <img alt="Logo Bourbon La Dodo" title="Bourbon La Dodo" src="images/logos/bourbon.png">
                                 <p>01 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner02">
+                                <img alt="Logo La petite ferme" title="La Petite Ferme" src="images/logos/Ferme.png">
                                 <p>02 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner03">
+                                <img alt="Logo Curé Nantais" title="Curé nantais" src="images/logos/curenantais.png">
                                 <p>03 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner04">
+                                <img alt="Logo Coca Cola" title="Coca Cola" src="images/logos/coca.png">
                                 <p>04 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner05">
+                                <img alt="Logo l'effet Péi" title="L'Effet Péi" src="images/logos/leffet-pei.png">
                                 <p>05 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner06">
+                                <img alt="Logo Écologie Réunion" title="Écologie Réunion" src="images/logos/ecolo_reunion.png">
                                 <p>06 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner07">
+                                <img alt="Logo Distram" title="Distram" src="images/logos/logo-vertical-distram.png">
                                 <p>07 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                             <div class="PartnersBox" id="Partner08">
+                                <img alt="Logo MIN de Nantes" title="MIN de Nantes" src="images/logos/min_nantes.png">
                                 <p>08 Texte descriptif apparaissant au passage de la souris</p>
                             </div>
                         </div>
@@ -79,18 +87,25 @@
                 </section>
 
                 <section class="Team">
-                    <div class="TeamBloc">
+                    
                         <div class="TeamTitle">
                             <h2>L'équipe</h2>
                         </div>
                         <div class="TeamMembers">
-                            <div class="TeamMembersBox" id="TeamMembers01"></div>
-                            <div class="TeamMembersBox" id="TeamMembers02"></div>
-                            <div class="TeamMembersBox" id="TeamMembers03"></div>
-                            <div class="TeamMembersBox" id="TeamMembers04"></div>
+                            <div class="TeamMembersBox" id="TeamMembers01">
+                                <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntonin.jpg">
+                            </div>
+                            <div class="TeamMembersBox" id="TeamMembers02">
+                                <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwann.jpg">
+                            </div>
+                            <div class="TeamMembersBox" id="TeamMembers03">
+                                <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffrey.jpg">
+                            </div>
+                            <div class="TeamMembersBox" id="TeamMembers04">
+                                <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentin.jpg">
+                            </div>
                         </div>
-                    </div>
-                    
+                                    
                 </section>
                 <?php include "infos_comp.php"; ?>
             </div>
