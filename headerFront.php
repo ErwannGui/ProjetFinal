@@ -3,7 +3,7 @@
     <div id="headerFrontContainerTotal">
         
         <div id="headerFrontContainerOne">
-            <img src="images/logo.png" alt="logo" title="Logo Chez Fifi">
+            <a href="index.php"><img src="images/logo.png" alt="logo" title="Logo Chez Fifi"></a>
         </div>
             <?php
             $link1 = '';

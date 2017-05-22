@@ -1392,6 +1392,7 @@ h2 {
 
 #menuSetMenuContainerOne span, #menuSetMenuContainerTwo span, #menuSetMenuContainerThree span{
     font-weight: 900;
+    color: #AA8C64;
 }
 
 #menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
