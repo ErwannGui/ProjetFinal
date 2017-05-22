@@ -33,7 +33,7 @@ body{
 
 /* Image de fond accueil */
 #backgroundImage{
-    background:url(../images/bg_home.png) fixed;
+    background:url(../images/bg/bg_home.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 80% 100%;
@@ -385,6 +385,10 @@ h2 {
     z-index:10000;
 }
 
+.top img{
+    width: 40px;
+}
+
 .top:hover {
     filter: alpha(opacity = 100); /* IE < 8 */
     opacity: 1;
@@ -502,8 +506,9 @@ h2 {
     width:100%;
 }
 
-.SvgIntervention > img{
+.SvgIntervention svg{
     width: 33.33%;
+    fill: #aaa9a9;
 }
 
 .TextIntervention{
@@ -619,7 +624,7 @@ h2 {
 
 /* Image de fond accueil */
 #blogBackgroundImage{
-    background:url(../images/bg_blog.png) fixed;
+    background:url(../images/bg/bg_actu.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 80% 100%;
@@ -1329,7 +1334,7 @@ h2 {
 
 /* Image de fond accueil */
 #menuBackgroundImage{
-    background:url(../images/bg_menu.png) fixed;
+    background:url(../images/bg/bg_menu.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 80% 100%;
@@ -1345,6 +1350,7 @@ h2 {
 #menuSetMenu{
     background-color: #313539;
     padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
     z-index: 50;
 }
