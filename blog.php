@@ -92,7 +92,7 @@
                                 <img src="images/testimonials/testimonyOne.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
-                                <h3>Vald</h3>
+                                <h3>Christelle</h3>
                                 <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
@@ -105,11 +105,11 @@
                                 <img src="images/testimonials/testimonyTwo.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
-                                <h3>Lorenzo</h3>
-                                <h4>Le 18/05/2017</h4>
+                                <h3>Jacques</h3>
+                                <h4>Le 22/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
+                        <p>"Habitué depuis peu j'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l'accueil parfaite, les serveurs sont plus qu'agréable !"</p>
                     </div>
                     
                     <div>
@@ -118,11 +118,11 @@
                                 <img src="images/testimonials/testimonyThree.jpg" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
-                                <h3>Columbine</h3>
+                                <h3>Léo</h3>
                                 <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
+                        <p>"Je vous recommande le food truck "Chez Fifi", placé à côté de mon lycée une fois par semaine. Je mange la formule à 6€ qui est dans mes moyens étudiants."</p>
                     </div>
                 </div>
             </div>

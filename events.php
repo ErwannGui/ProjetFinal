@@ -15,7 +15,7 @@
         <script src="js/filtrage.js"></script>-->
 
         <?php 
-            $page = 3;
+            $page = 2;
             include "headerFront.php"; 
         ?>
 
@@ -35,7 +35,7 @@
             <section class="Intro">
                 <div id="IntroBloc">
                     <div class="IntroContainer">
-                        <p>Explication de nos interventions</p>
+                        <p>Chez Fifi est un Food Truck proposant une offre à partir de produits frais, locaux et réunionnais. Pour vos événements nous élaborons avec vous une offre sur mesure: rougails saucisses, cari de poulet ... Notre camion au design original, notre cuisine faite maison et la qualité des produits utilisés laisseront un souvenir visuel et gustatif à vos convives. Ainsi si vous êtes intéressés par nos prestations de traiteur, n'hésitez plus pour apporter originalité et goût à votre réception, optez pour notre camion ! Pour permettre que cet évènement soit la plus belle des fêtes, et ce jusque dans vos assiettes!</p>
                     </div>
                         
                 </div>

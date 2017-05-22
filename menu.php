@@ -37,48 +37,72 @@
                     
                     <div id="menuSetMenuContainerOne">
                         <div id="menuSetMenuContainerOneTop">
-                            <p><strong>Formule 1 : 6€</strong></p>
+                            <p><strong>-- FORMULE 1 --</strong></p>
                             <p>Plat + boisson</p>
+                            <p>6€</p>
+                            <p>Disponibilité : midi et soir</p>
                         </div>
                         <div id="menuSetMenuContainerOneBottom">
-                            <p>Disponibilité : midi et soir</p>
-                            <p><span>Plat :</span></p>
-                            <p>rougail saucisse - carry poulet</p>
-                            <p><span>Boisson :</span></p>
-                            <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            <div>
+                                <p><span>Plat :</span></p>
+                                <p>rougail saucisse - carry poulet</p>
+                            </div>
+                            <div>
+                                <p><span>Boisson :</span></p>
+                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            </div>
                         </div>
                     </div>
                     <div id="menuSetMenuContainerTwo">
                         <div id="menuSetMenuContainerTwoTop">
-                            <p><strong>Formule 2 : 8 ou 10€</strong></p>
+                            <p><strong>-- FORMULE 2 --</strong></p>
                             <p>Plat + entrée ou dessert + boisson (L ou XL)</p>
+                            <p>8€ - 10€</p>
+                            <p>Disponibilité : midi et soir</p>
                         </div>
                         <div id="menuSetMenuContainerTwoBottom">
-                            <p>Disponibilité : midi et soir</p>
-                            <p><span>Entrée :</span></p>
-                            <p>samossa et bonbons piment</p>
-                            <p><span>Plat :</span></p>
-                            <p>rougail saucisse - carry poulet</p>
-                            <p><span>Dessert :</span></p>
-                            <p>pâtisserie - fruits créole (litchi et mangue)</p>
-                            <p>Boisson : eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            <div>
+                                <p><span>Entrée :</span></p>
+                                <p>samossa et bonbons piment</p>
+                            </div>
+                            <div>
+                                <p><span>Plat :</span></p>
+                                <p>rougail saucisse - carry poulet</p>
+                            </div>
+                            <div>    
+                                <p><span>Dessert :</span></p>
+                                <p>pâtisserie - fruits créole (litchi et mangue)</p>
+                            </div>
+                            <div>
+                                <p><span>Boisson :</span></p>
+                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            </div>
                         </div>
                     </div>
                     <div id="menuSetMenuContainerThree">
                         <div id="menuSetMenuContainerThreeTop">
-                            <p><strong>Formule 3 : 12 ou 15€</strong></p>
+                            <p><strong>-- FORMULE 3 --</strong></p>
                             <p>Entrée + plat + dessert + boisson (L ou XL)</p>
+                            <p>12€ - 15€</p>
+                            <p>Disponibilité : soir</p>
                         </div>
                         <div id="menuSetMenuContainerThreeBottom">
-                            <p>Disponibilité : soir</p>
-                            <p><span>Entrée :</span></p>
-                            <p>samossa et bonbons piment</p>
-                            <p><span>Plat :</span></p>
-                            <p>rougail saucisse - carry poulet</p>
-                            <p><span>Dessert :</span></p>
-                            <p>pâtisserie - fruits créole (litchi et mangue)</p>
-                            <p><span>Boisson :</span></p>
-                            <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            <div>
+                                <p><span>Entrée :</span></p>
+                                <p>samossa et bonbons piment</p>
+                            </div>
+                            <div>
+                                <p><span>Plat :</span></p>
+                                <p>rougail saucisse - carry poulet</p>
+                            </div>
+                            <div>
+                                <p><span>Dessert :</span></p>
+                                <p>pâtisserie - fruits créole (litchi et mangue)</p>
+                            </div>
+                            <div>
+                                <p><span>Boisson :</span></p>
+                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            </div>
                         </div>
                     </div>
                     

@@ -26,12 +26,7 @@
             </div>
             <div class="index-container">
                 <div class="text-container" id="scroll_ancre">
-                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                            varius laoreet. </p>
+                    <p>Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l'île de la Réunion.</p>
                 </div>
                 <div class="image-container">
                     <div class="single-item">
@@ -51,17 +46,15 @@
                        <img src="images/index/pic_BouchonGratine.png">
                        <div class="description">
                            <h3> BOUCHON GRATINE</h3>
-                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                           parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
-                           <a href="#"> En savoir plus </a>
+                           <p>Un bouchon est une petite bouchée de viande de porc ou de poulet entourée de pâte cuite à la vapeur que l'on sert généralement en tant qu'apéritif chaud sur l'île de La Réunion, département d'outre-mer français dans l'océan Indien.</p>
+                           <a href="menu.php"> En savoir plus</a>
                        </div>
                     </div>
                     <div class="rougail">
                         <div class="description">
                             <h3> ROUGAIL SAUCISSE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
-                            <a href="#"> En savoir plus </a>
+                            <p>Le Rougail saucisse est un plat traditionnelle réunionnais, à base de saucisses créoles souvent fumées artisanales ou encore fraîches. Celles-ci sont ensuite coupées en morceaux, accompagnées de riz et de rougail (tomates coupées en petits dés, gingembre pilé, oignons émincés et piments).</p>
+                            <a href="menu.php"> En savoir plus </a>
                         </div>
                         <img src="images/index/pic_rougail.png">
 
@@ -78,12 +71,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 16 20" enable-background="new 0 0 16 16" xml:space="preserve"><g><path d="M11.381,1.6C8.853,1.6,8,3.845,8,3.845S7.148,1.6,4.619,1.6c-2.528,0-4.051,2.41-4.051,4.397   C0.567,11.652,8,14.4,8,14.4s7.433-2.748,7.433-8.403C15.433,4.01,13.91,1.6,11.381,1.6z"/></g></svg>
                     </div>
                     <div class="TextIntervention">
-                        <p> porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                            varius laoreet.porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                            varius laoreet.porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                            varius laoreet.porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                            varius laoreet.</p>
-                        <a href="#"> En savoir plus</a>
+                        <p>Chez Fifi vous propose ses services pour vos évènements privés tels que des mariages, communions, anniversaires ou fêtes en tout genre. Vous pouvez ainsi profiter d’une carte concoctée à l’aide de produits de qualité tout en ayant un budget moins élevé qu’un traiteur traditionnel. Cela garanti aussi une ambiance plus conviviale qu'un traiteur traditionnel avec des petites animations avec le food truck.</p>
+                        <a href="events.php"> En savoir plus</a>
                     </div>
                 </div>
                 <div class="information">
@@ -91,7 +80,7 @@
                         <div class="journéeacceuil">
                             <div class="détails">
                                 <p class="jouracceuil">Mardi</p>
-                                <p class="adresseacceuil">8 boulevard des Pas Enchantés 44200 Nantes</p>
+                                <p class="adresseacceuil">141 Route de Clisson, 44230 Saint-Sébastien-sur-Loire</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
@@ -99,15 +88,17 @@
                             </div>
                             <div class="détails">
                                 <p class="jouracceuil">Mercredi</p>
-                                <p class="adresseacceuil">20 Boulevard De Gaules 44200 Nantes</p>
+                                <p class="adresseacceuil">Boulevard Salvador Allende, 44800 Saint-Herblain</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
                                 <p>19h30 - 22h30</p>
                             </div>
+                        </div>
+                        <div class="journéeacceuil">
                             <div class="détails">
                                 <p class="jouracceuil">Jeudi</p>
-                                <p class="adresseacceuil">Adresse Compléte</p>
+                                <p class="adresseacceuil">Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
@@ -115,7 +106,7 @@
                             </div>
                             <div class="détails">
                                 <p class="jouracceuil">Vendredi</p>
-                                <p class="adresseacceuil">Adresse Compléte</p>
+                                <p class="adresseacceuil">1 Rue Ordronneau, 44400 Rezé</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
@@ -123,12 +114,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="Mapacceuil">
-                        <p> MAP </p>
-                    </div>
+                        <div id="map" class="index-map">
+                        </div>
+
             </div>
 		</div>
+            <div class="Coordonnees">
         <?php include "infos_comp.php"; ?>
+            </div>
         </div>
         
 		<?php include "footer.php"; ?>
@@ -137,6 +130,7 @@
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/retourenhaut.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/map_contact.js"></script>
 
 	</body>
 </html>

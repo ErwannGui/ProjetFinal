@@ -441,18 +441,25 @@ h2 {
 
 .description > h3 {
     color: white;
-    padding-bottom: 6%;
-    padding-top:8%;
+    padding-bottom: 4%;
+    padding-top:4%;
+    margin:0;
 }
 
 .description{
     text-align: center;
     width:40vw;
     padding: 0% 4% 0% 4%;
+    height:40vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description > p{
-    padding-bottom: 6%;
+    padding-bottom: 3%;
+    margin:0;
 }
 
 .description > a{
@@ -460,7 +467,7 @@ h2 {
     padding: 2% 3% 2% 3%;
     color:white;
     text-transform: uppercase;
-    border-width: 1px;
+    border-width: 2px;
 }
 
 .description > a:hover{
@@ -513,7 +520,7 @@ h2 {
 }
 
 .SvgIntervention svg{
-    width: 33.33%;
+    width: 11%;
     fill: #aaa9a9;
 }
 
@@ -563,14 +570,18 @@ h2 {
 .journéeacceuil{
     display:flex;
     justify-content: center;
+    width: 40vw;
+    height: 35vh;
 }
 
 .détails{
-    width: 25%;
-    padding-right: 3%;
+    width: 15vw;
+    padding: 3% 3% 3% 3%;
     border-style: ridge;
-    margin-right: 1%;
+    margin-right: 8%;
     border-width: 2px;
+    margin-bottom: 3%;
+    margin-left: 3%;
  }
 
 .détails>p{
@@ -615,6 +626,11 @@ h2 {
     font-weight:bold;
     font-size: 1.2em;
     color:#aaa9a9;
+}
+
+.index-map{
+    height:67.6vh!important;
+    margin-right:2%;
 }
 
 
@@ -736,6 +752,7 @@ h2 {
     justify-content: center;
     position:relative;
     z-index: 1000;
+    margin-bottom: 4vh;
 }
 
 /* Titres des témoignages */
@@ -839,7 +856,7 @@ h2 {
 }
 
 #AProposBackgroundImage{
-    background:url(../images/bg_apropos.png) fixed;
+    background:url(../images/bg/bg_apropos.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1159,7 +1176,10 @@ h2 {
     align-content: space-around;
 }
 
-#Intervention01{
+.IntroContainer{
+    width: 500px;
+    text-align: center;
+    margin: auto;
     
 }
 
@@ -1302,7 +1322,7 @@ h2 {
 .contactMessage{
     width: 90%;
     height: auto;
-    border: solid 2px black;
+    border: solid 2px grey;
     margin-bottom: 3px;
     margin-left: 5%;
 }
@@ -1313,7 +1333,7 @@ h2 {
 
 .messageHeader{
     width: 100%;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px grey;
     overflow: hidden;
     cursor: pointer;
 }
@@ -1333,7 +1353,7 @@ h2 {
 
 .messageHeaderLeft{
     width: 35%;
-    border-right: solid 1px black;
+    border-right: solid 1px grey;
 }
 
 .messageHeaderRight{
@@ -1413,16 +1433,24 @@ h2 {
     padding: 3px 3px 3px 3px;
     background-color: #A8A8A8;
     margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px white solid;
 }
 
 #menuSetMenuContainerOneBottom, #menuSetMenuContainerTwoBottom, #menuSetMenuContainerThreeBottom{
     text-align: center;
-    padding: 3px 3px 3px 3px;
+    padding: 20px 20px 20px 20px;
     background-color: rgba(168,168,168, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
+    min-height: 70vh;
+    border-radius: 10px;
+    border: 3px white solid;
+}
+
+#menuSetMenuContainerOneBottom div, #menuSetMenuContainerTwoBottom div, #menuSetMenuContainerThreeBottom div{
+    margin-top: 20px;
 }
 
 #menuSetMenuContainerOne, #menuSetMenuContainerTwo, #menuSetMenuContainerThree{
@@ -1431,7 +1459,9 @@ h2 {
 
 #menuSetMenuContainerOne span, #menuSetMenuContainerTwo span, #menuSetMenuContainerThree span{
     font-weight: 900;
+    font-size: 17px;
     color: #AA8C64;
+    text-transform: uppercase;
 }
 
 #menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
@@ -1512,20 +1542,21 @@ th, td {
 }
 
 .day{
-    width: 180px;
+    width: 12vw;
     border: solid 3px;
     display: inline-block;
-    height: 17.5vw;
+    height: 22vw;
     color: white;
     text-align: left;
     padding-left: 1vw;
     vertical-align: top;
     margin-bottom: 1vh;
     font-size: 1.1vw;
+
 }
 
 .week-end{
-    width: 360px;
+    width: 24vw;
 }
 
 #map{
