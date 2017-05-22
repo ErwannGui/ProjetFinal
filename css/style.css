@@ -425,7 +425,6 @@ h2 {
 .image-container{
     display: flex;
     justify-content: center;
-    margin-bottom: -1%;
 }
 
 .bouchons{
@@ -514,7 +513,7 @@ h2 {
 }
 
 .SvgIntervention svg{
-    width: 10%;
+    width: 33.33%;
     fill: #aaa9a9;
 }
 
@@ -698,7 +697,7 @@ h2 {
 }
 
 /* Partie qui affiche les articles */
-.blogArticlesArticles{
+#blogArticlesArticles{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -706,24 +705,24 @@ h2 {
 }
 
 /* Gérer chaque article */
-.blogArticlesArticles a{
+#blogArticlesArticles a{
     margin: 15px 10px 15px 10px;
     background-color: white;
     border-radius: 10px;
 }
 
 /* Hover des images des articles */
-.blogArticlesArticles img:hover{
+#blogArticlesArticles img:hover{
     filter: brightness(70%);
 }
 
-.blogArticlesArticles img{
+#blogArticlesArticles img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 /* Titre des articles    */
-.blogArticlesArticles p{
+#blogArticlesArticles p{
     margin-left: 20px;
     max-width: 250px;
     text-align: center;
@@ -1064,7 +1063,7 @@ h2 {
 }
 
 #TeamMembers01{
-    content:url(../images/pics/ProfilAntonin.jpg);
+    content:url(../images/pics/ProfilGeoffrey.jpg);
 }
 
 #TeamMembers01:hover{
@@ -1072,7 +1071,7 @@ h2 {
 }
 
 #TeamMembers02{
-    content:url(../images/pics/ProfilErwann.jpg);
+    content:url(../images/pics/ProfilGeoffrey.jpg);
 }
 
 #TeamMembers02:hover{
@@ -1088,7 +1087,7 @@ h2 {
 }
 
 #TeamMembers04{
-    content:url(../images/pics/ProfilQuentin.jpg);
+    content:url(../images/pics/ProfilGeoffrey.jpg);
 }
 
 #TeamMembers04:hover{
@@ -1406,7 +1405,6 @@ h2 {
 
 #menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
     font-size: 20px;
-    color: #AA8C64;
 }
 
 #menuBoardContainer{
@@ -1547,17 +1545,26 @@ th, td {
 }
 
 #articleTitle{
-    
+    margin-bottom: 10vh;
 }
 
 #articleContent{
     width: 40vw;
     text-align: center;
     margin: auto;
+    margin-bottom: 15vh;
 }
 
 #articleBack{
-    
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    width: 30%;
+    margin: auto;
+}
+
+#articleBack:hover{
+    background-color: #C3C3C3;
 }
 
 /*----------------------*/

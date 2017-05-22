@@ -15,7 +15,7 @@
         <script src="js/filtrage.js"></script>-->
 
         <?php 
-            $page = 2;
+            $page = 3;
             include "headerFront.php"; 
         ?>
 
