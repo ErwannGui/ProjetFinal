@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 $(document).ready(function() {
     $('.js-scroll').on('click', function() {
         var page = $(this).attr('href');
@@ -6,4 +7,14 @@ $(document).ready(function() {
         }, speed ); 
         return false;
     });
+=======
+$('a[href^="#"]').click(function(){
+    var the_id = $(this).attr('href');
+    var slow = 700;
+    
+    $('html, body').animate({
+        scrollTop:$(the_id).offset().top -100
+    }, slow);
+    
+>>>>>>> Stashed changes
 });

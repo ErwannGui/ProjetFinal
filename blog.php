@@ -41,7 +41,7 @@
 
 
                 <div id="blogArticlesArticles">
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all foodtruck">
                                 <img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck">
@@ -50,7 +50,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all foodtruck cook">
                                 <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
@@ -59,7 +59,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all cook">
                                 <img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck">
@@ -68,7 +68,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all foodtruck">
                                 <img src="images/articles/articleFour.jpg" alt="Food truck" title="Food truck">
@@ -77,7 +77,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all foodtruck">
                                 <img src="images/articles/articleFive.jpg" alt="Food truck" title="Food truck">
@@ -86,7 +86,7 @@
                         </div>
                     </a>
                     
-                    <a href="#">
+                    <a href="article.php">
                         <div>
                             <article class="all foodtruck">
                                 <img src="images/articles/articleSix.jpg" alt="Food truck" title="Food truck">
@@ -116,7 +116,7 @@
                                 <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet venenatis mauris sed posuere. Phasellus ut hendrerit mi, eu dignissim ligula. Cras fermentum lacus metus, vel facilisis mauris blandit vitae."</p>
+                        <p>"Merci à "Chez Fifi" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus."</p>
                     </div>
                     
                     <div>

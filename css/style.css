@@ -363,10 +363,10 @@ footer{
 
 /* Boutons pour changer de catégorie */
 .category{
-   	border:none;
-	padding:6px 10px 6px 10px;
-	background:#ffffff;
-	color:#555; 
+   	border: none;
+	padding: 6px 10px 6px 10px;
+	background: #ffffff;
+	color: #555; 
     border-radius: 5px;
     width: 100px;
 }
@@ -387,11 +387,17 @@ footer{
 #blogArticlesArticles a{
     margin: 15px 10px 15px 10px;
     background-color: white;
+    border-radius: 10px;
 }
 
 /* Hover des images des articles */
 #blogArticlesArticles img:hover{
     filter: brightness(70%);
+}
+
+#blogArticlesArticles img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Titre des articles    */
@@ -401,6 +407,7 @@ footer{
     text-align: center;
 }
 
+/* Partie témoignages */
 #blogTestimony{
     z-index: 10;
     display: flex;
@@ -410,17 +417,20 @@ footer{
     z-index: 1000;
 }
 
+/* Titres des témoignages */
 #blogTestimonyTitle{
     text-align: center;
     margin-top: 4vh;
 }
 
+/* Flexbox pour les témoignages */
 #blogTestimonyTestimonials{
     display: flex;
     justify-content: space-around;
     margin-top: 4vh;
 }
 
+/* Paragraphes des témoignages */
 #blogTestimonyTestimonials p{
     font-size: 15px;
     font-family: 'Indie Flower', cursive;
@@ -433,12 +443,14 @@ footer{
     text-align: justify;
 }
 
+/* Images des témoignages */
 #blogTestimonyTestimonials img{
     width: 10vw;
     height: 10vw;
     border-radius: 30px;
 }
 
+/* Partie informations */
 #blogInformations{
     display: flex;
     flex-direction: column;
@@ -452,15 +464,18 @@ footer{
     text-align: center;
 }
 
+/* Liens de la partie informations */
 #blogInformations a{
     color: white;
 }
 
+/* SVG de la partie informations */
 #blogInformations svg{
     fill: white;
     height: 4vh;
 }
 
+/* Aligner nom date et image */
 .blogTestimonyTestimonialsImage{
     display: flex;
     justify-content: space-between;
@@ -741,7 +756,7 @@ footer{
 /*----------------------*/
 
 /* Image de fond accueil */
-#menusBackgroundImage{
+#menuBackgroundImage{
     background:url(../images/bg_menu.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
@@ -750,8 +765,94 @@ footer{
     height: 100vh; 
 }
 
-#menusBackground img{
+#menuBackground img{
     position: relative;
+}
+
+/* Div contenant toute la partie des formules */
+#menuSetMenu{
+    background-color: #313539;
+    padding-top: 30px;
+    position: relative;
+    z-index: 50;
+}
+
+/* Titre de la partie formules */
+#menuSetMenuTitle{
+    color: white;
+    text-align: center;
+    margin-bottom: 4.5vh;
+}
+
+/* Aligner les menus : flexbox */
+#menuSetMenuContainer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+#menuSetMenuContainerOneTop, #menuSetMenuContainerTwoTop, #menuSetMenuContainerThreeTop{
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: #A8A8A8;
+    margin-bottom: 20px;
+}
+
+#menuSetMenuContainerOneBottom, #menuSetMenuContainerTwoBottom, #menuSetMenuContainerThreeBottom{
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    background-color: rgba(168,168,168, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+}
+
+#menuSetMenuContainerOne, #menuSetMenuContainerTwo, #menuSetMenuContainerThree{
+    padding: 15px 15px 15px 15px;
+}
+
+#menuSetMenuContainerOne span, #menuSetMenuContainerTwo span, #menuSetMenuContainerThree span{
+    font-weight: 900;
+}
+
+#menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
+    font-size: 20px;
+}
+
+#menuBoardContainer{
+    position:relative;
+    padding-bottom: 4.5vh;
+}
+
+#menuBoardTitle{
+    text-align: center;
+    margin-bottom: 4.5vh;
+}
+
+#menuBoardBoard{
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    border: 1px black solid;
+}
+
+table tr:nth-child(odd){
+    background-color: #D3D3D3;
+}
+
+td.menuBoardBoardTD{
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border: 1px black solid;
 }
 
 /*----------------------*/
@@ -842,6 +943,21 @@ footer{
     width: 100px;
     margin-left: 400px;
 }
+
 /*----------------------*/
 /*      FIN CONTACT     */
+/*----------------------*/
+
+/*----------------------*/
+/*      PAGE ARTICLE    */
+/*----------------------*/
+
+#articleContent{
+    width: 40vw;
+    text-align: center;
+    margin: auto;
+}
+
+/*----------------------*/
+/*  FIN PAGE ARTICLE    */
 /*----------------------*/
