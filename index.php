@@ -105,6 +105,8 @@
                                 <p class="Soiracceuil">Soir :</p>
                                 <p>19h30 - 22h30</p>
                             </div>
+                        </div>
+                        <div class="journéeacceuil">
                             <div class="détails">
                                 <p class="jouracceuil">Jeudi</p>
                                 <p class="adresseacceuil">Adresse Compléte</p>
@@ -123,12 +125,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="Mapacceuil">
-                        <p> MAP </p>
-                    </div>
+                        <div id="map" class="index-map">
+                        </div>
+
             </div>
 		</div>
+            <div class="Coordonnees">
         <?php include "infos_comp.php"; ?>
+            </div>
         </div>
         
 		<?php include "footer.php"; ?>
@@ -137,6 +141,7 @@
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/retourenhaut.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/map_contact.js"></script>
 
 	</body>
 </html>
