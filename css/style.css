@@ -293,6 +293,8 @@ footer{
 /*      INDEX           */
 /*----------------------*/
 
+
+/* Image de fond acceuil*/
 #indexBackground img{
     position: relative;
 }
@@ -307,6 +309,7 @@ footer{
     height: 100vh;
 }
 
+/* Texte sur l'image de fond */
 #indexBackgroundTitle{
     position: fixed;
     text-align: center;
@@ -333,25 +336,14 @@ footer{
     fill: white;
 }
 
-/* Conteneur principal pour les articles */
-#indexArticles{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #313539;
-    margin-top: -5px;
-    position:relative;
-    z-index: 1000;
-    padding-bottom: 4vh;
-}
-
-
+/* Conteneur principal pour la page acceuil */
 .index-container{
     margin-top: -5px;
     position:relative;
     z-index: 1000;
 }
 
+/* Conteneur du texte de présentation*/
 .text-container{
     background-color: #313539;
     text-align: center;
@@ -360,6 +352,7 @@ footer{
     color: white;
 }
 
+/* Le texte de présentation*/
 .text-container>p{
     margin-right: 7.5%;
     margin-left: 7.5%;
@@ -367,6 +360,7 @@ footer{
     color:#aaa9a9;
 }
 
+/*taille du titre h2*/
 h2 {
     font-size: 2em;
 }
@@ -403,6 +397,7 @@ h2 {
     z-index:2;
 }
 
+/*Image du carrousel*/
 .carousel{
     width: 100%;
     filter: brightness(0.5);
@@ -427,6 +422,7 @@ h2 {
     justify-content: center;
 }
 
+/* Conteneur de l'image et texte du bouchon gratiné*/
 .bouchons{
     background-color: #24292d;
     display: flex;
@@ -434,11 +430,13 @@ h2 {
     height:auto;
 }
 
+/* Taille et largeur de l'image bouchon gratiné*/
 .bouchons> img{
     width:40vw;
     height:40vh;
 }
 
+/*Le titre h3*/
 .description > h3 {
     color: white;
     padding-bottom: 4%;
@@ -446,6 +444,7 @@ h2 {
     margin:0;
 }
 
+/* le conteneur des deux descriptions*/
 .description{
     text-align: center;
     width:40vw;
@@ -457,11 +456,13 @@ h2 {
     align-items: center;
 }
 
+/* le placement des textes de description*/
 .description > p{
     padding-bottom: 3%;
     margin:0;
 }
 
+/*Le lien pour en savoir plus avec un hover*/
 .description > a{
     border-style: ridge;
     padding: 2% 3% 2% 3%;
@@ -476,6 +477,7 @@ h2 {
 
 }
 
+/* Conteneur de l'image et texte du rougail saucisse*/
 .rougail{
     background-color: #313539;
     display: flex;
@@ -483,11 +485,13 @@ h2 {
     height:auto;
 }
 
+/* Taille et largeur de l'image rougail saucisse*/
 .rougail > img{
     width:40vw;
     height:40vh;
 }
 
+/* placement du titre h2*/
 .formules > h2{
     background-color: #24292d;
     margin: 0;
@@ -497,10 +501,12 @@ h2 {
     color: white;
 }
 
+/* La couleur de fond*/
 .events{
     background-color:#24292d;
 }
 
+/*placement des deux titres*/
 .title{
     margin: 0;
     text-align: center;
@@ -509,26 +515,31 @@ h2 {
     color: white;
 }
 
+/* La couleur du h3*/
 .title>h3{
     color:#ae895d;
 }
 
+/* Conteneur des svg*/
 .SvgIntervention{
     display:flex;
     justify-content:space-around;
     width:100%;
 }
 
+/*Taille des SVG et couleur*/
 .SvgIntervention svg{
     width: 11%;
     fill: #aaa9a9;
 }
 
+/*Conteneur du texte intervention*/
 .TextIntervention{
     text-align: center;
     padding-bottom: 6%;
 }
 
+/*position et couleur du texte intervention*/
 .TextIntervention>p {
     margin-right: 7.5%;
     margin-left: 7.5%;
@@ -538,6 +549,7 @@ h2 {
     margin-bottom: 6%;
 }
 
+/*Le lien pour en savoir plus avec un hover*/
 .TextIntervention > a{
     border-style: ridge;
     padding: 2% 3% 2% 3%;
@@ -552,6 +564,7 @@ h2 {
 
 }
 
+/* Conteneur des horaires et de la map*/
 .information{
     display:flex;
     justify-content:center;
@@ -567,6 +580,7 @@ h2 {
     width:55%;
 }
 
+/*Conteneur des horaires*/
 .journéeacceuil{
     display:flex;
     justify-content: center;
@@ -574,6 +588,7 @@ h2 {
     height: 35vh;
 }
 
+/*Position et taille ddans le cadre horaire*/
 .détails{
     width: 15vw;
     padding: 3% 3% 3% 3%;
@@ -588,10 +603,7 @@ h2 {
     margin:0;
 }
 
-.détails:nth-child(1){
-    color:white;
-}
-
+/*Placement des jours*/
 .jouracceuil{
     text-align: center;
     padding-bottom: 25%;
@@ -601,33 +613,17 @@ h2 {
     padding-top: 10%;
 }
 
+/*placement de l'adresse*/
 .adresseacceuil{
     padding-bottom: 10%;
 }
 
+/*Ecart entre l'heure et le moment de la journée*/
 .Soiracceuil{
     padding-top:10%;
 }
 
-.Mapacceuil{
-    width:45%;
-}
-
-.contactacceuil{
-    padding-top:5%;
-    text-align:center;
-}
-
-.contactacceuil>h2{
-    padding-bottom:3%;
-}
-
-.contactacceuil>p{
-    font-weight:bold;
-    font-size: 1.2em;
-    color:#aaa9a9;
-}
-
+/* Taille et position de la map*/
 .index-map{
     height:67.6vh!important;
     margin-right:2%;
