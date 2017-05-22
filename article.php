@@ -11,7 +11,7 @@
     <body>
 
         <?php $page = 4;
-            include "headerFront.php"; ?>
+                include "headerFront.php"; ?>
 
         <div id="container">
 
@@ -32,11 +32,14 @@
 
                     <p>Aujourd’hui le food truck est en perpétuel mouvement, de nouveaux food truck sont créés chaque semaine avec de nouveaux concepts pour être orignal et ainsi récupérer de nouveaux clients.</p>
                 </div>
-
+                
+              
                 <div id="articleBack">
                     <a href="blog.php">Retour à la liste des articles</a>
                 </div>
-                <div class="blogArticlesArticles">
+              
+             
+                <div id="blogArticlesArticles">
                     <a href="article.php">
                         <div>
                             <article class="all foodtruck">
@@ -45,7 +48,6 @@
                             </article>
                         </div>
                     </a>
-
                     <a href="article.php">
                         <div>
                             <article class="all foodtruck cook">
@@ -54,7 +56,6 @@
                             </article>
                         </div>
                     </a>
-
                     <a href="article.php">
                         <div>
                             <article class="all cook">
@@ -63,12 +64,11 @@
                             </article>
                         </div>
                     </a>
-
                 </div>
-
-                <?php include "infos_comp.php"; ?>
-
             </div>
+
+            <?php include "infos_comp.php"; ?>
+
         </div>
 
         <?php include "footer.php"; ?>
