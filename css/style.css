@@ -437,17 +437,19 @@ h2 {
 
 .bouchons> img{
     width:40vw;
+    height:40vh;
 }
 
 .description > h3 {
     color: white;
     padding-bottom: 6%;
+    padding-top:8%;
 }
 
 .description{
     text-align: center;
     width:40vw;
-    padding: 1% 4% 1% 4%;
+    padding: 0% 4% 0% 4%;
 }
 
 .description > p{
@@ -477,6 +479,7 @@ h2 {
 
 .rougail > img{
     width:40vw;
+    height:40vh;
 }
 
 .formules > h2{
@@ -781,6 +784,8 @@ h2 {
     margin-right: auto;
     padding-bottom: 4vh;
     text-align: center;
+    position:relative;
+    z-index:1000;
 }
 
 /* Liens de la partie informations */
