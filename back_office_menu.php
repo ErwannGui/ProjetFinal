@@ -36,17 +36,19 @@
         $dessert = htmlspecialchars($_POST['MenuDessert']);
         $boisson = htmlspecialchars($_POST['MenuBoisson']);
  
-        $query = "INSERT INTO menu(menuNom,menuPrixL,menuPrixXL) VALUES('$nomMenu','$prixL','$prixXL')";
+        $query = "INSERT INTO menu(menuNom,menuPrixL,menuPrixXL,menuEntree,menuPlat,menuDessert,menuBoisson) VALUES('$nomMenu','$prixL','$prixXL','$entree','$plat','$dessert','$boisson')";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
         if ($res) {
             $errTyp = "Succès";
             $errMSG_add_menu = "Le nouveau menu a été enregistré.";
             unset($nomAlim);
-            unset($ingredients);
             unset($prixL);
             unset($prixXL);
-            unset($typeAlim);
+            unset($entree);
+            unset($plat);
+            unset($dessert);
+            unset($boisson);
         } else {
             $errTyp = "danger";
             $errMSG_add_menu = "Quelque chose a mal fonctionné, réessayez plus tard ...";
@@ -93,7 +95,7 @@
 			<?php
 				}
 				mysql_free_result ($req);
-				mysql_close ();
+				//mysql_close ();
 
 				/* --- traitement du formulaire suppression de menu --- */
 			    if(isset($_POST['btn-suppr_menu'])) {
@@ -121,12 +123,11 @@
                 <?php echo $errMSG_suppr_menu; ?>
             </div><br>
             <?php
-            		mysql_close($conn);
                     }
 				}
 			?>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-				<label>Numéro du menu à supprimer :<br><span>(cette acion est irréverssible)</span></label>
+				<label>Numéro du menu à supprimer :<br><span>(cette action est irréverssible)</span></label>
 				<input type="number" name="MenuId">
 				<input type="submit" name="btn-suppr_menu" value="Valider">
 			</form>
@@ -151,61 +152,65 @@
 				<select name="MenuEntree">
 					<optgroup label="Entrée">
 						<?php
-							/*$entree = 'SELECT nourritureNom FROM nourriture WHERE typeId = 1';
+							$entree = 'SELECT nourritureNom FROM nourriture WHERE typeId = 1';
 							$req = mysql_query($entree) or die('Erreur SQL !<br />'.$entree.'<br />'.mysql_error()); 
-							while ($entrees = mysql_fetch_array($req)) {*/
+							while ($entrees = mysql_fetch_array($req)) {
 						?>
 						<option value="<?php echo $entrees['nourritureNom']; ?>"><?php echo $entrees['nourritureNom']; ?></option>
 						<?php 
-							/*}
+							}
 							mysql_free_result ($req);
-							mysql_close ();*/
+							//mysql_close ();
 						?>
+						<option value="Aucune">Aucune</option>
 					</optgroup>
 				</select>
 				<select name="MenuPlat">
 					<optgroup label="Plat">
 						<?php
-							/*$plat = 'SELECT nourritureNom FROM nourriture WHERE typeId = 2';
+							$plat = 'SELECT nourritureNom FROM nourriture WHERE typeId = 2';
 							$req = mysql_query($plat) or die('Erreur SQL !<br />'.$plat.'<br />'.mysql_error()); 
-							while ($plats = mysql_fetch_array($req)) {*/
+							while ($plats = mysql_fetch_array($req)) {
 						?>
 						<option value="<?php echo $plats['nourritureNom']; ?>"><?php echo $plats['nourritureNom']; ?></option>
 						<?php 
-							/*}
+							}
 							mysql_free_result ($req);
-							mysql_close (); */
+							//mysql_close (); 
 						?>
+						<option value="Aucun">Aucun</option>
 					</optgroup>
 				</select>
 				<select name="MenuDessert">
 					<optgroup label="Dessert">
 						<?php
-							/*$dessert = 'SELECT nourritureNom FROM nourriture WHERE typeId = 3';
+							$dessert = 'SELECT nourritureNom FROM nourriture WHERE typeId = 3';
 							$req = mysql_query($dessert) or die('Erreur SQL !<br />'.$dessert.'<br />'.mysql_error()); 
-							while ($desserts = mysql_fetch_array($req)) {*/
+							while ($desserts = mysql_fetch_array($req)) {
 						?>
 						<option value="<?php echo $desserts['nourritureNom']; ?>"><?php echo $desserts['nourritureNom']; ?></option>
 						<?php 
-							/*}
+							}
 							mysql_free_result ($req);
-							mysql_close (); */
+							//mysql_close ();
 						?>
+						<option value="Aucun">Aucun</option>
 					</optgroup>
 				</select>
 				<select name="MenuBoisson">
 					<optgroup label="Boisson">
 						<?php
-							/*$boisson = 'SELECT nourritureNom FROM nourriture WHERE typeId = 1';
+							$boisson = 'SELECT nourritureNom FROM nourriture WHERE typeId = 4';
 							$req = mysql_query($boisson) or die('Erreur SQL !<br />'.$boisson.'<br />'.mysql_error()); 
-							while ($boissons = mysql_fetch_array($req)) {*/
+							while ($boissons = mysql_fetch_array($req)) {
 						?>
 						<option value="<?php echo $boissons['nourritureNom']; ?>"><?php echo $boissons['nourritureNom']; ?></option>
 						<?php 
-							/*}
+							}
 							mysql_free_result ($req);
-							mysql_close (); */
+							//mysql_close ();
 						?>
+						<option value="Aucune">Aucune</option>
 					</optgroup>
 				</select>
 				<input type="submit" name="btn-add_menu" value="Valider">
