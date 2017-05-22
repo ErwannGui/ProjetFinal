@@ -21,90 +21,82 @@
 
         <div id="container">
 
-            <div id="blogBackground_APropos">
+            <div id="AProposBackground">
 
-                <div id="backgroundImage_APropos"></div>
+                <div id="AProposBackgroundImage"></div>
                 <div class="backgroundTitle">
                     <h1>À PROPOS DE NOUS</h1>
                 </div>
-                <div id="blogBackgroundArrow">
-                    <a href="#blogArticles"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
+                <div class="backgroundArrow" id="scroll_ancre">
+                    <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
                 </div>
             </div>
-
-            <div class="blogArticles">
-
-                <div id="blogArticlesTitle">
-                    <h2>Actualités</h2>
-                </div>
-
-                <div id="blogCategories">
-                    <p>Afficher les résultats par catégories</p>
-                    <ul>
-                        <button class="category" data-rel="all">Tout</button>
-                        <button class="category" data-rel="cook">Cuisine</button>
-                        <button class="category" data-rel="foodtruck">Food truck</button>
-                    </ul>
-                </div>
-
-
-                <div id="blogArticlesArticles">
-                    <a href="#">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck">
-                                <p>Conseils pour bien gérer son food truck</p>
-                            </article>
+        
+        
+            <section class="Infos" id="scroll_ancre">
+                    <div class="InfosBloc">
+                        <div class="InfosTitle">
+                            <h2>Un food-truck, c'est quoi ?</h2>
                         </div>
-                    </a>
-
-                    <a href="#">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
-                                <p>Etre traiteur en food truck</p>
-                            </article>
+                        <div class="InfosContainer">
+                            <p>Paragraphe traitant de l'évolution des food-trucks, à Nantes notamment.</p>
                         </div>
-                    </a>
+                    </div>
+                </section>
 
-                    <a href="#">
-                        <div>
-                            <article class="all cook">
-                                <img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck">
-                                <p>La cuisine créole : nouvelle à Nantes</p>
-                            </article>
+                <section class="Partners">
+                    <div id="PartnersBloc">
+                        <div class="PartnersTitle">
+                            <h2>Partenaires et fournisseurs</h2>
                         </div>
-                    </a>
-
-                    <a href="#">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleFour.jpg" alt="Food truck" title="Food truck">
-                                <p>Points stratégiques de l’activité d’un food truck</p>
-                            </article>
+                        <div class="PartnersContainer">
+                            <div class="PartnersBox" id="Partner01">
+                                <p>01 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner02">
+                                <p>02 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner03">
+                                <p>03 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner04">
+                                <p>04 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner05">
+                                <p>05 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner06">
+                                <p>06 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner07">
+                                <p>07 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
+                            <div class="PartnersBox" id="Partner08">
+                                <p>08 Texte descriptif apparaissant au passage de la souris</p>
+                            </div>
                         </div>
-                    </a>
+                    </div>
+                </section>
 
-                    <a href="#">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleFive.jpg" alt="Food truck" title="Food truck">
-                                <p>L’évolution du marché des food trucks</p>
-                            </article>
+                <section class="Team">
+                    <div class="TeamBloc">
+                        <div class="TeamTitle">
+                            <h2>L'équipe</h2>
                         </div>
-                    </a>
-
-                </div>
+                        <div class="TeamMembers">
+                            <div class="TeamMembersBox" id="TeamMembers01"></div>
+                            <div class="TeamMembersBox" id="TeamMembers02"></div>
+                            <div class="TeamMembersBox" id="TeamMembers03"></div>
+                            <div class="TeamMembersBox" id="TeamMembers04"></div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <?php include "infos_comp.php"; ?>
             </div>
-
-        </div>
-
-        <div id="blogTestimony">
-
-        </div>
-
-
-
+            
+            <script type="text/javascript" src="js/map_contact.js"></script>
+            <?php include "footer.php"; ?>
 
     </body>
 

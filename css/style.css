@@ -509,12 +509,11 @@ footer{
 /*      À PROPOS        */
 /*----------------------*/
 
-#blogBackground_APropos img{
+#AProposBackground img{
     position: relative;
 }
 
-
-#backgroundImage_APropos{
+#AProposBackgroundImage{
     background:url(../images/bg_apropos.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
@@ -523,6 +522,252 @@ footer{
     height: 100vh; 
 }
 
+.Infos, .Partners, .Team{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    position:relative;
+    z-index: 1000;
+}
+
+/*----------------------------------------------------------------*/
+.Infos{
+    width: 100%;
+    background-color: aqua;
+
+}
+
+.InfosTitle{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: 'Unica One', cursive;
+    display: block;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.InfosContainer{
+    text-align: center;
+}
+
+/*----------------------------------------------------------------*/
+.Partners{
+    background-color: blueviolet;
+    width: 100%;
+    height: auto;
+}
+
+.PartnersTitle{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: 'Unica One', cursive;
+    display: block;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.PartnersContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.PartnersBox{
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    background-color: grey;
+    margin: 25px;
+    padding: 15px;
+}
+
+
+#Partner01{
+
+}
+
+#Partner01 p{
+    display: none;
+}
+
+#Partner01:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner02{
+
+}
+
+#Partner02 p{
+    display: none;
+}
+
+#Partner02:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner03{
+
+}
+
+#Partner03 p{
+    display: none;
+}
+
+#Partner03:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner04{
+
+}
+
+#Partner04 p{
+    display: none;
+}
+
+#Partner04:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner05{
+
+}
+
+#Partner05 p{
+    display: none;
+}
+
+#Partner05:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner06{
+
+}
+
+#Partner06 p{
+    display: none;
+}
+
+#Partner06:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner07{
+
+}
+
+#Partner07 p{
+    display: none;
+}
+
+#Partner07:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#Partner08{
+
+}
+
+#Partner08 p{
+    display: none;
+}
+
+#Partner08:hover p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------*/
+.Team{
+    width: 100%;
+    height: auto;
+    background-color: chartreuse;
+
+}
+
+.TeamTitle{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: 'Unica One', cursive;
+    display: block;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.TeamMembers{
+    display: flex;
+    justify-content: center;
+}
+
+.TeamMembersBox{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: 20%;
+    height: 20%;
+    
+}
+
+#TeamMembers01{
+    content:url(../images/pics/ProfilGeoffrey.jpg);
+}
+
+#TeamMembers01:hover{
+    
+}
+
+#TeamMembers02{
+    content:url(../images/pics/ProfilGeoffrey.jpg);
+}
+
+#TeamMembers02:hover{
+    
+}
+
+#TeamMembers03{
+    content:url(../images/pics/ProfilGeoffrey.jpg);
+}
+
+#TeamMembers03:hover{
+    
+}
+
+#TeamMembers04{
+    content:url(../images/pics/ProfilGeoffrey.jpg);
+}
+
+#TeamMembers04:hover{
+    
+}
 
 /*----------------------*/
 /*     FIN À PROPOS     */
@@ -532,20 +777,35 @@ footer{
 /*        EVENTS        */
 /*----------------------*/
 
-#blogBackground_Events img{
+#EventsBackground img{
     position: relative;
 }
 
-
-#backgroundImage_Events{
-    background:url(../images/bg_events.png) fixed;
-    background-position: 80% 80%;
+#EventsBackgroundImage{
+    background:url(../images/bg/bg_events.png) fixed;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
     background-size: 100%;
-    filter: brightness(50%);
+    filter: brightness(50%);    
     height: 100vh; 
 }
 
+.Intro, .Interventions{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    position:relative;
+    z-index: 1000;
+}
+
+.InterventionBox{
+    display: flex;
+    align-content: space-around;
+}
+
+#Intervention01{
+    
+}
 
 /*----------------------*/
 /*        EVENTS        */
