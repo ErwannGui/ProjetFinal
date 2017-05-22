@@ -431,6 +431,7 @@ h2 {
     background-color: #24292d;
     display: flex;
     color:#aaa9a9;
+    height:auto;
 }
 
 .bouchons> img{
@@ -444,6 +445,8 @@ h2 {
 
 .description{
     text-align: center;
+    width:40vw;
+    padding: 1% 4% 1% 4%;
     width:50%;
 }
 
@@ -469,6 +472,7 @@ h2 {
     background-color: #313539;
     display: flex;
     color:#aaa9a9;
+    height:auto;
 }
 
 .rougail > img{
