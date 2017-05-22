@@ -45,7 +45,7 @@
                         <div id="menuSetMenuContainerOneBottom">
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - carry poulet</p>
+                                <p>rougail saucisse - curi poulet</p>
                             </div>
                             <div>
                                 <p><span>Boisson :</span></p>
@@ -63,11 +63,11 @@
                         <div id="menuSetMenuContainerTwoBottom">
                             <div>
                                 <p><span>Entrée :</span></p>
-                                <p>samossa et bonbons piment</p>
+                                <p>samoussa et bonbons piment</p>
                             </div>
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - carry poulet</p>
+                                <p>rougail saucisse - curi poulet</p>
                             </div>
                             <div>    
                                 <p><span>Dessert :</span></p>
@@ -89,11 +89,11 @@
                         <div id="menuSetMenuContainerThreeBottom">
                             <div>
                                 <p><span>Entrée :</span></p>
-                                <p>samossa et bonbons piment</p>
+                                <p>samoussa et bonbons piment</p>
                             </div>
                             <div>
                                 <p><span>Plat :</span></p>
-                                <p>rougail saucisse - carry poulet</p>
+                                <p>rougail saucisse - curi poulet</p>
                             </div>
                             <div>
                                 <p><span>Dessert :</span></p>
@@ -124,7 +124,7 @@
                             <th>XL</th>
                         </tr>
                         <tr>
-                            <td>Samossa</td>
+                            <td>Samoussa</td>
                             <td class="menuBoardBoardTD">1€</td>
                             <td class="menuBoardBoardTD">1.50€</td>
                         </tr>
@@ -139,7 +139,7 @@
                             <td class="menuBoardBoardTD">9€</td>
                         </tr>
                         <tr>
-                            <td>Carry</td>
+                            <td>Curi</td>
                             <td class="menuBoardBoardTD">7€</td>
                             <td class="menuBoardBoardTD">9€</td>
                         </tr>
