@@ -421,6 +421,7 @@ h2 {
 .image-container{
     display: flex;
     justify-content: center;
+    margin-bottom: -1%;
 }
 
 .bouchons{
@@ -430,7 +431,7 @@ h2 {
 }
 
 .bouchons> img{
-    width:39.25vw;
+    width:40vw;
 }
 
 .description > h3 {
@@ -440,7 +441,7 @@ h2 {
 
 .description{
     text-align: center;
-    width:50%;
+    width:40vw;
 }
 
 .description > p{
@@ -468,7 +469,7 @@ h2 {
 }
 
 .rougail > img{
-    width:40.5vw;
+    width:40vw;
 }
 
 .formules > h2{
@@ -503,7 +504,7 @@ h2 {
 }
 
 .SvgIntervention > img{
-    width: 33.33%;
+    width: 10%;
 }
 
 .TextIntervention{
