@@ -1271,7 +1271,7 @@ h2 {
 .contactMessage{
     width: 90%;
     height: auto;
-    border: solid 2px black;
+    border: solid 2px grey;
     margin-bottom: 3px;
     margin-left: 5%;
 }
@@ -1282,7 +1282,7 @@ h2 {
 
 .messageHeader{
     width: 100%;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px grey;
     overflow: hidden;
     cursor: pointer;
 }
@@ -1302,7 +1302,7 @@ h2 {
 
 .messageHeaderLeft{
     width: 35%;
-    border-right: solid 1px black;
+    border-right: solid 1px grey;
 }
 
 .messageHeaderRight{

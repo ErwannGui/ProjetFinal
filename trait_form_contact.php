@@ -31,7 +31,7 @@ $from_name=$nom.' '.$prenom;
 $subject=$objet;
 $msg=$message.'<br/>'.$tel;
 
-$query = "INSERT INTO message(messageNomEnvoyeur,messageMail,messageTel,messageObjet,messageContenu) VALUES('$nom_envoyeur','$mail','$tel','$subject','$message')";
+$query = "INSERT INTO message(messageNomEnvoyeur,messageMail,messageTel,messageObjet,messageContenu) VALUES('$from_name','$mail','$tel','$subject','$message')";
 $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
 if ($res) {
