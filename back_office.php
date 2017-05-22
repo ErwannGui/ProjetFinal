@@ -1,7 +1,7 @@
 <?php 
-    ob_start();
-    session_start();
-    include_once 'dbconnect.php';
+	ob_start();
+	session_start();
+	include_once 'dbconnect.php';
 ?>
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -28,4 +28,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/back_office.js"></script>
 </html>
-<?php ob_end_flush(); ?>
+<?php 
+	mysql_close($conn);
+	ob_end_flush(); 
+?>
