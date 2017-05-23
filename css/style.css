@@ -859,10 +859,8 @@ h2 {
     background:url(../images/bg/bg_apropos.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
-    /*background-size: 100%;*/
-    height: auto;
-    width: 100%;
-    filter: brightness(50%);    
+    background-size: 100% auto  ;
+    filter: brightness(60%);
     height: 100vh; 
 }
 
@@ -874,7 +872,6 @@ h2 {
     z-index: 1000;
 }
 
-/*----------------------------------------------------------------*/
 .Infos{
     width: 100%;
     background-color: #BC1C46;
@@ -903,7 +900,6 @@ h2 {
     padding: 20px;
 }
 
-/*----------------------------------------------------------------*/
 .Partners{
     background-color: #313539;
     width: 100%;
@@ -940,7 +936,6 @@ h2 {
     position: relative;
 }
 
-
 #Partner01, #Partner02, #Partner03, #Partner04, #Partner05, #Partner06, #Partner07, #Partner08{
     border-style: ridge;
     border-color: gray;
@@ -970,12 +965,10 @@ h2 {
     height: 105%;
 }
 
-/*----------------------------------------------------------------*/
 .Team{
     width: 100%;
     height: auto;
     background-color: #BC1C46;
-
 }
 
 .TeamTitle{
@@ -1029,6 +1022,7 @@ h2 {
     font-size: 20px;
     bottom: 10px;
 }
+
 .flip-container svg{
     
     margin: 5px;
@@ -1038,6 +1032,7 @@ h2 {
     height: auto;
     fill: aliceblue;
 }
+
 .logo{
     z-index: 1000000;
     position: absolute;
@@ -1050,8 +1045,6 @@ h2 {
     width: 20%;
     height: 20%;
 }
-
-
 
 /*----------------------*/
 /*     FIN À PROPOS     */
@@ -1067,47 +1060,57 @@ h2 {
 
 #EventsBackgroundImage{
     background:url(../images/bg/bg_events.png) fixed;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    filter: brightness(50%);    
+    background-size: 100% auto;
+    filter: brightness(60%);
     height: 100vh; 
 }
 
-.Intro, .Interventions{
+.Presentation, .Interventions{
     width: 100%;
     text-align: center;
     position:relative;
     z-index: 1000;
 }
 
-.Intro{
+.Presentation{
     background-color: #313539;
+    padding: 20px;
 }
 
-#IntroBloc p{
-    width: 500px;
+#Intro{
+    background-color: #BC1C46;
+    filter: saturate(110%);
+    border-style: ridge;
+    border-radius: 20px;
+    border-width: thin;
+    border-color: aliceblue;
+    width: auto;
+}
+
+#Intro p{
+    width: 75%;
+    font-size: 20px;
     text-align: center;
     margin: auto; 
     color: aliceblue;
-    padding: 0px;
+    padding: 30px;
+    font-family: 'Raleway', sans-serif;
 }
 
-.Intro svg{
+.Presentation svg{
     stroke: grey;
     fill: #A98C64;
-    padding-bottom: 30px;
-    width: 8vw;
-    height: 8vw;
+    margin: 30px;
+    width: 5%;
+    height: auto;
 }
 
 .Interventions{
-    background-color: #A98C64;
-    margin-top: -42.5px;
-}
-
-.InterBox{
-    display: flex;
-    align-content: space-around;
+    background-color: #BC1C46;
+    margin-top: -17.5px;
+    padding: 25px;
 }
 
 .InterTitle{
@@ -1120,33 +1123,48 @@ h2 {
     font-size: 25px;
 }
 
-.Inter{
-    display: flex;
-    justify-content: center;
-    border-style: dotted;
-    border-width: thin;
-    border-color: aliceblue;
-    
-}
-
-.InterBox img{
-    border-style: solid;
-    border-width: thin;
-    border-color: aliceblue;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    
+.InterPics div{
+    display: inline-block;
+    vertical-align: top;
 }
 
 .InterBox {
     display: flex;
-    margin: 50px;
-    width: auto;
+    align-content: space-around;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 25vw;
     height: auto;
 }
+
+.InterBox img{
+    width: 100%;
+    height: 100%;
+    border-color: aliceblue;
+    border-style: ridge;
+    border-radius: 20px;
+    border-width: thin;
+}
+
+.InterBox h3{
+    color: aliceblue;
+    font-family: "raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+}
+
+.InterBox p{
+    color: aliceblue;
+    font-family: "raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    display: block;
+}
+
 /*----------------------*/
-/*        EVENTS        */
+/*      FIN EVENTS      */
 /*----------------------*/
 
 
