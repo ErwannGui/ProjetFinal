@@ -19,4 +19,6 @@
 	if ( !$dbcon ) {
 		die("Database Connection failed : " . mysql_error());
 	}
+
+	$encode = mysql_query("SET NAMES UTF8");
 ?>
