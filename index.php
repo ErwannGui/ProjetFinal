@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <meta name="google-site-verification" content="Fxtm-DxJiEOykJM75OTwQFudIwGYrnBZGzd9ttVPziI" />
 		<title>Accueil</title>
         <meta charset="utf-8"/>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
