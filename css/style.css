@@ -859,7 +859,9 @@ h2 {
     background:url(../images/bg/bg_apropos.png) fixed;
     background-position: 100% 50%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    /*background-size: 100%;*/
+    height: auto;
+    width: 100%;
     filter: brightness(50%);    
     height: 100vh; 
 }
@@ -875,8 +877,7 @@ h2 {
 /*----------------------------------------------------------------*/
 .Infos{
     width: 100%;
-    background-color: #A98C64;
-
+    background-color: #BC1C46;
 }
 
 .InfosTitle{
@@ -894,11 +895,12 @@ h2 {
     text-align: center;
     width: 70%;
     color: aliceblue;
-    border-style: dotted;
+    border-style: groove;
     border-width: thin;
     border-color: aliceblue;
     border-radius: 20px;
     margin-bottom: 30px;
+    padding: 20px;
 }
 
 /*----------------------------------------------------------------*/
@@ -947,132 +949,32 @@ h2 {
 }
 
 .PartnersContainer div:hover p{
-    margin-top: -100px;
+    margin-top: -110px;
     position: absolute;
     width: 220px;
 }
 
-#Partner01 p{
+#Partner01 p, #Partner02 p, #Partner03 p, #Partner04 p, #Partner05 p, #Partner06 p, #Partner07 p, #Partner08 p{
     display: none;
 }
 
-#Partner01:hover p{
+#Partner01:hover p, #Partner02:hover p, #Partner03:hover p, #Partner04:hover p, #Partner05:hover p, #Partner06:hover p, #Partner07:hover p, #Partner08:hover p{
     display: block;
     color: aliceblue;
     text-align: center;
 }
 
-
-#Partner02{
-
-}
-
-#Partner02 p{
-    display: none;
-}
-
-#Partner02:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner03{
-
-}
-
-#Partner03 p{
-    display: none;
-    
-}
-
-#Partner03:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner04{
-
-}
-
-#Partner04 p{
-    display: none;
-}
-
-#Partner04:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner05{
-
-}
-
-#Partner05 p{
-    display: none;
-}
-
-#Partner05:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner06{
-
-}
-
-#Partner06 p{
-    display: none;
-}
-
-#Partner06:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner07{
-
-}
-
-#Partner07 p{
-    display: none;
-}
-
-#Partner07:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
-}
-
-
-#Partner08{
-
-}
-
-#Partner08 p{
-    display: none;
-}
-
-#Partner08:hover p{
-    display: block;
-    color: aliceblue;
-    text-align: center;
+#Partner01:hover img, #Partner02:hover img, #Partner03:hover img, #Partner04:hover img, #Partner05:hover img, #Partner06:hover img, #Partner07:hover img, #Partner08:hover img{
+    transition: 0.2s;
+    filter: opacity(25%);
+    height: 105%;
 }
 
 /*----------------------------------------------------------------*/
 .Team{
     width: 100%;
     height: auto;
-    background-color: #A98C64;
+    background-color: #BC1C46;
 
 }
 
@@ -1088,58 +990,6 @@ h2 {
 
 .Team{
  height: auto;
-}
-
-.TeamMembers{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.TeamMembersBox{
-    display: flex;
-    width: 250px;
-    height: 250px;
-    margin: 0 2vw;
-}
-
-#TeamMembers01 img, #TeamMembers02 img, #TeamMembers03 img, #TeamMembers04 img{
-    width: 100%;
-    height: 100%;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 20px;
-    border-color: aliceblue;
-    
-}
-
-#TeamMembers01:hover{
-    
-}
-
-#TeamMembers02{
-
-}
-
-#TeamMembers02:hover{
-    
-}
-
-#TeamMembers03{
-
-}
-
-#TeamMembers03:hover{
-    
-}
-
-#TeamMembers04{
-
-}
-
-#TeamMembers04:hover{
-    
 }
 
 .CartesMembers{
@@ -1179,7 +1029,27 @@ h2 {
     font-size: 20px;
     bottom: 10px;
 }
-
+.flip-container svg{
+    
+    margin: 5px;
+    right: 10px;
+    top: 10px;
+    width: 100%;
+    height: auto;
+    fill: aliceblue;
+}
+.logo{
+    z-index: 1000000;
+    position: absolute;
+    background-color: #3B5998;
+    margin: 20px;
+    bottom: 5px;
+    right: 5px;
+    filter: opacity(60%);
+    border-radius: 10px;
+    width: 20%;
+    height: 20%;
+}
 
 
 
