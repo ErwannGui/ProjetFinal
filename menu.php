@@ -46,14 +46,14 @@
                 
                 <div id="menuSetMenuContainer">
                     
-                    <div id="menuSetMenuContainerOne">
-                        <div id="menuSetMenuContainerOneTop">
+                    <div class="menuSetMenuContainer">
+                        <div class="menuSetMenuContainerTop">
                             <p><strong>-- FORMULE 1 --</strong></p>
                             <p>Plat + boisson</p>
                             <p>6€</p>
                             <p>Disponibilité : midi et soir</p>
                         </div>
-                        <div id="menuSetMenuContainerOneBottom">
+                        <div class="menuSetMenuContainerBottom">
                             <div>
                                 <p><span>Plat :</span></p>
                                 <p>rougail saucisse - cari poulet</p>
@@ -64,14 +64,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id="menuSetMenuContainerTwo">
-                        <div id="menuSetMenuContainerTwoTop">
+                    <div class="menuSetMenuContainer">
+                        <div class="menuSetMenuContainerTop">
                             <p><strong>-- FORMULE 2 --</strong></p>
                             <p>Plat + entrée ou dessert + boisson (L ou XL)</p>
                             <p>8€ - 10€</p>
                             <p>Disponibilité : midi et soir</p>
                         </div>
-                        <div id="menuSetMenuContainerTwoBottom">
+                        <div class="menuSetMenuContainerBottom">
                             <div>
                                 <p><span>Entrée :</span></p>
                                 <p>samoussa et bonbons piment</p>
@@ -90,14 +90,14 @@
                             </div>
                         </div>
                     </div>
-                    <div id="menuSetMenuContainerThree">
-                        <div id="menuSetMenuContainerThreeTop">
+                    <div class="menuSetMenuContainer">
+                        <div class="menuSetMenuContainerTop">
                             <p><strong>-- FORMULE 3 --</strong></p>
                             <p>Entrée + plat + dessert + boisson (L ou XL)</p>
                             <p>12€ - 15€</p>
                             <p>Disponibilité : soir</p>
                         </div>
-                        <div id="menuSetMenuContainerThreeBottom">
+                        <div class="menuSetMenuContainerBottom">
                             <div>
                                 <p><span>Entrée :</span></p>
                                 <p>samoussa et bonbons piment</p>

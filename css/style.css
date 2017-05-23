@@ -1391,7 +1391,7 @@ h2 {
 }
 
 /* Partie supérieur de l'affichage des menus */
-#menuSetMenuContainerOneTop, #menuSetMenuContainerTwoTop, #menuSetMenuContainerThreeTop{
+.menuSetMenuContainerTop{
     text-align: center;
     padding: 3px 3px 3px 3px;
     background-color: #A8A8A8;
@@ -1401,7 +1401,7 @@ h2 {
 }
 
 /* Seconde partie de l'affichage des menus */
-#menuSetMenuContainerOneBottom, #menuSetMenuContainerTwoBottom, #menuSetMenuContainerThreeBottom{
+.menuSetMenuContainerBottom{
     text-align: center;
     padding: 20px 20px 20px 20px;
     background-color: rgba(168,168,168, 0.3);
@@ -1414,22 +1414,22 @@ h2 {
 }
 
 /*  */
-#menuSetMenuContainerOneBottom div, #menuSetMenuContainerTwoBottom div, #menuSetMenuContainerThreeBottom div{
+.menuSetMenuContainerBottom div{
     margin-top: 20px;
 }
 
-#menuSetMenuContainerOne, #menuSetMenuContainerTwo, #menuSetMenuContainerThree{
+.menuSetMenuContainer{
     padding: 15px 15px 15px 15px;
 }
 
-#menuSetMenuContainerOne span, #menuSetMenuContainerTwo span, #menuSetMenuContainerThree span{
+.menuSetMenuContainer span{
     font-weight: 900;
     font-size: 17px;
     color: #AA8C64;
     text-transform: uppercase;
 }
 
-#menuSetMenuContainerOne strong, #menuSetMenuContainerTwo strong, #menuSetMenuContainerThree strong{
+.menuSetMenuContainer strong{
     font-size: 20px;
 }
 
