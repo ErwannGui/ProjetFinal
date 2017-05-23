@@ -1087,7 +1087,7 @@ h2 {
 }
 
 .Team{
-
+ height: auto;
 }
 
 .TeamMembers{
@@ -1141,6 +1141,47 @@ h2 {
 #TeamMembers04:hover{
     
 }
+
+.CartesMembers{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Container de la carte, garde la bonne perspective lors du retournement */
+.flip-container {perspective: 1000px; margin-bottom: 30px;}
+
+/* Tourne la carte lors du passage de la souris */
+.flip-container:hover .flipper, .flip-container.hover .flipper {transform: rotateY(180deg);}
+
+/* Définition de la hauteur / largeur de la carte (toute la carte, puis chaque côté) */
+.flip-container, .flip-container img, .front, .back {width: 300px;height: 300px; border-radius: 20px}
+
+/* Vitesse de l'animation */
+.flipper {transition: 0.5s;transform-style: preserve-3d;position: relative;}
+
+/* On cache l'autre côté lors du retournement */
+.front, .back {backface-visibility: hidden;position: absolute;top: 0;left: 0;}
+
+/* Face de devant, initiallement au dessus */
+.front {z-index: 2;/* Pour firefox 31 */transform: rotateY(0deg);background-color: red;}
+
+/* Face arrière, initiallement cachée */
+.back {transform: rotateY(180deg);background-color: blue;}
+
+
+.flip-container p{
+    color: aliceblue;
+    z-index: 100000;
+    position: absolute;
+    margin: 50px;
+    font-size: 20px;
+    bottom: 10px;
+}
+
+
+
 
 /*----------------------*/
 /*     FIN À PROPOS     */

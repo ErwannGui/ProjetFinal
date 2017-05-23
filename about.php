@@ -92,13 +92,75 @@
                         <div class="TeamTitle">
                             <h2>L'équipe</h2>
                         </div>
-                        <div class="TeamMembers">
-                            <div class="TeamMembersBox" id="TeamMembers01">
-                                <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntonin.jpg">
+                       <!-- <div class="TeamMembers">
+                            
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="TeamMembersBox" id="TeamMembers01">
+                                            <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntonin.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="TeamMembersBox" id="TeamMembers02">
+                                            <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwann.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                    <div class="CartesMembers">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwann.jpg">                </div>
+                                    <div class="back">
+                                        <p>Assistant</p>
+                                        <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwannSombre.jpg">                </div>
+                                </div>
                             </div>
-                            <div class="TeamMembersBox" id="TeamMembers02">
-                                <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwann.jpg">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntonin.jpg">
+                                    </div>
+                                    <div class="back">
+                                        <p>Patron</p>
+                                        <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntoninSombre.jpg">
+                                    </div>
+                                </div>
                             </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffrey.jpg">
+                                    </div>
+                                    <div class="back">
+                                        <p>Geoffrey le plus beau</p>
+                                        <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffreySombre.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentin.jpg">
+                                    </div>
+                                    <div class="back">
+                                        <p>Assistant</p>
+                                        <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentinSombre.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!--
                             <div class="TeamMembersBox" id="TeamMembers03">
                                 <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffrey.jpg">
                             </div>
