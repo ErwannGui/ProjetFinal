@@ -20,13 +20,15 @@
     }
 
 	/* --- traitement du formulaire modification d'un texte --- */
+	if(isset($_POST['btn-select_page_txt'])) {
+		$selectPageTxt = htmlspecialchars($_POST['PageTextModify']);
+	}
     if(isset($_POST['btn-modify_text'])) {
 
-		$page = htmlspecialchars($_POST['PageTextModify']);
         $textExistant = htmlspecialchars($_POST['DebutText']);
 	    $texteContenu = $_POST['AutreTextContenuModify'];
 
-	    $query = "UPDATE texte SET texteContenu = $texteContenu WHERE texteId = $textExistant";
+	    $query = "UPDATE texte SET texteContenu = '$texteContenu' WHERE texteId = $textExistant";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
 
         if ($res) {
@@ -92,13 +94,16 @@
 	}
 
 	/* --- traitement du formulaire modification d'une image --- */
+	if(isset($_POST['btn-select_page_img'])) {
+		$selectPageImg = htmlspecialchars($_POST['PageImgModify']);
+	}
     if(isset($_POST['btn-modify_image'])) {
 
 		$page = htmlspecialchars($_POST['PageImgModify']);
         $imgPathExistant = htmlspecialchars($_POST['ImgSource']);
 	    $imgPath = $_POST['ImgSourceModify'];
 
-	    $query = "UPDATE image SET imageSource = $imgPath WHERE imageId = $imgPathExistant";
+	    $query = "UPDATE image SET imageSource = '$imgPath' WHERE imageId = $imgPathExistant";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
 
         if ($res) {
@@ -113,7 +118,7 @@
         }
 	}
 ?>
-<div class="back_content back_autre active">
+<div class="back_content back_autre ">
 	<div class="back_left_content">
 		<div class="back_top_left_content">
 			<h2>Ajouter un nouveau texte</h2>
@@ -144,15 +149,6 @@
 		<div class="back_bottom_left_content">
 			<h2>Modifier un texte existant</h2>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-				<?php
-                    if ( isset($errMSG_modify_text) ) {
-                ?>
-                <div class="alert">
-                    <?php echo $errMSG_modify_text; ?>
-                </div><br>
-                <?php
-                    }
-                ?>
 				<select name="PageTextModify">
 					<optgroup label="Page concernée">
 						<?php
@@ -164,15 +160,29 @@
 						<?php 
 							}
 							mysql_free_result ($req);
-							$textePageModify = htmlspecialchars($_POST['PageTextModify']);
 							//mysql_close ();
 						?>
 					</optgroup>
 				</select>
+				<input type="submit" name="btn-select_page_txt" value="Valider">
+			</form>
+			<?php
+                    if ( isset($selectPageTxt) ) {
+                ?>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+				<?php
+                    if ( isset($errMSG_modify_text) ) {
+                ?>
+                <div class="alert">
+                    <?php echo $errMSG_modify_text; ?>
+                </div><br>
+                <?php
+                    }
+                ?>
 				<select name="DebutText">
 					<optgroup label="Texte concerné">
 						<?php
-						    $sql = "SELECT * FROM texte WHERE textePage = '$textePageModify'";
+						    $sql = "SELECT * FROM texte WHERE textePage = '$selectPageTxt'";
 							$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 							while ($data = mysql_fetch_array($req)) {
 								$texteActuel = $data['texteContenu'];
@@ -190,6 +200,9 @@
 				<textarea name="AutreTextContenuModify"><?php echo $texteActuel; ?></textarea>
 				<input type="submit" name="btn-modify_text" value="Valider">
 			</form>
+            <?php
+                   	}
+            ?>
 		</div>
 	</div>
 	<div class="back_right_content">
@@ -234,16 +247,7 @@
 		</div>
 		<div class="back_bottom_right_content">
 		<h2>Modifier une image existante</h2>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-				<?php
-                    if ( isset($errMSG_modify_image) ) {
-                ?>
-                <div class="alert">
-                    <?php echo $errMSG_modify_image; ?>
-                </div><br>
-                <?php
-                    }
-                ?>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 				<select name="PageImgModify">
 					<optgroup label="Page concernée">
 						<?php
@@ -259,10 +263,25 @@
 						?>
 					</optgroup>
 				</select>
+				<input type="submit" name="btn-select_page_img" value="Valider">
+			</form>
+			<?php
+                if ( isset($selectPageTxt) ) {
+            ?>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+				<?php
+                    if ( isset($errMSG_modify_image) ) {
+                ?>
+                <div class="alert">
+                    <?php echo $errMSG_modify_image; ?>
+                </div><br>
+                <?php
+                    }
+                ?>
 				<select name="ImgSource">
 					<optgroup label="Image concernée">
 						<?php
-						    $sql = "SELECT * FROM image WHERE imagePage = '$imagePageModify'";
+						    $sql = "SELECT * FROM image WHERE imagePage = '$selectPageImg'";
 							$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 							while ($data = mysql_fetch_array($req)) {
 								$pathActuel = $data['texteContenu'];
@@ -279,6 +298,9 @@
 				<input type="text" name="ImgSourceModify" placeholder="<?php echo $nomImage; ?>">
 				<input type="submit" name="btn-modify_image" value="Valider">
 			</form>
+			<?php
+                }
+            ?>
 		</div>
 	</div>
 </div>
