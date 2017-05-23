@@ -19,6 +19,28 @@
         }
     }
 
+	/* --- traitement du formulaire modification d'un texte --- */
+    if(isset($_POST['btn-modify_text'])) {
+
+		$page = htmlspecialchars($_POST['PageTextModify']);
+        $textExistant = htmlspecialchars($_POST['DebutText']);
+	    $texteContenu = $_POST['AutreTextContenuModify'];
+
+	    $query = "UPDATE texte SET texteContenu = $texteContenu WHERE texteId = $textExistant";
+        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+
+        if ($res) {
+            $errTyp = "Succès";
+            $errMSG_modify_text = "Le texte a été modifié.";
+            unset($PageTextModify);
+            unset($textExistant);
+            unset($AutreTextContenuModify);
+        } else {
+            $errTyp = "danger";
+            $errMSG_modify_text = "Quelque chose a mal fonctionné, réessayez plus tard ...";
+        }
+	}
+
     /* --- traitement du formulaire ajout d'une image --- */
     if ( isset($_POST['btn-add_image']) ) {
 
@@ -41,34 +63,57 @@
 
     /* --- upload d'une image dans le dossier images --- */
     if (isset($_POST['upload'])) { // si formulaire soumis
-    $content_dir = 'images/'; // dossier où sera déplacé le fichier
+	    $content_dir = 'images/'; // dossier où sera déplacé le fichier
 
-    $tmp_file = $_FILES['fichier']['tmp_name'];
+	    $tmp_file = $_FILES['fichier']['tmp_name'];
 
-    if (!is_uploaded_file($tmp_file)) {
-        exit("Le fichier est introuvable </br><a href=\"home.php\">retour</a>");
-    }
+	    if (!is_uploaded_file($tmp_file)) {
+	        exit("Le fichier est introuvable.");
+	    }
 
-    // on vérifie maintenant l'extension
-    $type_file = $_FILES['fichier']['type'];
+	    // on vérifie maintenant l'extension
+	    $type_file = $_FILES['fichier']['type'];
 
-    if (!strstr($type_file, 'jpg') && !strstr($type_file, 'png') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif')){
-    	$errMSG_upload = "Le fichier n'est pas une image. Choisissez une image.";
-        exit();
-    }
+	    if (!strstr($type_file, 'jpg') && !strstr($type_file, 'png') && !strstr($type_file, 'jpeg') && !strstr($type_file, 'bmp') && !strstr($type_file, 'gif')){
+	    	$errMSG_upload = "Le fichier n'est pas une image. Choisissez une image.";
+	        exit();
+	    }
 
-    // on copie le fichier dans le dossier de destination
-    $name_file = $_FILES['fichier']['name'];
+	    // on copie le fichier dans le dossier de destination
+	    $name_file = $_FILES['fichier']['name'];
 
-    if (!move_uploaded_file($tmp_file, $content_dir.$name_file)) {
-    	$errMSG_upload = "Impossible de copier le fichier dans ".$content_dir;
-        exit();
-    } else {
-    	$errMSG_upload = "Le fichier a bien été sauvegardé.";
-    }
-}
+	    if (!move_uploaded_file($tmp_file, $content_dir.$name_file)) {
+	    	$errMSG_upload = "Impossible de copier le fichier dans ".$content_dir;
+	        exit();
+	    } else {
+	    	$errMSG_upload = "Le fichier a bien été sauvegardé.";
+	    }
+	    $imgPath=$content_dir.$name_file;
+	}
+
+	/* --- traitement du formulaire modification d'une image --- */
+    if(isset($_POST['btn-modify_image'])) {
+
+		$page = htmlspecialchars($_POST['PageImgModify']);
+        $imgPathExistant = htmlspecialchars($_POST['ImgSource']);
+	    $imgPath = $_POST['ImgSourceModify'];
+
+	    $query = "UPDATE image SET imageSource = $imgPath WHERE imageId = $imgPathExistant";
+        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+
+        if ($res) {
+            $errTyp = "Succès";
+            $errMSG_modify_image = "L'image'a été modifié.";
+            unset($PageTextModify);
+            unset($textExistant);
+            unset($AutreTextContenuModify);
+        } else {
+            $errTyp = "danger";
+            $errMSG_modify_image = "Quelque chose a mal fonctionné, réessayez plus tard ...";
+        }
+	}
 ?>
-<div class="back_content back_autre">
+<div class="back_content back_autre active">
 	<div class="back_left_content">
 		<div class="back_top_left_content">
 			<h2>Ajouter un nouveau texte</h2>
@@ -111,7 +156,7 @@
 				<select name="PageTextModify">
 					<optgroup label="Page concernée">
 						<?php
-							$page = 'SELECT DISTINCT textePage FROM texte';
+							$page = "SELECT DISTINCT textePage FROM texte";
 							$req = mysql_query($page) or die('Erreur SQL !<br />'.$page.'<br />'.mysql_error()); 
 							while ($pages = mysql_fetch_array($req)) {
 						?>
@@ -119,6 +164,7 @@
 						<?php 
 							}
 							mysql_free_result ($req);
+							$textePageModify = htmlspecialchars($_POST['PageTextModify']);
 							//mysql_close ();
 						?>
 					</optgroup>
@@ -126,56 +172,22 @@
 				<select name="DebutText">
 					<optgroup label="Texte concerné">
 						<?php
-							$textePageModify = htmlspecialchars($_POST['PageTextModify']);
-						    $sql = 'SELECT texteId,texteContenu,textePage FROM texte';
+						    $sql = "SELECT * FROM texte WHERE textePage = '$textePageModify'";
 							$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 							while ($data = mysql_fetch_array($req)) {
-								$debutTexte = substr($data['texteContenu'], 0, 15);
+								$texteActuel = $data['texteContenu'];
+								$debutTexte = substr($texteActuel, 0, 15);
 								$texte = $debutTexte.' ...';
-								if ($data['textePage'] == $textePageModify) {
 						?>
 						<option value="<?php echo $data['texteId']; ?>"><?php echo $data['texteId']; ?> - <?php echo $texte; ?></option>
 						<?php
-								}
 								mysql_free_result ($req);
 							}
 							//mysql_close ();
-
-							/* --- traitement du formulaire suppression d'un évenement --- */
-						    /*if(isset($_POST['btn-suppr_event'])) {
-							    if(! $conn ) {
-							        die('Impossible de se connecter a la base de donnée: ' . mysql_error());
-							    }
-
-							    $eventId = $_POST['EventId'];
-
-							    $sql = "SELECT texteId,imageId FROM evenement WHERE eventId = $eventId";
-							    $res = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-							    $texteId_imageId = mysql_fetch_array($res);
-							    $texteId = $texteId_imageId['texteId'];
-								$imageId = $texteId_imageId['imageId'];
-
-								$sql = "DELETE FROM texte WHERE texteId = $texteId" ;
-							    $retval = mysql_query( $sql, $conn );
-
-							    $sql = "DELETE FROM image WHERE imageId = $imageId" ;
-							    $retval = mysql_query( $sql, $conn );
-
-							    $sql = "DELETE FROM evenement WHERE eventId = $eventId" ;
-							    $retval = mysql_query( $sql, $conn );
-
-							    if($retval) {
-							    	$errTyp = "Succès";
-			            			$errMSG_suppr_event = "L'évenement à bien été supprimé.";
-							    } else {
-							    	$errTyp = "danger";
-			            			$errMSG_suppr_event = "Quelque chose a mal fonctionné, réessayez plus tard ...";
-							    }  
-							}*/  
             			?>
 					</optgroup>
 				</select>
-				<textarea name="AutreTextContenuModify">Contenu du texte existant (à modifier)</textarea>
+				<textarea name="AutreTextContenuModify"><?php echo $texteActuel; ?></textarea>
 				<input type="submit" name="btn-modify_text" value="Valider">
 			</form>
 		</div>
@@ -247,18 +259,26 @@
 						?>
 					</optgroup>
 				</select>
-				<select name="ImgNom">
+				<select name="ImgSource">
 					<optgroup label="Image concernée">
-						<option value="Id1">1 - "Nom de la première image"</option>
-						<option value="Id2">2 - "Nom de la deuxième image"</option>
-						<option value="Id3">3 - "Nom de la troisième image"</option>
+						<?php
+						    $sql = "SELECT * FROM image WHERE imagePage = '$imagePageModify'";
+							$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
+							while ($data = mysql_fetch_array($req)) {
+								$pathActuel = $data['texteContenu'];
+								$nomImage = substr($pathActuel, 7);
+						?>
+						<option value="<?php echo $data['texteId']; ?>"><?php echo $nomImage; ?></option>
+						<?php
+								mysql_free_result ($req);
+							}
+							//mysql_close ();
+            			?>
 					</optgroup>
 				</select>
-				<input type="text" name="ImgSourceModify" placeholder="Source de l'image existante">
+				<input type="text" name="ImgSourceModify" placeholder="<?php echo $nomImage; ?>">
 				<input type="submit" name="btn-modify_image" value="Valider">
 			</form>
 		</div>
 	</div>
 </div>
-<!--UPDATE 'texte' SET 'texteContenu' = '$contenu' WHERE 'texte'.'texteId' = $texteId;-->
-<!--UPDATE 'image' SET 'imageSource' = '$imgPath' WHERE 'image'.'imageId' = $imageId;-->
