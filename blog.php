@@ -60,7 +60,7 @@
                 </div>
                 
                 
-                
+                <div id="blogArticlesArticles">
                             
                             <?php $article=$bdd->query('SELECT * FROM article');
                                   
@@ -71,17 +71,17 @@
                                 while($imageArt=$imageArticle->fetch()){
                                 
                                     print_r(" 
-                                    <div id='blogArticlesArticles'>
-                    <a href='article.php'>
-                        <div>
-                            <article class=" /*. $art['ArticleCategorieAll'] */ . $art['ArticleCategorie'] . ">
-                                <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">
-                                <p>" . $art['articleTitre'] . "</p>
-                            </article>
-                        </div>
-                    </a>
-                </div>"); } } ?>
-                
+                                    
+                                        <a href='article.php'>
+                                            <div>
+                                                <article class=" /*. $art['ArticleCategorieAll'] */ . $art['ArticleCategorie'] . ">
+                                                    <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">
+                                                    <p>" . $art['articleTitre'] . "</p>
+                                                </article>
+                                            </div>
+                                        </a>
+                                    "); } } ?>
+                </div>
                 
             </div>
             <div id="blogTestimony">

@@ -1,3 +1,14 @@
+<?php
+
+    Try {
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+    }
+    catch (PDOException $e) {
+            die('Erreur : ' . $e->getMessage()); 
+    }
+    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -31,7 +42,11 @@
                 <div id="menuBackgroundImage"></div>
                 <div class="backgroundTitle">
                     <h1>NOS MENUS</h1>
-                    <h2>La cuisine traditionnelle : notre vocation, vos dégustations</h2>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=35'); 
+                    $sub= $subtitle->fetch();?>
+                    <h2><?php echo $sub['texteContenu']; ?></h2>
+                    
                 </div>
                 <div class="backgroundArrow" id="scroll_ancre">
                     <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
@@ -47,76 +62,33 @@
                 
                 <div id="menuSetMenuContainer">
                     
-                    <div class="menuSetMenuContainer">
-                        <div class="menuSetMenuContainerTop">
-                            <p><strong>-- FORMULE 1 --</strong></p>
-                            <p>Plat + boisson</p>
-                            <p>6€</p>
-                            <p>Disponibilité : midi et soir</p>
-                        </div>
-                        <div class="menuSetMenuContainerBottom">
-                            <div>
-                                <p><span>Plat :</span></p>
-                                <p>rougail saucisse - cari poulet</p>
+                    <?php  
+                        $menu=$bdd->query("SELECT * FROM menu");
+                    
+                        while($men=$menu->fetch()){
+                            print_r("
+                        <div class='menuSetMenuContainer'>
+                            <div class='menuSetMenuContainerTop'>
+                                <p><strong>" . $men['menuTitre'] . "</strong></p>
+                                <p>" . $men['menuComposition'] . "</p>
+                                <p>" . $men['menuPrixL'] . "€ ou " . $men['menuPrixXL'] . "€</p>
+                                <p>Disponibilité : " . $men['Disponibilité'] . "</p>
                             </div>
-                            <div>
-                                <p><span>Boisson :</span></p>
-                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
+                            <div class='menuSetMenuContainerBottom'>
+                                <div>
+                                    <p><span>Entrée :</span></p>
+                                    <p>" . $men['menuEntree'] . "</p>
+                                    <p><span>Plat :</span></p>
+                                    <p>" . $men['menuPlat'] . "</p>
+                                    <p><span>Dessert :</span></p>
+                                    <p>" . $men['menuDessert'] . "</p>
+                                </div>
+                                <div>
+                                    <p><span>Boisson :</span></p>
+                                    <p>" . $men['menuBoisson'] . "</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="menuSetMenuContainer">
-                        <div class="menuSetMenuContainerTop">
-                            <p><strong>-- FORMULE 2 --</strong></p>
-                            <p>Plat + entrée ou dessert + boisson (L ou XL)</p>
-                            <p>8€ - 10€</p>
-                            <p>Disponibilité : midi et soir</p>
-                        </div>
-                        <div class="menuSetMenuContainerBottom">
-                            <div>
-                                <p><span>Entrée :</span></p>
-                                <p>samoussa et bonbons piment</p>
-                            </div>
-                            <div>
-                                <p><span>Plat :</span></p>
-                                <p>rougail saucisse - cari poulet</p>
-                            </div>
-                            <div>    
-                                <p><span>Dessert :</span></p>
-                                <p>pâtisserie - fruits créole (litchi et mangue)</p>
-                            </div>
-                            <div>
-                                <p><span>Boisson :</span></p>
-                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menuSetMenuContainer">
-                        <div class="menuSetMenuContainerTop">
-                            <p><strong>-- FORMULE 3 --</strong></p>
-                            <p>Entrée + plat + dessert + boisson (L ou XL)</p>
-                            <p>12€ - 15€</p>
-                            <p>Disponibilité : soir</p>
-                        </div>
-                        <div class="menuSetMenuContainerBottom">
-                            <div>
-                                <p><span>Entrée :</span></p>
-                                <p>samoussa et bonbons piment</p>
-                            </div>
-                            <div>
-                                <p><span>Plat :</span></p>
-                                <p>rougail saucisse - cari poulet</p>
-                            </div>
-                            <div>
-                                <p><span>Dessert :</span></p>
-                                <p>pâtisserie - fruits créole (litchi et mangue)</p>
-                            </div>
-                            <div>
-                                <p><span>Boisson :</span></p>
-                                <p>eau minérale/gazeuse - sodas - bière - vin de Loire</p>
-                            </div>
-                        </div>
-                    </div>
+                        </div>");} ?>
                     
                 </div>
                 
