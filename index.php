@@ -2,8 +2,9 @@
 <html>
 	<head>
         <meta name="google-site-verification" content="Fxtm-DxJiEOykJM75OTwQFudIwGYrnBZGzd9ttVPziI" />
-		<title>Accueil</title>
-        <meta charset="utf-8"/>
+		<title>Chez FIFI - Food Truck Nantais | Cuisine réunionnaise simple et de qualité</title>
+        <link rel="shortcut icon" href="images/icon/logo.ico">
+        <meta charset="utf-8" title="À propos de nous" content="Le Food Truck Chez FIFI vous propose des plats typiques réunionnais, simples et issus de produits de qualité tous les midis et soirs dans la région Nantaise.">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
         <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>

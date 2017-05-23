@@ -2,8 +2,9 @@
 
 <html>
     <head>
-        <title>Prestations privées</title>
-        <meta charset="utf-8" />
+        <title>Prestations privées ~ Chez FIFI - Food Truck Nantais</title>
+        <link rel="shortcut icon" href="images/icon/logo.ico">
+        <meta charset="utf-8" title="À propos de nous" content="Le Food Truck Chez FIFI vous propose des plats typiques réunionnais, simples et issus de produits de qualité pour vos événements privés.">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
