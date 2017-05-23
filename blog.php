@@ -1,19 +1,36 @@
+<?php
+
+    Try {
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+    }
+    catch (PDOException $e) {
+            die('Erreur : ' . $e->getMessage()); 
+    }
+    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8" />
         <title>Actualités</title>
         <link href="css/style.css" rel="stylesheet">
     </head>
+
     <body>
         <?php $page = 4;
-        include "headerFront.php"; ?>
+            include "headerFront.php"; ?>
         <div id="container">
             <div id="blogBackground">
                 <div id="blogBackgroundImage"></div>
                 <div class="backgroundTitle">
                     <h1>BLOG ET ACTUALITES</h1>
-                    <h2>Ici on ne vous cache rien, et vous pouvez tout nous dire</h2>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=38'); 
+                    $sub= $subtitle->fetch();?>
+                    <h2><?php echo $sub['texteContenu']; ?></h2>
+                    
                 </div>
                 <div class="backgroundArrow" id="scroll_ancre">
                     <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
@@ -29,63 +46,36 @@
                     <button class="category" data-rel="cook">Cuisine</button>
                     <button class="category" data-rel="foodtruck">Food truck</button>
                 </div>
+                
+                
                 <div id="blogArticlesArticles">
                     <a href="article.php">
                         <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleOne.jpg" alt="Food truck" title="Food truck">
-                                <p>Conseils pour bien gérer son food truck</p>
+                            
+                            <?php $article=$bdd->query('SELECT * FROM article');
+                                  
+                            
+                            while($art=$article->fetch()){
+                                $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=".$art['imageId']);
+                                
+                                while($imageArt=$imageArticle->fetch()){
+                                
+                                    print_r("    
+                            <article class=" . $art['ArticleCategorie'] . ">
+                                <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">
+                                <p>" . $art['articleTitre'] . "</p>
                             </article>
                         </div>
                     </a>
-                    <a href="article.php">
-                        <div>
-                            <article class="all foodtruck cook">
-                                <img src="images/articles/articleTwo.jpg" alt="Food truck" title="Food truck">
-                                <p>Etre traiteur en food truck</p>
-                            </article>
-                        </div>
-                    </a>
-                    <a href="article.php">
-                        <div>
-                            <article class="all cook">
-                                <img src="images/articles/articleThree.jpg" alt="Food truck" title="Food truck">
-                                <p>La cuisine créole : nouvelle à Nantes</p>
-                            </article>
-                        </div>
-                    </a>
-                    <a href="article.php">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleFour.jpg" alt="Food truck" title="Food truck">
-                                <p>Points stratégiques de l’activité d’un food truck</p>
-                            </article>
-                        </div>
-                    </a>
-                    <a href="article.php">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleFive.jpg" alt="Food truck" title="Food truck">
-                                <p>L’évolution du marché des food trucks</p>
-                            </article>
-                        </div>
-                    </a>
-                    
-                    <a href="article.php">
-                        <div>
-                            <article class="all foodtruck">
-                                <img src="images/articles/articleSix.jpg" alt="Food truck" title="Food truck">
-                                <p>Le food truck de demain</p>
-                            </article>
-                        </div>
-                    </a>
-                </div>
+                </div>"); } } ?>
+                
+                
             </div>
             <div id="blogTestimony">
                 <div id="blogTestimonyTitle">
                     <h2>Témoignages</h2>
                 </div>
-                
+
                 <div id="blogTestimonyTestimonials">
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
@@ -99,7 +89,7 @@
                         </div>
                         <p>"Merci à "Chez Fifi" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus."</p>
                     </div>
-                    
+
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
                             <div>
@@ -112,7 +102,7 @@
                         </div>
                         <p>"Habitué depuis peu j'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l'accueil parfaite, les serveurs sont plus qu'agréable !"</p>
                     </div>
-                    
+
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
                             <div>
@@ -128,9 +118,10 @@
                 </div>
             </div>
             <?php include "infos_comp.php"; ?>
-        </div>  
-        
+        </div>
+
         <?php include "footer.php"; ?>
-        
+
     </body>
+
 </html>
