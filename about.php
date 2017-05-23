@@ -161,22 +161,13 @@
                                 </div>
                             </div>
                     </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            <!--
-                            <div class="TeamMembersBox" id="TeamMembers03">
+
+                            <!--<div class="TeamMembersBox" id="TeamMembers03">
                                 <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffrey.jpg">
                             </div>
                             <div class="TeamMembersBox" id="TeamMembers04">
                                 <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentin.jpg">
-                            </div>
-                        </div>
+                            </div>-->
                                     
                 </section>
                 <?php include "infos_comp.php"; ?>
