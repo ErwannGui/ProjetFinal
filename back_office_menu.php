@@ -29,6 +29,7 @@
     if ( isset($_POST['btn-add_menu']) ) {
 
         $nomMenu = htmlspecialchars($_POST['MenuNom']);
+        $compoMenu = htmlspecialchars($_POST['MenuComposition']);
         $prixL = htmlspecialchars($_POST['MenuPrixL']);
         $prixXL = htmlspecialchars($_POST['MenuPrixXL']);
         $entre = htmlspecialchars($_POST['MenuEntree']);
@@ -36,13 +37,14 @@
         $dessert = htmlspecialchars($_POST['MenuDessert']);
         $boisson = htmlspecialchars($_POST['MenuBoisson']);
  
-        $query = "INSERT INTO menu(menuNom,menuPrixL,menuPrixXL,menuEntree,menuPlat,menuDessert,menuBoisson) VALUES('$nomMenu','$prixL','$prixXL','$entree','$plat','$dessert','$boisson')";
+        $query = "INSERT INTO menu(menuTitre,menuComposition,menuPrixL,menuPrixXL,menuEntree,menuPlat,menuDessert,menuBoisson) VALUES('$nomMenu','$compoMenu','$prixL','$prixXL','$entree','$plat','$dessert','$boisson')";
         $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
         if ($res) {
             $errTyp = "Succès";
             $errMSG_add_menu = "Le nouveau menu a été enregistré.";
-            unset($nomAlim);
+            unset($nomMenu);
+            unset($compoMenu);
             unset($prixL);
             unset($prixXL);
             unset($entree);
@@ -147,6 +149,7 @@
                     }
                 ?>
 				<input type="text" name="MenuNom" placeholder="Nom de la formule">
+				<input type="text" name="MenuComposition" placeholder="Composition du menu">
 				<input type="number" name="MenuPrixL" placeholder="Prix L">
 				<input type="number" name="MenuPrixXL" placeholder="Prix XL">
 				<select name="MenuEntree">
