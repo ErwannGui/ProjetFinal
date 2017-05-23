@@ -176,6 +176,7 @@ header{
     height:2.5vw;
 }
 
+/* SVG du header (réseaux sociaux) lors du survol souris */
 #headerFrontContainerThree svg:hover{
     fill: #AA8C64;
 }
@@ -276,10 +277,12 @@ footer{
     color: white;
 }
 
+/* Couleur de fond du footer */
 .foot{
     background-color: #333333;
 }
 
+/* Paragraphes et liens du footer */
 .foot p, .foot a{
     text-decoration: none;
     display: inline-block;
@@ -654,6 +657,7 @@ h2 {
     height: 100vh; 
 }
 
+/* Position de l'image de fond du blog */
 #blogBackground img{
     position: relative;
 }
@@ -708,6 +712,7 @@ h2 {
     width: 100px;
 }
 
+/* Les boutons pour changer de catégorie lors du survol souris */
 .category:hover{
 	background: #C1C1C1;
 }
@@ -776,6 +781,7 @@ h2 {
     padding: 20px;
 }
 
+/* Chaque dis des témoignages */
 #blogTestimonyTestimonials div{
     width: 18vw;
     text-align: justify;
@@ -1431,15 +1437,17 @@ h2 {
     border: 3px white solid;
 }
 
-/*  */
+/* Partie basse des menus */
 .menuSetMenuContainerBottom div{
     margin-top: 20px;
 }
 
+/* Containeur principal des menus */
 .menuSetMenuContainer{
     padding: 15px 15px 15px 15px;
 }
 
+/* Span des menus : catégories d'aliments */
 .menuSetMenuContainer span{
     font-weight: 900;
     font-size: 17px;
@@ -1447,31 +1455,37 @@ h2 {
     text-transform: uppercase;
 }
 
+/* Strong des menus : les numéros des formules */
 .menuSetMenuContainer strong{
     font-size: 20px;
 }
 
+/* Containeur pour afficher chaque aliments à la carte */
 #menuBoardContainer{
     position:relative;
     padding-bottom: 4.5vh;
 }
 
+/* Titre de la partie affichage des aliments */
 #menuBoardTitle{
     text-align: center;
     margin-bottom: 4.5vh;
 }
 
+/* Première ligne du tableau */
 #menuBoardBoard{
     display: flex;
     justify-content: center;
 }
 
+/* Tableau pour afficher les aliments */
 table {
     border-collapse: collapse;
     width: 60%;
     border: 1px black solid;
 }
 
+/* Colorier une ligne sur deux du tableau */
 table tr:nth-child(odd){
     background-color: #D3D3D3;
 }
@@ -1480,6 +1494,7 @@ td.menuBoardBoardTD{
     text-align: center;
 }
 
+/* Cellules et lignes du tableau */
 th, td {
     padding: 8px;
     border-bottom: 1px solid #ddd;
@@ -1590,10 +1605,12 @@ th, td {
     padding-bottom: 50px;
 }
 
+/* Titre de l'article */
 #articleTitle{
     margin-bottom: 10vh;
 }
 
+/* Contenu de l'article */
 #articleContent{
     width: 40vw;
     text-align: center;
@@ -1601,6 +1618,7 @@ th, td {
     margin-bottom: 15vh;
 }
 
+/* Liens pour le retour à l'affichage des articles */
 #articleBack{
     text-align: center;
     border: 1px solid black;
@@ -1609,6 +1627,7 @@ th, td {
     margin: auto;
 }
 
+/* Lien retour lors du survol souris */
 #articleBack:hover{
     background-color: #C3C3C3;
 }

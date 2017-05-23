@@ -107,61 +107,20 @@
                             <th>L</th>
                             <th>XL</th>
                         </tr>
-                        <tr>
-                            <td>Samoussa</td>
-                            <td class="menuBoardBoardTD">1€</td>
-                            <td class="menuBoardBoardTD">1.50€</td>
-                        </tr>
-                        <tr>
-                            <td>Bonbons</td>
-                            <td class="menuBoardBoardTD">1€</td>
-                            <td class="menuBoardBoardTD">1,50€</td>
-                        </tr>
-                        <tr>
-                            <td>Rougail</td>
-                            <td class="menuBoardBoardTD">7€</td>
-                            <td class="menuBoardBoardTD">9€</td>
-                        </tr>
-                        <tr>
-                            <td>Cari</td>
-                            <td class="menuBoardBoardTD">7€</td>
-                            <td class="menuBoardBoardTD">9€</td>
-                        </tr>
-                        <tr>
-                            <td>Bouchon gratiné</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">5€</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">X</td>
-                        </tr>
-                        <tr>
-                            <td>Coupelle de fruits</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">2,50€</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">X</td>
-                        </tr>
-                        <tr>
-                            <td>Pâtisserie</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">3€</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">X</td>
-                        </tr>
-                        <tr>
-                            <td>Eau</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">1,10€</td>
-                            <td class="menuBoardBoardTD" class="menuBoardBoardTD">1,50€</td>
-                        </tr>
-                        <tr>
-                            <td>Soda</td>
-                            <td class="menuBoardBoardTD">1,30</td>
-                            <td class="menuBoardBoardTD">1,90€</td>
-                        </tr>
-                        <tr>
-                            <td>Bière dodo</td>
-                            <td class="menuBoardBoardTD">3,50</td>
-                            <td class="menuBoardBoardTD">X</td>
-                        </tr>
-                        <tr>
-                            <td>Vin de Loire</td>
-                            <td class="menuBoardBoardTD">5€</td>
-                            <td class="menuBoardBoardTD">10€</td>
-                        </tr>
+                        
+                        <?php 
+                            $produits=$bdd->query("SELECT nourriturePrixL, nourriturePrixXL, nourritureNom FROM nourriture");
+                        
+                            while($prod=$produits->fetch()){
+                                print_r("
+                                    <tr>
+                                        <td>" . $prod['nourritureNom'] . "</td>
+                                        <td class='menuBoardBoardTD'>" . $prod['nourriturePrixL'] . "</td>
+                                        <td class='menuBoardBoardTD''>" . $prod['nourriturePrixXL'] . "</td>
+                                    </tr>
+                                ");}
+                        ?>
+                        
                     </table>
                 </div>
                 

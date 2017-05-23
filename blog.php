@@ -72,7 +72,7 @@
                                 
                                     print_r(" 
                                     
-                                        <a href='article.php'>
+                                        <a href='article.php?id=' " . $art['texteId'] ." >
                                             <div>
                                                 <article class=" /*. $art['ArticleCategorieAll'] */ . $art['ArticleCategorie'] . ">
                                                     <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">

@@ -1,3 +1,15 @@
+<?php
+
+    Try {
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+    }
+    catch (PDOException $e) {
+            die('Erreur : ' . $e->getMessage()); 
+    }
+    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -27,7 +39,9 @@
                 <div id="EventsBackgroundImage"></div>
                 <div class="backgroundTitle">
                     <h1>PRESTATIONS PRIVÉES</h1>
-                    <h2>Food truck, mais aussi traiteur !</h2>
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=36'); 
+                    $sub= $subtitle->fetch();?>
+                    <h2><?php echo $sub['texteContenu']; ?></h2>
                 </div>
                 <div class="backgroundArrow" id="scroll_ancre">
                     <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
@@ -47,21 +61,28 @@
                     <h2>Interventions</h2>
                 </div>
                 <div class="InterPics">
-                    <div class="InterBox" id="Inter01">
-                        <img alt="Photo Anniversaire" title="Anniversaire" src="images/interventions/anniversaire.png">
-                        <h3>Anniversaires</h3>
-                        <p>Nous pouvons nous déplacer lors d'événements tels que des anniversaires.</p>
-                    </div>
-                    <div class="InterBox" id="Inter02">
-                        <img alt="Photo Repas Entreprise" title="Repas d'entreprise" src="images/interventions/businessMeal.png">
-                        <h3>Repas d'entreprises</h3>
-                        <p>Vous souhaitez préparer un événement et proposer un repas atypique à vos employés ? Faites-leur découvrir la cusine créloe !</p>
-                    </div>
-                    <div class="InterBox" id="Inter03">
-                        <img alt="Photo mariage" title="Mariage" src="images/interventions/mariage.png">
-                        <h3>Mariages</h3>
-                        <p>Surprenez vous invités en amenant notre food truck et notre cuisine à votre mariage !</p>
-                    </div>
+                  
+                        
+                        <?php 
+                            $evenement=$bdd->query("SELECT * FROM evenement");
+                            while($even=$evenement->fetch()){
+                                $imageEvenement=$bdd->query("SELECT imageSource FROM image WHERE imageId=" . $even['imageId']);
+                                
+                                while($imageEven=$imageEvenement->fetch()){
+                                    $texteEvenement=$bdd->query("SELECT texteContenu FROM texte WHERE texteId=" .$even['texteId']);
+                                    
+                                    while($texteEven=$texteEvenement->fetch()){
+                                    print_r(" 
+                                    
+                                    <div class='InterBox'>
+                                        <img src" . $imageEven['imageSource'] . " alt='Evenement' title='Evenement'>
+                                        <h3>" . $even['eventTitre'] . "</h3>
+                                        <p>" . $texteEven['texteContenu'] . "</p>
+                                    </div>
+                                    
+                                            ");}}} ?>
+                                   
+                    
                 </div>    
             </section>
             <?php include "infos_comp.php"; ?>

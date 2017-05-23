@@ -1,3 +1,14 @@
+<?php
+
+    Try {
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+    }
+    catch (PDOException $e) {
+            die('Erreur : ' . $e->getMessage()); 
+    }
+    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -12,13 +23,18 @@
 
         <?php $page = 4;
                 include "headerFront.php"; ?>
+        
+        <?php $idarticle = $_GET['id'];
+              $contenu= $bdd->query('SELECT articleTitre, texteId FROM article WHERE id ='.$idarticle);
+        while ($article= $contenu->fetch()){
+        ?>
 
         <div id="container">
 
             <div id="articleTotal">
 
                 <div id="articleTitle">
-                    <h1>L’évolution du marché des food trucks</h1>
+                    <h1><?php echo $article['articleTitre']; ?></h1>
                 </div>
 
                 <div id="articleContent">
@@ -32,6 +48,7 @@
 
                     <p>Aujourd’hui le food truck est en perpétuel mouvement, de nouveaux food truck sont créés chaque semaine avec de nouveaux concepts pour être orignal et ainsi récupérer de nouveaux clients.</p>
                 </div>
+            <?php } ?>
                 
               
                 <div id="articleBack">
