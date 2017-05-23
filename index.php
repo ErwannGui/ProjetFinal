@@ -89,7 +89,7 @@
                             </div>
                             <div class="détails">
                                 <p class="jouracceuil">Mercredi</p>
-                                <p class="adresseacceuil">Boulevard Salvador Allende, 44800 Saint-Herblain</p>
+                                <p class="adresseacceuil">1 Rue Ordronneau, 44400 Rezé</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
@@ -99,7 +99,7 @@
                         <div class="journéeacceuil">
                             <div class="détails">
                                 <p class="jouracceuil">Jeudi</p>
-                                <p class="adresseacceuil">Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</p>
+                                <p class="adresseacceuil">Boulevard Salvador Allende, 44800 Saint-Herblain</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="détails">
                                 <p class="jouracceuil">Vendredi</p>
-                                <p class="adresseacceuil">1 Rue Ordronneau, 44400 Rezé</p>
+                                <p class="adresseacceuil">Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</p>
                                 <p>Midi :</p>
                                 <p>11h30 - 14h30</p>
                                 <p class="Soiracceuil">Soir :</p>

@@ -161,10 +161,9 @@ header{
 /* Partie comprenant les svg des réseaux sociaux */
 #headerFrontContainerThree{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    position: absolute;
-    bottom: 8vh;
-    width: 20vw;
+    margin-top: 20%;
 }
 
 #headerFrontContainerThree div:nth-child(1), #headerFrontContainerThree div:nth-child(2), #headerFrontContainerThree div:nth-child(3){
@@ -173,12 +172,12 @@ header{
 
 /* SVG du header */
 #headerFrontContainerThree svg{
-    height: 5.3vh;
-    fill: grey;
+    fill: white;
+    height:2.5vw;
 }
 
 #headerFrontContainerThree svg:hover{
-    fill: white;
+    fill: #AA8C64;
 }
 
 /* Partie 2017 Copyright */
@@ -1480,6 +1479,7 @@ h2 {
     color: white;
 }
 
+/* Partie supérieur de l'affichage des menus */
 #menuSetMenuContainerOneTop, #menuSetMenuContainerTwoTop, #menuSetMenuContainerThreeTop{
     text-align: center;
     padding: 3px 3px 3px 3px;
@@ -1489,6 +1489,7 @@ h2 {
     border: 3px white solid;
 }
 
+/* Seconde partie de l'affichage des menus */
 #menuSetMenuContainerOneBottom, #menuSetMenuContainerTwoBottom, #menuSetMenuContainerThreeBottom{
     text-align: center;
     padding: 20px 20px 20px 20px;
@@ -1501,6 +1502,7 @@ h2 {
     border: 3px white solid;
 }
 
+/*  */
 #menuSetMenuContainerOneBottom div, #menuSetMenuContainerTwoBottom div, #menuSetMenuContainerThreeBottom div{
     margin-top: 20px;
 }
@@ -1653,6 +1655,7 @@ th, td {
 /*      PAGE ARTICLE    */
 /*----------------------*/
 
+/* Div qui contient la totalité de l'article : titre + contenu */
 #articleTotal{
     padding-top: 30px;
     padding-bottom: 50px;

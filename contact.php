@@ -17,6 +17,7 @@
                 <div id="contactBackgroundImage"></div>
                 <div class="backgroundTitle">
                     <h1>CONTACT</h1>
+                    <h2>Plus d'informations ? Des questions ? Vous êtes au bon endroit</h2>
                 </div>
                 <div class="backgroundArrow" id="scroll_ancre">
                     <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
@@ -35,7 +36,7 @@
             		</div>
             		<div class="day mercredi">
             			<h3>Mercredi</h3>
-            			<h4>Boulevard Salvador Allende, 44800 Saint-Herblain</h4>
+            			<h4>1 Rue Ordronneau, 44400 Rezé</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
@@ -43,7 +44,7 @@
             		</div>
             		<div class="day jeudi">
             			<h3>Jeudi</h3>
-            			<h4>Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</h4>
+                        <h4>Boulevard Salvador Allende, 44800 Saint-Herblain</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
@@ -51,7 +52,7 @@
             		</div>
             		<div class="day vendredi">
             			<h3>Vendredi</h3>
-            			<h4>1 Rue Ordronneau, 44400 Rezé</h4>
+                        <h4>Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</h4>
             			<p>Midi :</p>
             			<p>11h30 - 14h30</p>
             			<p>Soir :</p>
