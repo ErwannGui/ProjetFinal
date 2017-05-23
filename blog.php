@@ -58,20 +58,21 @@
                 </div>
                 
                 
-                <div id="blogArticlesArticles">
-                    <a href="article.php">
-                        <div>
+                
                             
                             <?php $article=$bdd->query('SELECT * FROM article');
                                   
                             
                             while($art=$article->fetch()){
-                                $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=".$art['imageId']);
+                                $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=" . $art['imageId']);
                                 
                                 while($imageArt=$imageArticle->fetch()){
                                 
-                                    print_r("    
-                            <article class=" . $art['ArticleCategorie'] . ">
+                                    print_r(" 
+                                    <div id='blogArticlesArticles'>
+                    <a href='article.php'>
+                        <div>
+                            <article class=" /*. $art['ArticleCategorieAll'] */ . $art['ArticleCategorie'] . ">
                                 <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">
                                 <p>" . $art['articleTitre'] . "</p>
                             </article>
@@ -85,45 +86,83 @@
                 <div id="blogTestimonyTitle">
                     <h2>Témoignages</h2>
                 </div>
-
+                
+                <?php 
+                    $testimonyImage=$bdd->prepare('SELECT * FROM image WHERE imageId = ?'); 
+                    $testimonyImage->bindParam('1', $imageId);
+                        
+                    $testimonyTexte=$bdd->prepare('SELECT * FROM texte WHERE texteId = ?');
+                    $testimonyTexte->bindParam('1', $texteId);
+                ?>
+                
                 <div id="blogTestimonyTestimonials">
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
                             <div>
-                                <img src="images/testimonials/testimonyOne.jpg" alt="Témoignage" title="Témoignage">
+                                <?php 
+                                    $imageId = 14;
+                                    $testimonyImage->execute();
+                                    $tesImage = $testimonyImage->fetch(); 
+                                ?>
+                                <img src="<?php print_r($tesImage['1']); ?>" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Christelle</h3>
                                 <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Merci à "Chez Fifi" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus."</p>
+                        <?php
+                            $texteId = 11;
+                            $testimonyTexte->execute();
+                            $testTexte = $testimonyTexte->fetch();
+                        ?>
+                        <p><?php echo $testTexte['1']; ?></p>
                     </div>
 
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
                             <div>
-                                <img src="images/testimonials/testimonyTwo.jpg" alt="Témoignage" title="Témoignage">
+                                <?php 
+                                    $imageId = 15;
+                                    $testimonyImage->execute();
+                                    $tesImage = $testimonyImage->fetch(); 
+                                ?>
+                                <img src="<?php print_r($tesImage['1']); ?>" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Jacques</h3>
                                 <h4>Le 22/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Habitué depuis peu j'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l'accueil parfaite, les serveurs sont plus qu'agréable !"</p>
+                        <?php
+                            $texteId = 12;
+                            $testimonyTexte->execute();
+                            $testTexte = $testimonyTexte->fetch();
+                        ?>
+                        <p><?php echo $testTexte['1']; ?></p>
                     </div>
 
                     <div>
                         <div class="blogTestimonyTestimonialsImage">
                             <div>
-                                <img src="images/testimonials/testimonyThree.jpg" alt="Témoignage" title="Témoignage">
+                                <?php 
+                                    $imageId = 16;
+                                    $testimonyImage->execute();
+                                    $tesImage = $testimonyImage->fetch(); 
+                                ?>
+                                <img src="<?php print_r($tesImage['1']); ?>" alt="Témoignage" title="Témoignage">
                             </div>
                             <div>
                                 <h3>Léo</h3>
                                 <h4>Le 18/05/2017</h4>
                             </div>
                         </div>
-                        <p>"Je vous recommande le food truck "Chez Fifi", placé à côté de mon lycée une fois par semaine. Je mange la formule à 6€ qui est dans mes moyens étudiants."</p>
+                        <?php
+                            $texteId = 13;
+                            $testimonyTexte->execute();
+                            $testTexte = $testimonyTexte->fetch();
+                        ?>
+                        <p><?php echo $testTexte['1']; ?></p>
                     </div>
                 </div>
             </div>
