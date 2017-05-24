@@ -1627,5 +1627,67 @@ th, td {
 }
 
 /*----------------------*/
-/*  FIN PAGE ARTICLE    */
+/*         404          */
+/*----------------------*/
+/*
+.ErrorPagebackgroundTitle{
+    position: fixed;
+    text-align: center;
+    color: white;
+    top: 30%;
+    left: 50vw;
+    width: 20vw;
+    font-family: 'Unica One', cursive;
+    display: block;
+    text-transform: uppercase;
+}
+
+#ErrorPageBackgroundImage img{
+   /* background:url(../images/404/404.png) fixed;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto  ;
+    filter: brightness(60%);
+    height: 150vh;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;*/
+    
+}
+/*
+#Page{
+    margin:0;
+    padding:0;
+    background: url(../images/404/404.png) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari *//*
+    background-size: cover; /* version standardisée *//*
+}
+
+.BackButton{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: thin;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    background-color: transparent;
+    border-color: aliceblue;
+    color: aliceblue;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    top: 150px;
+    position: absolute;
+}
+*/
+#Page{
+background-image:url('../images/404/404.png');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+
+/* #ae895d #313539*/
+/*----------------------*/
+/*       FIN 404        */
 /*----------------------*/
