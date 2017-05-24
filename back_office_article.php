@@ -27,6 +27,7 @@
 	        $titreArticle = htmlspecialchars($_POST['ArticleTitre']);
 	        $authorArticle = htmlspecialchars($_POST['ArticleAuteur']);
 	        $dateArticle = htmlspecialchars($_POST['ArticleDate']);
+	        $categorieArticle = "all ".htmlspecialchars($_POST['ArticleCategorie']);
 	        $contentArticle = htmlspecialchars($_POST['ArticleContenu']);
 
 	        // envoi du texte dans la table texte
@@ -50,7 +51,7 @@
 			$imageId = $image['imageId'];
 	 
 	 		// insertion de la ligne dans la table (ici article)
-	        $query = "INSERT INTO article(articleTitre,articleAuteur,articleDate,texteId,imageId) VALUES('$titreArticle','$authorArticle','$dateArticle','$texteId','$imageId')";
+	        $query = "INSERT INTO article(articleTitre,articleAuteur,ArticleCategorie,articleDate,texteId,imageId) VALUES('$titreArticle','$authorArticle','$categorieArticle','$dateArticle','$texteId','$imageId')";
 	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
 	        if ($res) {
@@ -86,6 +87,7 @@
 				<input type="file" name="ArticleImage">
 				<input type="text" name="ArticleAuteur" placeholder="Auteur">
 				<input type="date" name="ArticleDate" placeholder="Date de l'article (format YYYY-MM-DD)">
+				<input type="text" name="ArticleCategorie" placeholder="Catégorie dans laquelle sera affiché l'article">
 				<textarea name="ArticleContenu" placeholder="Contenu de votre article"></textarea>
 				<input type="submit" name="btn-add_article" value="Valider">
 			</form>
