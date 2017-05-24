@@ -1,29 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Mer 24 Mai 2017 à 10:25
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Host: localhost:8889
+-- Generation Time: May 24, 2017 at 04:15 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Base de données :  `food_truck`
+-- Database: `food_truck`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `article`
+-- Table structure for table `article`
 --
 
 CREATE TABLE `article` (
@@ -37,7 +31,7 @@ CREATE TABLE `article` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `article`
+-- Dumping data for table `article`
 --
 
 INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `ArticleCategorie`, `articleDate`, `texteId`, `imageId`) VALUES
@@ -51,7 +45,7 @@ INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `ArticleCat
 -- --------------------------------------------------------
 
 --
--- Structure de la table `equipe`
+-- Table structure for table `equipe`
 --
 
 CREATE TABLE `equipe` (
@@ -63,7 +57,7 @@ CREATE TABLE `equipe` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `equipe`
+-- Dumping data for table `equipe`
 --
 
 INSERT INTO `equipe` (`membreId`, `membreNom`, `membrePrenom`, `texteId`, `imageId`) VALUES
@@ -75,7 +69,7 @@ INSERT INTO `equipe` (`membreId`, `membreNom`, `membrePrenom`, `texteId`, `image
 -- --------------------------------------------------------
 
 --
--- Structure de la table `evenement`
+-- Table structure for table `evenement`
 --
 
 CREATE TABLE `evenement` (
@@ -88,7 +82,7 @@ CREATE TABLE `evenement` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `evenement`
+-- Dumping data for table `evenement`
 --
 
 INSERT INTO `evenement` (`eventId`, `eventTitre`, `eventDate`, `eventType`, `texteId`, `imageId`) VALUES
@@ -100,7 +94,7 @@ INSERT INTO `evenement` (`eventId`, `eventTitre`, `eventDate`, `eventType`, `tex
 -- --------------------------------------------------------
 
 --
--- Structure de la table `image`
+-- Table structure for table `image`
 --
 
 CREATE TABLE `image` (
@@ -110,7 +104,7 @@ CREATE TABLE `image` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `image`
+-- Dumping data for table `image`
 --
 
 INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
@@ -133,7 +127,7 @@ INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
 (17, 'images/bg/bg_menu.png', 'Nos menus'),
 (18, 'images/bg/bg_contact.png', 'Contact'),
 (19, 'images/bg/bg_events.png', 'Prestations privées'),
-(20, 'images/bg/bg_apropos.png', 'A propos de nous'),
+(20, 'images/bg/bg_apropos.png', 'A propos'),
 (22, 'images/pics/ProfilAntonin.jpg', 'A propos'),
 (23, 'images/pics/ProfilErwann.jpg', 'A propos'),
 (24, 'images/pics/ProfilGeoffrey.jpg', 'A propos'),
@@ -155,7 +149,7 @@ INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `menu`
+-- Table structure for table `menu`
 --
 
 CREATE TABLE `menu` (
@@ -172,7 +166,7 @@ CREATE TABLE `menu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `menu`
+-- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`menuId`, `menuTitre`, `menuComposition`, `menuPrixL`, `menuPrixXL`, `menuEntree`, `menuPlat`, `menuDessert`, `menuBoisson`, `Disponibilité`) VALUES
@@ -183,7 +177,7 @@ INSERT INTO `menu` (`menuId`, `menuTitre`, `menuComposition`, `menuPrixL`, `menu
 -- --------------------------------------------------------
 
 --
--- Structure de la table `message`
+-- Table structure for table `message`
 --
 
 CREATE TABLE `message` (
@@ -196,7 +190,7 @@ CREATE TABLE `message` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `message`
+-- Dumping data for table `message`
 --
 
 INSERT INTO `message` (`messageId`, `messageNomEnvoyeur`, `messageMail`, `messageTel`, `messageObjet`, `messageContenu`) VALUES
@@ -206,7 +200,7 @@ INSERT INTO `message` (`messageId`, `messageNomEnvoyeur`, `messageMail`, `messag
 -- --------------------------------------------------------
 
 --
--- Structure de la table `nourriture`
+-- Table structure for table `nourriture`
 --
 
 CREATE TABLE `nourriture` (
@@ -219,7 +213,7 @@ CREATE TABLE `nourriture` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `nourriture`
+-- Dumping data for table `nourriture`
 --
 
 INSERT INTO `nourriture` (`nourritureId`, `nourriturePrixL`, `nourriturePrixXL`, `nourritureNom`, `nourritureIngredient`, `typeId`) VALUES
@@ -239,35 +233,36 @@ INSERT INTO `nourriture` (`nourritureId`, `nourriturePrixL`, `nourriturePrixXL`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `partenaire`
+-- Table structure for table `partenaire`
 --
 
 CREATE TABLE `partenaire` (
   `partenaireId` int(10) NOT NULL,
   `partenaireNom` varchar(100) NOT NULL,
   `partenaireLieu` varchar(255) NOT NULL,
+  `partenaireLien` varchar(255) DEFAULT NULL,
   `texteId` int(10) NOT NULL,
   `imageId` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `partenaire`
+-- Dumping data for table `partenaire`
 --
 
-INSERT INTO `partenaire` (`partenaireId`, `partenaireNom`, `partenaireLieu`, `texteId`, `imageId`) VALUES
-(1, 'Bourbon', 'Réunion', 26, 28),
-(2, 'Coca-Cola', 'France', 27, 29),
-(3, 'Le Curé Nantais', 'Nantes', 28, 30),
-(4, 'Ecologie Réunion', 'Réunion', 29, 31),
-(5, 'La petite Ferme', 'Nantes', 30, 32),
-(6, 'L\'effet Péi', 'Réunion', 31, 33),
-(7, 'Distram', 'Nantes', 32, 34),
-(8, 'Min Nantes', 'Nantes', 33, 35);
+INSERT INTO `partenaire` (`partenaireId`, `partenaireNom`, `partenaireLieu`, `partenaireLien`, `texteId`, `imageId`) VALUES
+(1, 'Bourbon', 'Réunion', 'http://www.ladodo.com', 26, 28),
+(2, 'Coca-Cola', 'France', 'https://www.coca-cola-france.fr/', 27, 29),
+(3, 'Le Curé Nantais', 'Nantes', 'http://www.curenantais.com/', 28, 30),
+(4, 'Ecologie Réunion', 'Réunion', 'https://ecologie-reunion.com/', 29, 31),
+(5, 'La petite Ferme', 'Nantes', 'http://www.lapetitefermecarquefou.fr/', 30, 32),
+(6, 'L\'effet Péi', 'Réunion', 'http://www.leffetpei.re/', 31, 33),
+(7, 'Distram', 'Nantes', 'https://www.distram.com/', 32, 34),
+(8, 'Min Nantes', 'Nantes', 'http://www.minnantes.com/', 33, 35);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `proprietaire`
+-- Table structure for table `proprietaire`
 --
 
 CREATE TABLE `proprietaire` (
@@ -277,7 +272,7 @@ CREATE TABLE `proprietaire` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `proprietaire`
+-- Dumping data for table `proprietaire`
 --
 
 INSERT INTO `proprietaire` (`adminId`, `adminPseudo`, `adminMdp`) VALUES
@@ -289,7 +284,7 @@ INSERT INTO `proprietaire` (`adminId`, `adminPseudo`, `adminMdp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `texte`
+-- Table structure for table `texte`
 --
 
 CREATE TABLE `texte` (
@@ -299,21 +294,21 @@ CREATE TABLE `texte` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `texte`
+-- Dumping data for table `texte`
 --
 
 INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (1, 'Chez Fifi', 'Accueil'),
 (63, 'Nos spécialités', 'Accueil'),
-(3, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
+(3, 'Bienvenue sur le site web du food truck \"Chez Fifi\". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme \"La dodo\" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
 (6, 'Le food truck “Chez Fifi” vient de s’installer dans les rues de Nantes et permet enfin de manger de la nourriture traditionnelle créole de La Réunion. En effet, aujourd’hui dans l’agglomération nantaise seulement 2 restaurants permettent de manger réunionnais.\n\nGrace à “Chez Fifi” certaines personnes n’ayant jamais goûté de nourriture réunionnaise vont pouvoir l’expérimenter. De plus, les personnes réunionnaises d’origine vont pouvoir manger ce qu’elles aiment sans payer trop cher. En effet, le prix maximal du restaurant sera de 15€, mais il est tout à fait possible de manger pour moins de 10€.\n\nIl est important de gouter au moins une fois dans sa vie la cuisine traditionnelle réunionnaise, qui est une des cuisines les moins représentées en France.\n', 'Actualités'),
 (7, 'De plus en plus d\'entrepreneurs se lancent aujourd’hui à la conquête du marché de la streetfood avec leur camion. Mais beaucoup d\'entre eux ignorent ou négligent certaines précautions à prendre concernant leur clientèle et leurs finances. Savoir se vendre, connaître les retours, ne pas confondre chiffre d\'affaires et bénéfices, … On vous donne ainsi aujourd’hui quelques conseils déterminants afin de maintenir son camion et son commerce « sur les roues » afin de mener votre business vers le succès.\r\nLe bouche à oreille ne suffira pas à assurer la rentabilité de vote food truck. Avec le développement des réseaux sociaux des nouveau différents moyens de communication, il est plus facile et rapide de se faire connaitre et repérer et à moindre coût. Tous les concepts sont bons mais la présence online est tout autant importante si ce n’est plus que la présence offline. Pleins de moyens permettent d’être mieux référencés sur le web, que ça soit à l’aide d’une application mobile de géolocalisation, d’une page Facebook professionnelle, sur un site de réservation de food truck, voire même son propre site.\r\nLes food trucks sont de plus en plus recherchés pour des prestations événementielles, qu’elles soient pour des particuliers (un food truck pour un mariage, un anniversaire ou une soirée entre amis à domicile) ou pour des entreprises (séminaire, réunion, fête de fin d’année, …). En pleine saison (mai – septembre) il sera ainsi judicieux de faire un maximum d’événements de la sorte afin de générer de l’argent pour tenir lorsque l’hiver arrivera, et que l’activité sera moindre.\r\nFace à un client mécontent, mieux vaut ne pas s’énerver. Si un client vous signale qu’il est insatisfait, essayez de comprendre pourquoi (repas froid, problème de qualité ou de quantité ?) et si cela est justifié, offrez-lui un repas ou un plat gratuit pour vous excuser. Peut-être changera-t-il d’opinion et se transformera en client fidèle.\r\nMaintenant, à vous de jouer et de faire de votre food truck un véritable succès !', 'Actualités'),
 (8, 'Avec la diversification du business des food truck, il est de plus en plus difficile de se faire une place reconnue sur le marché et de séduire de nouveaux consommateurs. Il est certes important de trouver une cible idéale mais s’il est un paramètre qui déterminera la réussite ou l’échec de votre commerce, c’est bel et bien les emplacements de vente. Il faut donc correspondre le mieux possible aux points de passage de vos cibles au moment des repas, pour ainsi maximiser l’effet coup de cœur.\r\n\r\nLes mairies, administrations fiscales, préfectures, tribunaux, ministères, bibliothèques, bureaux, centres d’affaires. Certains y travaillent, d’autres les fréquentent, mais il est certain que tous déjeunent à midi. Les chambres d’hôtes, hôtels, gîtes ruraux, il faut se documenter sur le nombre de chambres, mais aussi leur niveau de qualité. Les stations balnéaires, stations thermales, stations de ski sont aussi des points stratégiques en fonction des saisons. Il faut aussi sauter sur l’occasion pour profiter des foires, festivals et salons. Attention toutefois à la redevance. Elle sera sans doute plus élevée qu’en moyenne.', 'Actualités'),
 (9, 'Depuis peu, et du fait de l’augmentation des camions repas, les propriétaires de food trucks se voient obligés de diversifier leurs activités. La grande majorité propose désormais ses services en tant que traiteurs et sont appelés à intervenir à domicile, pour des évènements privés tel que des mariages, anniversaires, ou fêtes en tout genre. Les clients peuvent ainsi profiter d’une carte concoctée à l’aide de produits de qualité tout en ayant un budget moins élevé qu’un traiteur traditionnel.\r\n\r\nDe plus, pour les organisateurs de l’évènement, cela garanti une bonne ambiance car le traiteur préparera la cuisine dans son camion. Ce camion va susciter l’intérêt des invités qui vont tour à tour passer devant le camion. De plus le traiteur fera la cuisine devant les invités, ce qui inspirera confiance aux clients.\r\n\r\nC’est un concept encore insolite pour la plupart des personnes, de plus le prix par personne est nettement inférieur à un traiteur traditionnel. En effet, avec un traiteur traditionnel, il faut compter environ 50 à 150€ par personne. Avec un food truck, la note peut baisser à 25€ par personne, même si le service à table est optionnel.\r\n', 'Actualités'),
 (10, 'Le food truck est un concept importé des États Unis qui est arrivé en France en 2009 à Paris puis depuis 2011 dans les autres villes de France. Le principe du food truck est d’utiliser un camion pour cuisiner et vendre de la nourriture aux passants. Ainsi le cuisinier peut changer d’endroit en fonction des événements et des habitudes de déplacement des gens.\r\n\r\nCe concept s’est beaucoup développé en France ces dernières années. En effet depuis 2011 le nombre de camions a littéralement explosé ! Ainsi en 2015 on comptabilisait déjà plus de 400 food trucks dans l’hexagone dont une grande partie dans la capitale.\r\n\r\nAvec ce développement on peut retrouver toute sorte de cuisine : pizzas, sandwichs, sushis mais aussi des cuisines plus exotiques comme de la cuisine chinoise ou réunionnaise.\r\n\r\nLes marques de grande distribution ont aussi misé sur ces food truck pour aller à la rencontre des consommateurs dans l’espoir de vendre encore plus et de faire découvrir de nouveaux produits aux clients.\r\n\r\nAujourd’hui le food truck est en perpétuel mouvement, de nouveaux food truck sont créés chaque semaine avec de nouveaux concepts pour être orignal et ainsi récupérer de nouveaux clients.\r\n', 'Actualités'),
-(11, '"Merci à "Chez Fifi" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus."', 'Actualités'),
-(12, '"Habitué depuis peu j\'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l\'accueil parfaite, les serveurs sont plus qu\'agréable !"', 'Actualités'),
-(13, '"Je vous recommande le food truck "Chez Fifi", placé à côté de mon lycée une fois par semaine. Je mange la formule à 6€ qui est dans mes moyens étudiants."', 'Actualités'),
+(11, '\"Merci à \"Chez Fifi\" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus.\"', 'Actualités'),
+(12, '\"Habitué depuis peu j\'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l\'accueil parfaite, les serveurs sont plus qu\'agréable !\"', 'Actualités'),
+(13, '\"Je vous recommande le food truck \"Chez Fifi\", placé à côté de mon lycée une fois par semaine. Je mange la formule à 6€ qui est dans mes moyens étudiants.\"', 'Actualités'),
 (14, 'Un bouchon est une petite bouchée de viande de porc ou de poulet entourée de pâte cuite à la vapeur que l\'on sert généralement en tant qu\'apéritif chaud sur l\'île de La Réunion, département d\'outre-mer français dans l\'océan Indien.', 'Accueil'),
 (15, 'Le Rougail saucisse est un plat traditionnelle réunionnais, à base de saucisses créoles souvent fumées artisanales ou encore fraîches. Celles-ci sont ensuite coupées en morceaux, accompagnées de riz et de rougail (tomates coupées en petits dés, gingembre pilé, oignons émincés et piments).', 'Accueil'),
 (20, 'Erwann est un jeune développeur back-end. Il va vous créer la meilleur base de données possible.', 'Equipe'),
@@ -322,14 +317,14 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (23, 'Antonin est développeur possédant des capacités en front et back-end. Il peut donc travailler sur la partie visible mais aussi non visible de votre site.', 'Equipe'),
 (24, 'Lors d\'un mariage, nous avons préparé à bord de notre food truck du rougail saucisse pour plus de 90 personnes, dans la bonne humeur !', 'Evenements'),
 (25, 'Pour les 65 ans d\'une retraitée, nous avons préparé des bouchons gratinés pour 30 personnes. ', 'Evenements'),
-(26, 'Bourbon', 'A propos'),
-(27, 'Coca-Cola', 'A propos'),
-(28, 'Cure Nantais', 'A propos'),
-(29, 'Ecolo Réunion', 'A propos'),
-(30, 'Ferme Nantaise', 'A propos'),
-(31, 'L\'effet Péi', 'A propos'),
-(32, 'Distram', 'A propos'),
-(33, 'Min Nantes', 'A propos'),
+(26, 'La Dodo, la bière préférée des Réunionnais !', 'A propos'),
+(27, 'Le seul et l\'unique !', 'A propos'),
+(28, 'Le Curé Nantais issu de la fromagerie artisanale à Pornic, en  Pays de Loire, est un fromage de tradition au lait cru affiné au Muscadet.', 'A propos'),
+(29, 'Association agréée au titre de la protection de l\'environnement Ile de La Réunion', 'A propos'),
+(30, 'Notre petit producteur de volailles et boeuf !', 'A propos'),
+(31, 'Marque réunionnaise de prêt-à-porter, L\'effet Péi représente la Réunion et la culture réunionnaise à travers ses collections.', 'A propos'),
+(32, 'Distram, expert et conseiller en restauration.', 'A propos'),
+(33, 'La marché d\'intérêt national de Nantes, un acteur économique de l\'agglomération nantaise.', 'A propos'),
 (34, 'Food truck réunnionnais à Nantes', 'Accueil'),
 (35, 'La cuisine traditionnelle : notre vocation, vos dégustations', 'Menus'),
 (36, 'Food truck, mais aussi traiteur !', 'Prestations privées'),
@@ -343,7 +338,7 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (65, 'Rougail saucisse', 'Accueil'),
 (66, 'Evenements spéciaux', 'Accueil'),
 (67, 'Interventions', 'Accueil'),
-(68, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
+(68, 'Bienvenue sur le site web du food truck \"Chez Fifi\". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme \"La dodo\" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
 (5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dapibus est. Proin gravida ornare ligula, at lacinia leo laoreet et. Quisque finibus quis purus ac ultrices. Cras efficitur porttitor augue vitae molestie. Fusce quis sem consequat, tincidunt nisi sed, tincidunt urna. Etiam ut enim elementum, lacinia dui quis, dapibus nisi. Vivamus congue elementum finibus. Nam accumsan feugiat lectus.\r\n\r\nQuisque placerat euismod elit in mattis. Curabitur lacus quam, finibus eget dapibus sodales, pharetra vitae mi. Quisque euismod efficitur nisl sed condimentum. Suspendisse sollicitudin lectus at massa suscipit, mattis auctor nunc malesuada. Phasellus vitae sollicitudin arcu. Suspendisse lorem diam, efficitur vitae suscipit id, congue sit amet turpis. In malesuada non diam luctus molestie. Vestibulum et turpis at sem gravida vehicula non sagittis lorem. Curabitur vel vehicula velit. Maecenas non nulla risus. Pellentesque non nunc lacinia, suscipit tortor eget, molestie tortor. Duis mollis vitae tortor non finibus. Proin malesuada leo rutrum orci consectetur ullamcorper. Proin maximus nibh quis nisi fringilla imperdiet.', 'Actualités'),
 (69, 'Chez Fifi est un Food Truck proposant une offre à partir de produits frais, locaux et réunionnais. Pour vos événements nous élaborons avec vous une offre sur mesure: rougails saucisses, cari de poulet ... Notre camion au design original, notre cuisine faite maison et la qualité des produits utilisés laisseront un souvenir visuel et gustatif à vos convives. Ainsi si vous êtes intéressés par nos prestations de traiteur, n\'hésitez plus pour apporter originalité et goût à votre réception, optez pour notre camion ! Pour permettre que cet évènement soit la plus belle des fêtes, et ce jusque dans vos assiettes!', 'Evenements'),
 (70, 'Nos menus', 'Menus'),
@@ -352,28 +347,12 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (73, 'Prestations privées', 'Evenements'),
 (74, 'A propos de nous', 'A propos'),
 (75, 'Largement inspiré de la street food en provenance des Etats Unis, le food truck est un nouveau concept de restauration nomade qui propose un service de restauration de qualité à emporter à bord d’un camion dit « truck ».', 'A propos'),
-(76, 'UN FOOD-TRUCK, C\'EST QUOI ?', 'A propos'),
-(77, 'http://www.ladodo.com', 'A propos'),
-(78, 'http://www.lapetitefermecarquefou.fr/', 'A propos'),
-(79, 'http://www.curenantais.com/', 'A propos'),
-(80, 'https://www.coca-cola-france.fr/', 'A propos'),
-(81, 'http://www.leffetpei.re/', 'A propos'),
-(82, 'https://ecologie-reunion.com/', 'A propos'),
-(83, 'https://www.distram.com/', 'A propos'),
-(84, 'http://www.minnantes.com/', 'A propos'),
-(85, 'Notre petit producteur de volailles et boeuf !', 'A propos'),
-(86, 'Le Curé Nantais issu de la fromagerie artisanale à Pornic, en  Pays de Loire, est un fromage de tradition au lait cru affiné au Muscadet.', 'A propos'),
-(87, 'Le seul et l\'unique !', 'A propos'),
-(88, 'Marque réunionnaise de prêt-à-porter, L\'effet Péi représente la Réunion et la culture réunionnaise à travers ses collections.', 'A propos'),
-(89, 'La Dodo, la bière préférée des Réunionnais !', 'A propos'),
-(90, 'Association agréée au titre de la protection de l\'environnement Ile de La Réunion.', 'A propos'),
-(91, 'Distram, expert et conseiller en restauration.', 'A propos'),
-(92, 'La marché d\'intérêt national de Nantes, un acteur économique de l\'agglomération nantaise.', 'A propos');
+(76, 'UN FOOD-TRUCK, C\'EST QUOI ?', 'A propos');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `type`
+-- Table structure for table `type`
 --
 
 CREATE TABLE `type` (
@@ -382,7 +361,7 @@ CREATE TABLE `type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `type`
+-- Dumping data for table `type`
 --
 
 INSERT INTO `type` (`typeId`, `typeNom`) VALUES
@@ -392,11 +371,11 @@ INSERT INTO `type` (`typeId`, `typeNom`) VALUES
 (4, 'Boisson');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `article`
+-- Indexes for table `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`articleId`),
@@ -404,7 +383,7 @@ ALTER TABLE `article`
   ADD KEY `imageId` (`imageId`);
 
 --
--- Index pour la table `equipe`
+-- Indexes for table `equipe`
 --
 ALTER TABLE `equipe`
   ADD PRIMARY KEY (`membreId`),
@@ -412,7 +391,7 @@ ALTER TABLE `equipe`
   ADD KEY `imageId` (`imageId`);
 
 --
--- Index pour la table `evenement`
+-- Indexes for table `evenement`
 --
 ALTER TABLE `evenement`
   ADD PRIMARY KEY (`eventId`),
@@ -420,32 +399,32 @@ ALTER TABLE `evenement`
   ADD KEY `imageId` (`imageId`);
 
 --
--- Index pour la table `image`
+-- Indexes for table `image`
 --
 ALTER TABLE `image`
   ADD PRIMARY KEY (`imageId`);
 
 --
--- Index pour la table `menu`
+-- Indexes for table `menu`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`menuId`);
 
 --
--- Index pour la table `message`
+-- Indexes for table `message`
 --
 ALTER TABLE `message`
   ADD PRIMARY KEY (`messageId`);
 
 --
--- Index pour la table `nourriture`
+-- Indexes for table `nourriture`
 --
 ALTER TABLE `nourriture`
   ADD PRIMARY KEY (`nourritureId`),
   ADD KEY `typeId` (`typeId`);
 
 --
--- Index pour la table `partenaire`
+-- Indexes for table `partenaire`
 --
 ALTER TABLE `partenaire`
   ADD PRIMARY KEY (`partenaireId`),
@@ -453,82 +432,79 @@ ALTER TABLE `partenaire`
   ADD KEY `imageId` (`imageId`);
 
 --
--- Index pour la table `proprietaire`
+-- Indexes for table `proprietaire`
 --
 ALTER TABLE `proprietaire`
   ADD PRIMARY KEY (`adminId`);
 
 --
--- Index pour la table `texte`
+-- Indexes for table `texte`
 --
 ALTER TABLE `texte`
   ADD PRIMARY KEY (`texteId`);
 
 --
--- Index pour la table `type`
+-- Indexes for table `type`
 --
 ALTER TABLE `type`
   ADD PRIMARY KEY (`typeId`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `article`
+-- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
   MODIFY `articleId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT pour la table `equipe`
+-- AUTO_INCREMENT for table `equipe`
 --
 ALTER TABLE `equipe`
   MODIFY `membreId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT pour la table `evenement`
+-- AUTO_INCREMENT for table `evenement`
 --
 ALTER TABLE `evenement`
   MODIFY `eventId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `image`
+-- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
   MODIFY `imageId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
--- AUTO_INCREMENT pour la table `menu`
+-- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `menuId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT pour la table `message`
+-- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
   MODIFY `messageId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
--- AUTO_INCREMENT pour la table `nourriture`
+-- AUTO_INCREMENT for table `nourriture`
 --
 ALTER TABLE `nourriture`
   MODIFY `nourritureId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
--- AUTO_INCREMENT pour la table `partenaire`
+-- AUTO_INCREMENT for table `partenaire`
 --
 ALTER TABLE `partenaire`
   MODIFY `partenaireId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT pour la table `proprietaire`
+-- AUTO_INCREMENT for table `proprietaire`
 --
 ALTER TABLE `proprietaire`
   MODIFY `adminId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `texte`
+-- AUTO_INCREMENT for table `texte`
 --
 ALTER TABLE `texte`
   MODIFY `texteId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 --
--- AUTO_INCREMENT pour la table `type`
+-- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
   MODIFY `typeId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

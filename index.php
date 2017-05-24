@@ -69,15 +69,15 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                         <?php $subtitle= $bdd->query('SELECT imageId, imageSource FROM image WHERE imageId=2');
                         $sub= $subtitle->fetch();?>
-                        <div><img class="carousel1 carousel" src = <?php echo $sub['imageSource']; ?> alt="food truck" title="food truck" /></div>
+                        <div><img class="carousel1 carousel" src =" <?php echo $sub['imageSource']; ?>" alt="food truck" title="food truck" /></div>
 
                         <?php $subtitle= $bdd->query('SELECT imageId, imageSource FROM image WHERE imageId=3');
                         $sub= $subtitle->fetch();?>
-                        <div><img class="carousel2 carousel" src = <?php echo $sub['imageSource']; ?> alt="fifi" title="fifi" /></div>
+                        <div><img class="carousel2 carousel" src =" <?php echo $sub['imageSource']; ?> "alt="fifi" title="fifi" /></div>
 
                         <?php $subtitle= $bdd->query('SELECT imageId, imageSource FROM image WHERE imageId=4');
                         $sub= $subtitle->fetch();?>
-                        <div><img class="carousel3 carousel" src = <?php echo $sub['imageSource']; ?> alt="samoussa" title="samoussa" /></div>
+                        <div><img class="carousel3 carousel" src ="<?php echo $sub['imageSource']; ?> "alt="samoussa" title="samoussa" /></div>
 
                     </div>
                     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -97,7 +97,7 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                         <?php $subtitle= $bdd->query('SELECT imageId, imageSource FROM image WHERE imageId=5');
                         $sub= $subtitle->fetch();?>
-                        <img src = <?php echo $sub['imageSource']; ?> alt="bouchons gratinés" title="bouchons gratinés" />
+                        <img src = "<?php echo $sub['imageSource']; ?> "alt="bouchons gratinés" title="bouchons gratinés" />
 
                        <div class="description">
 
@@ -130,7 +130,7 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                         <?php $subtitle= $bdd->query('SELECT imageId, imageSource FROM image WHERE imageId=6');
                         $sub= $subtitle->fetch();?>
-                        <img src = <?php echo $sub['imageSource']; ?> alt="rougail saucisse" title="rougail saucisse" />
+                        <img src = "<?php echo $sub['imageSource']; ?> "alt="rougail saucisse" title="rougail saucisse" />
 
                     </div>
                 </div>
