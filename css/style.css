@@ -198,7 +198,7 @@ header{
 /*----------------------*/
 /*      HEADER BACK     */
 /*----------------------*/
-
+/*header du back-office*/
 #headerBack{
     position: fixed;
     background-color: #073863;
@@ -212,43 +212,43 @@ header{
 #headerBack img{
     width: 7vw;
 }
-
+/*div avec le logo*/
 #headerBackContainerOne{
     text-align: center;
     margin-top: 20px;
 }
-
+/*menu comprenant les liens*/
 #headerBackContainerTwo{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     text-transform: uppercase;
 }
-
+/*div contenant les liens*/
 #headerBackContainerTwo div{
     text-align: center;
     margin-bottom: 15px;
     background-color: grey;
     padding: 8px 13px 8px 13px;
 }
-
+/*liens en question*/
 #headerBackContainerTwo a{
     font-size: 1.2vw;
     cursor: pointer;
 }
-
+/*au survol de la div, le a enfant change*/
 #headerBackContainerTwo div:hover a{
     color: white;
 }
-
+/*conséquence de la class ajoutée en js*/
 .actif a{
     color: white;
 }
-
+/*au survol, la couleur change*/
 #headerBack a:hover{
     color: white;
 }
-
+/*liens de deconnection et retour au site front*/
 #headerBackContainerFour{
     text-align: center;
     color: grey;
@@ -257,7 +257,7 @@ header{
     text-transform: uppercase;
     width: 10vw;
 }
-
+/*liens en question*/
 #headerBackContainerFour a{
     font-size: 1.2vw;
 }
@@ -1177,30 +1177,30 @@ h2 {
 /*----------------------*/
 /*      BACK-OFFICE     */
 /*----------------------*/
-
+/* image de fond */
 #background_back{
     background-image: url(../images/bg/bg_admin.png);
     background-size: cover;
 }
-
+/*div container (page-header)*/
 #containerBack{
     margin: 0;
     width: 90%;
     height: 100%;
     margin-left: 10%;
 } 
-
+/*titre h1 du container*/
 #containerBack h1{
     text-align: center;
     font-size: 40px;
     margin-top: 4vh;
     color: white;
 }
-
+/*class permettant d'afficher proporement les div du back office*/
 #containerBack .active{
     display: block;
 }
-
+/*toutes les div 'mères' du back_office*/
 .back_content{
     border-radius: 1vw;
     background-color: #071428;
@@ -1217,58 +1217,53 @@ h2 {
     overflow: scroll;
     overflow-x: hidden;
 }
-
+/*toutes div 'enfants' sauf contact*/
 .back_content:not(.back_contact) div{
     display: inline-block;
     vertical-align: top;
     text-align: left;
 }
-
+/*tout les titres h2 les premiers de leurs div*/
 .back_content h2:not(:first-child){
     margin-top: 0;
 }
-
+/*différentes div enfants du back*/
 .back_top_left_content, .back_bottom_left_content, .back_top_right_content, .back_bottom_right_content{
     /*border: solid 2px;*/
     width: 100%;
     padding: 1vw;
     padding-top: 0;
 }
-
+/*div enfant du haut*/
 .back_top_left_content, .back_top_right_content{
     margin-bottom: 1vh;
 }
-
+/*bouttons de formulaires de suppression*/
 .back_menu .back_bottom_left_content input[name='btn-suppr_menu'], .back_article .back_top_right_content input[name='btn-suppr_article'], .back_partenaire .back_top_right_content input[name='btn-suppr_partenaire'], .back_equipe .back_top_right_content input[name='btn-suppr_equipe'], .back_evenement .back_top_right_content input[name='btn-suppr_event']{
     margin-left: 8%!important;
 }
-
+/*case de selection d'élement a supprimer*/
 .back_content input[name='MenuId'], .back_content input[name='ArticleId'], .back_content input[name='PartenaireId'], .back_content input[name='CollegueId'], .back_content input[name='EventId']{
     width: 40px!important;
     height: 35px!important;
 }
-
+/*tout les labels du back*/
 .back_content label{
     width: 50%;
 }
-
+/*lorsque leur taille leur permet, aligner sur une ligne label et input*/
 .back_content label, .back_content input{
     display: inline-block!important;
     vertical-align: top;
 }
-
-.back_right_content label, .back_right_content input{
-    display: inline-block!important;
-    vertical-align: top;
-}
-
+/*div enfant*/
 .back_left_content, .back_right_content{
     width: 49%;
     height: 100%;
     border: none;
     padding: 0;
 }
-
+/*tout les champs de formulaires du back*/
 #containerBack input, #containerBack select, #containerBack textarea{
     width: 95%;
     height: 25px;
@@ -1277,19 +1272,14 @@ h2 {
     border-radius: 2px;
     border: solid 1.5px grey;
 }
-
+/*textareas du back*/
 #containerBack textarea{
     height: 30vh;
 }
-
+/*input de type submit*/
 #containerBack input[type='submit']{
     width: 25%;
     margin-left: 70%;
-}
-
-#boite_mail{
-    width: 100%;
-    height: 100%;
 }
 
 .back_reseau span{
@@ -1300,11 +1290,11 @@ h2 {
 /*----------------------*/
 /*  BACK-OFFICE-CONTACT */
 /*----------------------*/
-
+/*div enfant du back contact*/
 .back_contact div{
     text-align: left;
 }
-
+/*message complet*/
 .contactMessage{
     width: 90%;
     height: auto;
@@ -1316,14 +1306,14 @@ h2 {
 .contactMessage a, .contactMessage p{
     color: white!important;
 }
-
+/*en tête du message*/
 .messageHeader{
     width: 100%;
     border-bottom: solid 1px grey;
     overflow: hidden;
     cursor: pointer;
 }
-
+/*différentes div du header*/
 .messageHeaderLeft, .messageHeaderRight{
     display: inline-block;
     overflow: hidden;
@@ -1332,7 +1322,7 @@ h2 {
     height: 3.5vw;
     margin-top: -0.5vw;
 }
-
+/*paragraphes contenus dans ces div*/
 .messageHeaderLeft p, .messageHeaderRight p{
     font-size: 1.2vw;
 }
@@ -1345,23 +1335,23 @@ h2 {
 .messageHeaderRight{
     width: 50%;
 }
-
+/*conséquence de la class ajoutée en js*/
 .visibleBody .messageBody{
     display: block!important;
 }
-
+/*corps du mail*/
 .messageBody{
     display: none;
     width: 100%;
     padding-left: 2%;
 }
-
+/*informatiosn pratiques*/
 .messageBodyInfos{
     width: 100%;
     height: 30px;
     font-size: 0.8vw;
 }
-
+/*texte du mail*/
 .messageBodyContent{
     width: 100%;
     height: auto;
