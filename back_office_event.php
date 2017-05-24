@@ -2,7 +2,7 @@
 	/* --- traitement du formulaire ajout d'un évenement --- */
     if ( isset($_POST['btn-add_event']) ) {
 
-    	$dossier = 'images/'; // dossier où sera déplacé le fichier
+    	$dossier = 'images/events/'; // dossier où sera déplacé le fichier
 
 		$image = basename($_FILES['EventImage']['name']);
 
@@ -21,7 +21,7 @@
 	    	$imgPathEvent = $dossier.$image;
 
 	        $titreEvent = htmlspecialchars($_POST['EventTitre']);
-	        //$dateEvent = htmlspecialchars($_POST['EventDate']);$errMSG_upload.
+	        $dateEvent = htmlspecialchars($_POST['EventDate']);
  	        $typeEvent = htmlspecialchars($_POST['EventType']);
 	        $descriptionEvent = htmlspecialchars($_POST['EventDescription']);
 
@@ -41,7 +41,7 @@
 	        $image = mysql_fetch_array($res);
 			$imageId = $image['imageId'];
 	 
-	        $query = "INSERT INTO evenement(eventTitre,eventType,texteId,imageId) VALUES('$titreEvent','$typeEvent','$texteId','$imageId')";
+	        $query = "INSERT INTO evenement(eventTitre,eventDate,eventType,texteId,imageId) VALUES('$titreEvent','$dateEvent','$typeEvent','$texteId','$imageId')";
 	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
 	        if ($res) {
@@ -74,7 +74,7 @@
                     }
                 ?>
 				<input type="text" name="EventTitre" placeholder="Titre de l'évenement">
-				<input type="date" name="EventDate" placeholder="Date de l'évenement">
+				<input type="date" name="EventDate" placeholder="Date de l'évenement (format YYYY-MM-DD)">
 				<input type="file" name="EventImage">
 				<input type="date" name="EventType" placeholder="Type d'évenement">
 				<textarea name="EventDescription" placeholder="Description de l'évenement"></textarea>

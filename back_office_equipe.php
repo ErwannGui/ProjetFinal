@@ -2,7 +2,7 @@
 	/* --- traitement du formulaire ajout d'un collègue --- */
     if ( isset($_POST['btn-add_equipe']) ) {
 
-		$dossier = 'images/'; // dossier où sera déplacé le fichier
+		$dossier = 'images/pics/'; // dossier où sera déplacé le fichier
 
 		$image = basename($_FILES['CollegueImage']['name']);
 

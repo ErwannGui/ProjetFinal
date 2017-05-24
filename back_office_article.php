@@ -5,7 +5,7 @@
     if ( isset($_POST['btn-add_article']) ) {
 
     	/* --- script d'upload d'image pour remplacer le champ de source à rentrer à la main --- */
-    	$dossier = 'images/'; // dossier où sera déplacé le fichier
+    	$dossier = 'images/articles/'; // dossier où sera déplacé le fichier
 
 		$image = basename($_FILES['ArticleImage']['name']); // nom du fichier selectionné
 
@@ -26,7 +26,7 @@
 
 	        $titreArticle = htmlspecialchars($_POST['ArticleTitre']);
 	        $authorArticle = htmlspecialchars($_POST['ArticleAuteur']);
-	        //$dateArticle = htmlspecialchars($_POST['ArticleDate']);
+	        $dateArticle = htmlspecialchars($_POST['ArticleDate']);
 	        $contentArticle = htmlspecialchars($_POST['ArticleContenu']);
 
 	        // envoi du texte dans la table texte
@@ -50,7 +50,7 @@
 			$imageId = $image['imageId'];
 	 
 	 		// insertion de la ligne dans la table (ici article)
-	        $query = "INSERT INTO article(articleTitre,articleAuteur,texteId,imageId) VALUES('$titreArticle','$authorArticle','$texteId','$imageId')";
+	        $query = "INSERT INTO article(articleTitre,articleAuteur,articleDate,texteId,imageId) VALUES('$titreArticle','$authorArticle','$dateArticle','$texteId','$imageId')";
 	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
 	        if ($res) {
@@ -59,6 +59,7 @@
 	            unset($titreArticle);
 	            unset($imgPathArticle);
 	            unset($auteurArticle);
+	            unset($dateArticle);
 	            unset($contentArticle);
 	        } else {
 	            $errTyp = "danger";
@@ -84,7 +85,7 @@
 				<input type="text" name="ArticleTitre" placeholder="Titre de l'article">
 				<input type="file" name="ArticleImage">
 				<input type="text" name="ArticleAuteur" placeholder="Auteur">
-				<!--<input type="date" name="ArticleDate" placeholder="Date de l'article">-->
+				<input type="date" name="ArticleDate" placeholder="Date de l'article (format YYYY-MM-DD)">
 				<textarea name="ArticleContenu" placeholder="Contenu de votre article"></textarea>
 				<input type="submit" name="btn-add_article" value="Valider">
 			</form>

@@ -2,7 +2,7 @@
 	/* --- traitement du formulaire ajout de partenaire --- */
     if ( isset($_POST['btn-add_partenaire']) ) {
 
-		$dossier = 'images/'; // dossier où sera déplacé le fichier
+		$dossier = 'images/logo/'; // dossier où sera déplacé le fichier
 
 		$image = basename($_FILES['PartenaireImage']['name']);
 

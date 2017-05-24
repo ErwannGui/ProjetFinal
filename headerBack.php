@@ -1,6 +1,6 @@
 <header id="headerBack">
     <div id="headerBackContainerOne">
-        <img src="images/logo.png" alt="logo" title="Logo Chez Fifi">
+        <img src="images/trash/logo.png" alt="logo" title="Logo Chez Fifi">
     </div>
     <div id="headerBackContainerTwo">
         <div class="btn_header_back btn_back_menu actif"><a>Menus</a></div>

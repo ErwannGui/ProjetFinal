@@ -96,11 +96,11 @@
 			<h2>Supprimer un menu existant</h2>
 			<?php
 				/* --- affichage des différents menu stockés en bdd sous forme de tableau --- */
-			    $sql = 'SELECT menuId,menuNom FROM menu';
+			    $sql = 'SELECT menuId,menuTitre FROM menu';
 				$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
 				while ($data = mysql_fetch_array($req)) { // méthode alternative au ->fetch(), qui ne necessite pas de PDO
 			?>
-			<span class="diff_menus"><?php echo $data['menuId']; ?> - <?php echo $data['menuNom']; ?></span><br>
+			<span class="diff_menus"><?php echo $data['menuId']; ?> - <?php echo $data['menuTitre']; ?></span><br>
 			<?php
 				}
 				mysql_free_result ($req);

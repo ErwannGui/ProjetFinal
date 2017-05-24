@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 24 Mai 2017 à 07:43
+-- Généré le :  Mer 24 Mai 2017 à 10:25
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -31,7 +31,6 @@ CREATE TABLE `article` (
   `articleTitre` varchar(255) CHARACTER SET utf8 NOT NULL,
   `articleAuteur` varchar(50) CHARACTER SET utf8 NOT NULL,
   `ArticleCategorie` varchar(25) DEFAULT NULL,
-  `ArticleCategorieAll` varchar(4) NOT NULL DEFAULT 'all',
   `articleDate` date DEFAULT NULL,
   `texteId` int(10) NOT NULL,
   `imageId` int(10) NOT NULL
@@ -41,13 +40,13 @@ CREATE TABLE `article` (
 -- Contenu de la table `article`
 --
 
-INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `ArticleCategorie`, `ArticleCategorieAll`, `articleDate`, `texteId`, `imageId`) VALUES
-(1, 'Conseils pour bien gérer son food truck', 'Antonin', 'foodtruck', 'all ', '2017-05-16', 6, 7),
-(2, 'Traiteur en food truck', 'Erwann', 'foodtruck', 'all ', '2017-05-16', 9, 8),
-(3, 'La cuisine créole : nouvelle à Nantes', 'Antonin', 'cook', 'all ', '2017-05-16', 7, 9),
-(4, 'Points stratégiques de l’activité d’un food truck', 'Erwann', 'foodtruck', 'all ', '2017-05-16', 8, 10),
-(5, 'L’évolution du marché des food trucks', 'Geoffrey', 'foodtruck', 'all ', '2017-05-16', 10, 11),
-(6, 'Le food truck de demain', 'Quentin', 'foodtruck', 'all ', '2017-05-17', 6, 12);
+INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `ArticleCategorie`, `articleDate`, `texteId`, `imageId`) VALUES
+(1, 'Conseils pour bien gérer son food truck', 'Antonin', 'all foodtruck', '2017-05-16', 6, 7),
+(2, 'Traiteur en food truck', 'Erwann', 'all foodtruck', '2017-05-16', 9, 8),
+(3, 'La cuisine créole : nouvelle à Nantes', 'Antonin', 'all cook', '2017-05-16', 7, 9),
+(4, 'Points stratégiques de l’activité d’un food truck', 'Erwann', 'all foodtruck', '2017-05-16', 8, 10),
+(5, 'L’évolution du marché des food trucks', 'Geoffrey', 'all foodtruck', '2017-05-16', 10, 11),
+(6, 'Le food truck de demain', 'Quentin', 'all foodtruck', '2017-05-17', 5, 12);
 
 -- --------------------------------------------------------
 
@@ -177,7 +176,7 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`menuId`, `menuTitre`, `menuComposition`, `menuPrixL`, `menuPrixXL`, `menuEntree`, `menuPlat`, `menuDessert`, `menuBoisson`, `Disponibilité`) VALUES
-(1, '-- Formule 1 --', 'Plat + Boisson (L ou XL)', 6, 8, NULL, 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Midi et soir'),
+(1, '-- Formule 1 --', 'Plat + Boisson (L ou XL)', 6, 8, 'Aucune', 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Midi et soir'),
 (2, '-- Formule 2 --', 'Plat + Entrée ou Dessert + Boisson (L ou XL)', 8, 10, 'Samossa et bonbons piment', 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Midi et soir'),
 (3, '-- Formule 3 --', 'Entrée + Plat + Dessert + Boisson (L ou XL)', 12, 15, 'Samossa et bonbons piment', 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Soir');
 
@@ -202,7 +201,7 @@ CREATE TABLE `message` (
 
 INSERT INTO `message` (`messageId`, `messageNomEnvoyeur`, `messageMail`, `messageTel`, `messageObjet`, `messageContenu`) VALUES
 (19, 'Guillevic Erwann', 'erwann.guillevic@ynov.com', '0600000000', 'Prestation privée', 'Message test'),
-(21, 'Dijoux Quentin', 'quentin.dijoux@ynov.com', '0600000000', 'Prestation privÃ©e', 'Message test 02');
+(21, 'Dijoux Quentin', 'quentin.dijoux@ynov.com', '0600000000', 'Prestation privée', 'Message test 02');
 
 -- --------------------------------------------------------
 
@@ -344,7 +343,32 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (65, 'Rougail saucisse', 'Accueil'),
 (66, 'Evenements spéciaux', 'Accueil'),
 (67, 'Interventions', 'Accueil'),
-(68, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil');
+(68, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
+(5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in dapibus est. Proin gravida ornare ligula, at lacinia leo laoreet et. Quisque finibus quis purus ac ultrices. Cras efficitur porttitor augue vitae molestie. Fusce quis sem consequat, tincidunt nisi sed, tincidunt urna. Etiam ut enim elementum, lacinia dui quis, dapibus nisi. Vivamus congue elementum finibus. Nam accumsan feugiat lectus.\r\n\r\nQuisque placerat euismod elit in mattis. Curabitur lacus quam, finibus eget dapibus sodales, pharetra vitae mi. Quisque euismod efficitur nisl sed condimentum. Suspendisse sollicitudin lectus at massa suscipit, mattis auctor nunc malesuada. Phasellus vitae sollicitudin arcu. Suspendisse lorem diam, efficitur vitae suscipit id, congue sit amet turpis. In malesuada non diam luctus molestie. Vestibulum et turpis at sem gravida vehicula non sagittis lorem. Curabitur vel vehicula velit. Maecenas non nulla risus. Pellentesque non nunc lacinia, suscipit tortor eget, molestie tortor. Duis mollis vitae tortor non finibus. Proin malesuada leo rutrum orci consectetur ullamcorper. Proin maximus nibh quis nisi fringilla imperdiet.', 'Actualités'),
+(69, 'Chez Fifi est un Food Truck proposant une offre à partir de produits frais, locaux et réunionnais. Pour vos événements nous élaborons avec vous une offre sur mesure: rougails saucisses, cari de poulet ... Notre camion au design original, notre cuisine faite maison et la qualité des produits utilisés laisseront un souvenir visuel et gustatif à vos convives. Ainsi si vous êtes intéressés par nos prestations de traiteur, n\'hésitez plus pour apporter originalité et goût à votre réception, optez pour notre camion ! Pour permettre que cet évènement soit la plus belle des fêtes, et ce jusque dans vos assiettes!', 'Evenements'),
+(70, 'Nos menus', 'Menus'),
+(71, 'CONTACT', 'Contact'),
+(72, 'Blog et actualités', 'Actualités'),
+(73, 'Prestations privées', 'Evenements'),
+(74, 'A propos de nous', 'A propos'),
+(75, 'Largement inspiré de la street food en provenance des Etats Unis, le food truck est un nouveau concept de restauration nomade qui propose un service de restauration de qualité à emporter à bord d’un camion dit « truck ».', 'A propos'),
+(76, 'UN FOOD-TRUCK, C\'EST QUOI ?', 'A propos'),
+(77, 'http://www.ladodo.com', 'A propos'),
+(78, 'http://www.lapetitefermecarquefou.fr/', 'A propos'),
+(79, 'http://www.curenantais.com/', 'A propos'),
+(80, 'https://www.coca-cola-france.fr/', 'A propos'),
+(81, 'http://www.leffetpei.re/', 'A propos'),
+(82, 'https://ecologie-reunion.com/', 'A propos'),
+(83, 'https://www.distram.com/', 'A propos'),
+(84, 'http://www.minnantes.com/', 'A propos'),
+(85, 'Notre petit producteur de volailles et boeuf !', 'A propos'),
+(86, 'Le Curé Nantais issu de la fromagerie artisanale à Pornic, en  Pays de Loire, est un fromage de tradition au lait cru affiné au Muscadet.', 'A propos'),
+(87, 'Le seul et l\'unique !', 'A propos'),
+(88, 'Marque réunionnaise de prêt-à-porter, L\'effet Péi représente la Réunion et la culture réunionnaise à travers ses collections.', 'A propos'),
+(89, 'La Dodo, la bière préférée des Réunionnais !', 'A propos'),
+(90, 'Association agréée au titre de la protection de l\'environnement Ile de La Réunion.', 'A propos'),
+(91, 'Distram, expert et conseiller en restauration.', 'A propos'),
+(92, 'La marché d\'intérêt national de Nantes, un acteur économique de l\'agglomération nantaise.', 'A propos');
 
 -- --------------------------------------------------------
 
@@ -499,7 +523,7 @@ ALTER TABLE `proprietaire`
 -- AUTO_INCREMENT pour la table `texte`
 --
 ALTER TABLE `texte`
-  MODIFY `texteId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `texteId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 --
 -- AUTO_INCREMENT pour la table `type`
 --
