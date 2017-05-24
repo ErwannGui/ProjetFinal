@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 24 Mai 2017 à 07:38
+-- Généré le :  Mer 24 Mai 2017 à 07:43
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -119,8 +119,8 @@ INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
 (2, 'images/index/carrousel01.png', 'Accueil'),
 (3, 'images/index/carrousel02.png', 'Accueil'),
 (4, 'images/index/carrousel03.png', 'Accueil'),
-(5, 'images/index/bouchon.png', 'Accueil'),
-(6, 'images/index/rougail.png', 'Accueil'),
+(5, 'images/index/pic_BouchonGratine.png', 'Accueil'),
+(6, 'images/index/pic_rougail.png', 'Accueil'),
 (7, 'images/articles/articleOne.jpg', 'Actualités'),
 (8, 'images/articles/articleTwo.jpg', 'Actualités'),
 (9, 'images/articles/articleThree.jpg', 'Actualités'),
