@@ -22,14 +22,19 @@
     }
 
 	/* --- traitement du formulaire modification d'un texte --- */
+	// récupération des variables en variables sessions afin de pouvoir les réutiliser postérieurement
 	if(isset($_POST['btn-select_page_txt'])) { // lors de l'envoi du formulaire de choix de page
-		$selectPageTxt = htmlspecialchars($_POST['PageTextModify']); // stockage de la page choisie
+		$_SESSION['selectPageTxt'] = htmlspecialchars($_POST['PageTextModify']); // stockage de la page choisie
+		$selectPageTxt = $_SESSION['selectPageTxt'];// les variables récupérées ne sont pas conservées dans le temps
 	} // même chose en dessous
 	if(isset($_POST['btn-select_texte'])) {
-		$selectTxt = htmlspecialchars($_POST['DebutText']);
+		$_SESSION['selectTxt'] = htmlspecialchars($_POST['DebutText']); // même chose
+		$selectPageTxt = $_SESSION['selectPageTxt'];
+		$selectTxt = $_SESSION['selectTxt'];
 	}
     if(isset($_POST['btn-modify_text'])) {
-
+    	$selectPageTxt = $_SESSION['selectPageTxt'];
+		$selectTxt = $_SESSION['selectTxt'];
 	    $texteContenu = htmlspecialchars($_POST['AutreTextContenuModify']);
 
 	    // modification du contanu textuel
@@ -52,17 +57,17 @@
     if ( isset($_POST['btn-add_image']) ) {
 
     	// même script d'upload
-    	$dossier = 'images/'; // dossier où sera déplacé le fichier
+    	$dossier = 'images/trash/'; // dossier où sera déplacé le fichier
 
-		$image = basename($_FILES['Image']['name']);
+		$image = basename($_FILES['ImageAdd']['name']);
 
 		$extensions = array('.png', '.gif', '.jpg', '.jpeg');
-		$extension = strrchr($_FILES['Image']['name'], '.');
+		$extension = strrchr($_FILES['ImageAdd']['name'], '.');
 		if(!in_array($extension, $extensions))
 		{
 		     $errMSG_add_image = 'Vous devez uploader un fichier de type png, gif, jpg, ou jpeg.';
 		} else {
-			if(move_uploaded_file($_FILES['Image']['tmp_name'], $dossier.$image)) {
+			if(move_uploaded_file($_FILES['ImageAdd']['tmp_name'], $dossier.$image)) {
 				$errMSG_upload = "Le fichier a bien été sauvegardé.";
 			} else {
 				$errMSG_upload = "Impossible de copier le fichier dans ".$dossier;
@@ -89,29 +94,54 @@
 
 	/* --- traitement du formulaire modification d'une image --- */
 	// même chose que pour le texte
-	if(isset($_POST['btn-select_page_img'])) { 
-		$selectPageImg = htmlspecialchars($_POST['PageImgModify']);
-	}
+	if(isset($_POST['btn-select_page_img'])) { // lors de l'envoi du formulaire de choix de page
+		$_SESSION['selectPageImg'] = htmlspecialchars($_POST['PageImgModify']); // stockage de la page choisie
+		$selectPageImg = $_SESSION['selectPageImg'];// les variables récupérées ne sont pas conservées dans le temps
+	} // même chose en dessous
 	if(isset($_POST['btn-select_image'])) {
-		$selectImg = htmlspecialchars($_POST['ImgSource']);
+		$_SESSION['selectImg'] = htmlspecialchars($_POST['ImgSource']); // même chose
+		$selectPageImg = $_SESSION['selectPageImg'];
+		$selectImg = $_SESSION['selectImg'];
 	}
     if(isset($_POST['btn-modify_image'])) {
 
-	    $imgPath = htmlspecialchars($_POST['ImgSourceModify']);
+    	$selectPageImg = $_SESSION['selectPageImg'];
+		$selectImg = $_SESSION['selectImg'];
+    	$path = $selectImg;
+    	list($rep, $sous_rep, $nom) = explode("/", $path); // on découpe le chemin d'accès pour avoir les dossiers de stockage
 
-	    $query = "UPDATE image SET imageSource = '$imgPath' WHERE imageId = $selectImg";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+    	$dossier = $rep.$sous_rep; // dossier où sera déplacé le fichier
 
-        if ($res) {
-            $errTyp = "Succès";
-            $errMSG_modify_image = "L'image'a été modifié.";
-            unset($selectPageImg);
-            unset($selectImg);
-            unset($imgPath);
-        } else {
-            $errTyp = "danger";
-            $errMSG_modify_image = "Quelque chose a mal fonctionné, réessayez plus tard ...";
-        }
+		$image = basename($_FILES['ImageModify']['name']);
+
+		$extensions = array('.png', '.gif', '.jpg', '.jpeg');
+		$extension = strrchr($_FILES['ImageModify']['name'], '.');
+		if(!in_array($extension, $extensions))
+		{
+		     $errMSG_add_image = 'Vous devez uploader un fichier de type png, gif, jpg, ou jpeg.';
+		} else {
+			if(move_uploaded_file($_FILES['ImageModify']['tmp_name'], $dossier.$image)) {
+				$errMSG_upload = "Le fichier a bien été sauvegardé.";
+			} else {
+				$errMSG_upload = "Impossible de copier le fichier dans ".$dossier;
+		        exit();
+			}
+	    	$imgPath = $dossier.$image;
+
+		    $query = "UPDATE image SET imageSource = '$imgPath' WHERE imageId = $selectImg";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+
+	        if ($res) {
+	            $errTyp = "Succès";
+	            $errMSG_modify_image = "L'image'a été modifié.";
+	            unset($selectPageImg);
+	            unset($selectImg);
+	            unset($imgPath);
+	        } else {
+	            $errTyp = "danger";
+	            $errMSG_modify_image = "Quelque chose a mal fonctionné, réessayez plus tard ...";
+	        }
+		}
 	}
 ?>
 <div class="back_content back_autre ">
@@ -252,7 +282,7 @@
 						<option value="Actualites">Actualités</option>
 						<option value="Contact">Contact</option>
 				</select>
-				<input type="file" name="Image">
+				<input type="file" name="ImageAdd">
 				<input type="submit" name="btn-add_image" value="Valider">
 			</form>
 		</div>
@@ -275,7 +305,7 @@
 							$req = mysql_query($page) or die('Erreur SQL !<br />'.$page.'<br />'.mysql_error()); 
 							while ($pages = mysql_fetch_array($req)) {
 						?>
-						<option value="<?php echo $pages['imagePage']; ?>"><?php echo $pages['imagePage']; ?></option>
+						<option value="<?php echo $pages['imagePage']; ?>" <?php if(isset($selectPageImg) && $selectPageImg == $pages['imagePage']) {echo 'selected="selected"';} ?>><?php echo $pages['imagePage']; ?></option>
 						<?php 
 							}
 							mysql_free_result ($req);
@@ -298,7 +328,7 @@
 								$pathActuel = $data['imageSource'];
 								$nomImage = substr($pathActuel, 7);
 						?>
-						<option value="<?php echo $data['texteId']; ?>"><?php echo $nomImage; ?></option>
+						<option value="<?php echo $data['imageId']; ?>" <?php if(isset($selectImg) && $selectImg == $data['imageId']) {echo 'selected="selected"';} ?>><?php echo $nomImage; ?></option>
 						<?php
 							}
 							mysql_free_result ($req);
@@ -313,22 +343,11 @@
                 if (isset($selectImg)) {
            	?>
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" enctype="multipart/form-data">
-				<?php
-				    $sql = "SELECT imageSource FROM image WHERE imageId = '$selectImg'";
-					$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
-					while ($data = mysql_fetch_array($req)) {
-						$pathActuel = $data['imageSource'];
-				?>
-				<textarea name="ImgSourceModify"><?php echo $pathActuel; ?></textarea>
-				<?php
-					}	
-					mysql_free_result ($req);
-					//mysql_close ();
-    			?>
+				<input type="file" name="ImageModify">
 				<input type="submit" name="btn-modify_image" value="Valider">
 			</form>
-			<?php
-				}
+            <?php
+    			}
             ?>
 		</div>
 	</div>
