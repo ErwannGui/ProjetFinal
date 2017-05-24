@@ -27,6 +27,7 @@
         <?php $idarticle = $_GET['id'];
               $contenu= $bdd->query('SELECT articleTitre, texteId FROM article WHERE id ='.$idarticle);
         while ($article= $contenu->fetch()){
+            
         ?>
 
         <div id="container">
