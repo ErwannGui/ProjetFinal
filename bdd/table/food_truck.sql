@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 23 Mai 2017 à 08:59
+-- Généré le :  Mer 24 Mai 2017 à 07:38
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -30,6 +30,8 @@ CREATE TABLE `article` (
   `articleId` int(10) NOT NULL,
   `articleTitre` varchar(255) CHARACTER SET utf8 NOT NULL,
   `articleAuteur` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `ArticleCategorie` varchar(25) DEFAULT NULL,
+  `ArticleCategorieAll` varchar(4) NOT NULL DEFAULT 'all',
   `articleDate` date DEFAULT NULL,
   `texteId` int(10) NOT NULL,
   `imageId` int(10) NOT NULL
@@ -39,13 +41,13 @@ CREATE TABLE `article` (
 -- Contenu de la table `article`
 --
 
-INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `articleDate`, `texteId`, `imageId`) VALUES
-(1, 'Conseils pour bien gérer son food truck', 'Antonin', '2017-05-16', 6, 7),
-(2, 'Traiteur en food truck', 'Erwann', '2017-05-16', 9, 8),
-(3, 'La cuisine créole : nouvelle à Nantes', 'Antonin', '2017-05-16', 6, 9),
-(4, 'Points stratégiques de l’activité d’un food truck', 'Erwann', '2017-05-16', 8, 10),
-(5, 'L’évolution du marché des food trucks', 'Geoffrey', '2017-05-16', 10, 11),
-(6, 'Le food truck de demain', 'Quentin', '2017-05-17', 11, 12);
+INSERT INTO `article` (`articleId`, `articleTitre`, `articleAuteur`, `ArticleCategorie`, `ArticleCategorieAll`, `articleDate`, `texteId`, `imageId`) VALUES
+(1, 'Conseils pour bien gérer son food truck', 'Antonin', 'foodtruck', 'all ', '2017-05-16', 6, 7),
+(2, 'Traiteur en food truck', 'Erwann', 'foodtruck', 'all ', '2017-05-16', 9, 8),
+(3, 'La cuisine créole : nouvelle à Nantes', 'Antonin', 'cook', 'all ', '2017-05-16', 7, 9),
+(4, 'Points stratégiques de l’activité d’un food truck', 'Erwann', 'foodtruck', 'all ', '2017-05-16', 8, 10),
+(5, 'L’évolution du marché des food trucks', 'Geoffrey', 'foodtruck', 'all ', '2017-05-16', 10, 11),
+(6, 'Le food truck de demain', 'Quentin', 'foodtruck', 'all ', '2017-05-17', 6, 12);
 
 -- --------------------------------------------------------
 
@@ -114,11 +116,11 @@ CREATE TABLE `image` (
 
 INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
 (1, 'images/bg/bg_home.png', 'Accueil'),
-(2, 'images/carrousel01.png', 'Accueil'),
-(3, 'images/carrousel02.png', 'Accueil'),
-(4, 'images/carrousel03.png', 'Accueil'),
-(5, 'images/bouchon.png', 'Accueil'),
-(6, 'images/rougail.png', 'Accueil'),
+(2, 'images/index/carrousel01.png', 'Accueil'),
+(3, 'images/index/carrousel02.png', 'Accueil'),
+(4, 'images/index/carrousel03.png', 'Accueil'),
+(5, 'images/index/bouchon.png', 'Accueil'),
+(6, 'images/index/rougail.png', 'Accueil'),
 (7, 'images/articles/articleOne.jpg', 'Actualités'),
 (8, 'images/articles/articleTwo.jpg', 'Actualités'),
 (9, 'images/articles/articleThree.jpg', 'Actualités'),
@@ -159,23 +161,25 @@ INSERT INTO `image` (`imageId`, `imageSource`, `imagePage`) VALUES
 
 CREATE TABLE `menu` (
   `menuId` int(10) NOT NULL,
-  `menuNom` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `menuTitre` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `menuComposition` varchar(255) NOT NULL,
   `menuPrixL` float NOT NULL,
   `menuPrixXL` float DEFAULT NULL,
   `menuEntree` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `menuPlat` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `menuDessert` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
-  `menuBoisson` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL
+  `menuBoisson` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `Disponibilité` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `menu`
 --
 
-INSERT INTO `menu` (`menuId`, `menuNom`, `menuPrixL`, `menuPrixXL`, `menuEntree`, `menuPlat`, `menuDessert`, `menuBoisson`) VALUES
-(1, 'Formule du midi : Plat + Boisson - Spéciale étudiant', 6, NULL, '', NULL, NULL, NULL),
-(2, 'Formule 2 : Plat + Entrée ou Dessert + Boisson', 9, 11, '', NULL, NULL, NULL),
-(3, 'Formule du soir : Entrée + Plat + Dessert + Boisson', 12, 15, '', NULL, NULL, NULL);
+INSERT INTO `menu` (`menuId`, `menuTitre`, `menuComposition`, `menuPrixL`, `menuPrixXL`, `menuEntree`, `menuPlat`, `menuDessert`, `menuBoisson`, `Disponibilité`) VALUES
+(1, '-- Formule 1 --', 'Plat + Boisson (L ou XL)', 6, 8, NULL, 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Midi et soir'),
+(2, '-- Formule 2 --', 'Plat + Entrée ou Dessert + Boisson (L ou XL)', 8, 10, 'Samossa et bonbons piment', 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Midi et soir'),
+(3, '-- Formule 3 --', 'Entrée + Plat + Dessert + Boisson (L ou XL)', 12, 15, 'Samossa et bonbons piment', 'Rougail saucisse - Carry poulet', 'Pâtisserie - Fruits créoles (litchi et mangue)', 'Eau - Sodas - Bière - Vin de Loire', 'Soir');
 
 -- --------------------------------------------------------
 
@@ -300,9 +304,9 @@ CREATE TABLE `texte` (
 --
 
 INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
-(1, 'Chef Fifi', 'Accueil'),
-(2, 'Food truck réunionnais', 'Accueil'),
-(3, 'A l\'image de notre association, notre cuisine est inspirée des plats réunionnais revisités à la nantaise ! Découvrez ainsi de nouvelles saveurs, et profitez de l\'expertise culinaire traditionnelle créole dans un repas rapide et abordable.', 'Accueil'),
+(1, 'Chez Fifi', 'Accueil'),
+(63, 'Nos spécialités', 'Accueil'),
+(3, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil'),
 (6, 'Le food truck “Chez Fifi” vient de s’installer dans les rues de Nantes et permet enfin de manger de la nourriture traditionnelle créole de La Réunion. En effet, aujourd’hui dans l’agglomération nantaise seulement 2 restaurants permettent de manger réunionnais.\n\nGrace à “Chez Fifi” certaines personnes n’ayant jamais goûté de nourriture réunionnaise vont pouvoir l’expérimenter. De plus, les personnes réunionnaises d’origine vont pouvoir manger ce qu’elles aiment sans payer trop cher. En effet, le prix maximal du restaurant sera de 15€, mais il est tout à fait possible de manger pour moins de 10€.\n\nIl est important de gouter au moins une fois dans sa vie la cuisine traditionnelle réunionnaise, qui est une des cuisines les moins représentées en France.\n', 'Actualités'),
 (7, 'De plus en plus d\'entrepreneurs se lancent aujourd’hui à la conquête du marché de la streetfood avec leur camion. Mais beaucoup d\'entre eux ignorent ou négligent certaines précautions à prendre concernant leur clientèle et leurs finances. Savoir se vendre, connaître les retours, ne pas confondre chiffre d\'affaires et bénéfices, … On vous donne ainsi aujourd’hui quelques conseils déterminants afin de maintenir son camion et son commerce « sur les roues » afin de mener votre business vers le succès.\r\nLe bouche à oreille ne suffira pas à assurer la rentabilité de vote food truck. Avec le développement des réseaux sociaux des nouveau différents moyens de communication, il est plus facile et rapide de se faire connaitre et repérer et à moindre coût. Tous les concepts sont bons mais la présence online est tout autant importante si ce n’est plus que la présence offline. Pleins de moyens permettent d’être mieux référencés sur le web, que ça soit à l’aide d’une application mobile de géolocalisation, d’une page Facebook professionnelle, sur un site de réservation de food truck, voire même son propre site.\r\nLes food trucks sont de plus en plus recherchés pour des prestations événementielles, qu’elles soient pour des particuliers (un food truck pour un mariage, un anniversaire ou une soirée entre amis à domicile) ou pour des entreprises (séminaire, réunion, fête de fin d’année, …). En pleine saison (mai – septembre) il sera ainsi judicieux de faire un maximum d’événements de la sorte afin de générer de l’argent pour tenir lorsque l’hiver arrivera, et que l’activité sera moindre.\r\nFace à un client mécontent, mieux vaut ne pas s’énerver. Si un client vous signale qu’il est insatisfait, essayez de comprendre pourquoi (repas froid, problème de qualité ou de quantité ?) et si cela est justifié, offrez-lui un repas ou un plat gratuit pour vous excuser. Peut-être changera-t-il d’opinion et se transformera en client fidèle.\r\nMaintenant, à vous de jouer et de faire de votre food truck un véritable succès !', 'Actualités'),
 (8, 'Avec la diversification du business des food truck, il est de plus en plus difficile de se faire une place reconnue sur le marché et de séduire de nouveaux consommateurs. Il est certes important de trouver une cible idéale mais s’il est un paramètre qui déterminera la réussite ou l’échec de votre commerce, c’est bel et bien les emplacements de vente. Il faut donc correspondre le mieux possible aux points de passage de vos cibles au moment des repas, pour ainsi maximiser l’effet coup de cœur.\r\n\r\nLes mairies, administrations fiscales, préfectures, tribunaux, ministères, bibliothèques, bureaux, centres d’affaires. Certains y travaillent, d’autres les fréquentent, mais il est certain que tous déjeunent à midi. Les chambres d’hôtes, hôtels, gîtes ruraux, il faut se documenter sur le nombre de chambres, mais aussi leur niveau de qualité. Les stations balnéaires, stations thermales, stations de ski sont aussi des points stratégiques en fonction des saisons. Il faut aussi sauter sur l’occasion pour profiter des foires, festivals et salons. Attention toutefois à la redevance. Elle sera sans doute plus élevée qu’en moyenne.', 'Actualités'),
@@ -311,8 +315,8 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (11, '"Merci à "Chez Fifi" pour ce très bon moment passé. La cuisine est de qualité et on y est très bien reçus."', 'Actualités'),
 (12, '"Habitué depuis peu j\'y retourne les yeux fermés, la nourriture est de très bonne qualité, le service impeccable, l\'accueil parfaite, les serveurs sont plus qu\'agréable !"', 'Actualités'),
 (13, '"Je vous recommande le food truck "Chez Fifi", placé à côté de mon lycée une fois par semaine. Je mange la formule à 6€ qui est dans mes moyens étudiants."', 'Actualités'),
-(14, 'Le bouchon gratiné, originaire de Chine et importé à la Réunion, où il est très vite devenu un plat typique de l’île. A base de pain, bouchon et curé nantais, nous vous faisons découvrir cette facette de notre gastronomie.', 'Accueil'),
-(15, 'Le rougail saucisse est quant à lui un plat traditionnellement réunionnais préparé dans une marmite et composé de morceaux de saucisse accompagnés de riz et de grain (lentille ou haricot blanc) et bien souvent de piment.', 'Accueil'),
+(14, 'Un bouchon est une petite bouchée de viande de porc ou de poulet entourée de pâte cuite à la vapeur que l\'on sert généralement en tant qu\'apéritif chaud sur l\'île de La Réunion, département d\'outre-mer français dans l\'océan Indien.', 'Accueil'),
+(15, 'Le Rougail saucisse est un plat traditionnelle réunionnais, à base de saucisses créoles souvent fumées artisanales ou encore fraîches. Celles-ci sont ensuite coupées en morceaux, accompagnées de riz et de rougail (tomates coupées en petits dés, gingembre pilé, oignons émincés et piments).', 'Accueil'),
 (20, 'Erwann est un jeune développeur back-end. Il va vous créer la meilleur base de données possible.', 'Equipe'),
 (21, 'Geoffrey possède une bonne capacité à créer des designs pour vos futurs sites internet.', 'Equipe'),
 (22, 'Quentin est un développeur possédant plus d\'expérience que ses collègues. Il a une vision d\'ensemble et est chef sur chaque projet.', 'Equipe'),
@@ -335,7 +339,12 @@ INSERT INTO `texte` (`texteId`, `texteContenu`, `textePage`) VALUES
 (39, 'Plus d\'informations ? Des questions ? Vous êtes au bon endroit', 'Contact'),
 (40, 'Une entreprise nous a contacté pour offrir à ses employés de la nourriture créole afin de les remercier pour un projet. ', 'Evenements'),
 (41, 'Lors du baptême d\'un enfant nous avons préparé les plats typiques de la réunion.', 'Evenements'),
-(42, 'test', 'Actualites');
+(42, 'test', 'Actualites'),
+(64, 'Bouchons gratinés', 'Accueil'),
+(65, 'Rougail saucisse', 'Accueil'),
+(66, 'Evenements spéciaux', 'Accueil'),
+(67, 'Interventions', 'Accueil'),
+(68, 'Bienvenue sur le site web du food truck "Chez Fifi". Situés dans la région nantaise, nous vous proposons de la nourriture réunionnaise de qualité avec des produits frais cultivés en Loire-Atlantique. Des produits sont aussi importés de la réunion comme "La dodo" qui est la bière locale de l\'île de la Réunion.', 'Accueil');
 
 -- --------------------------------------------------------
 
@@ -490,7 +499,7 @@ ALTER TABLE `proprietaire`
 -- AUTO_INCREMENT pour la table `texte`
 --
 ALTER TABLE `texte`
-  MODIFY `texteId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `texteId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT pour la table `type`
 --
