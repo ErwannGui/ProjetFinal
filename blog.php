@@ -69,7 +69,7 @@
                                 $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=" . $art['imageId']);
                                 
                                 while($imageArt=$imageArticle->fetch()){
-                                
+                                    
                                     print_r(" 
                                     
                                         <a href='article.php?id=". $art['texteId'] ."' >
