@@ -1,7 +1,7 @@
 <?php
 
     Try {
-        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
     }
     catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage()); 
@@ -75,7 +75,7 @@
                                     print_r(" 
                                     
                                     <div class='InterBox'>
-                                        <img src" . $imageEven['imageSource'] . " alt='Evenement' title='Evenement'>
+                                        <img src=" . $imageEven['imageSource'] . " alt='Evenement' title='Evenement'>
                                         <h3>" . $even['eventTitre'] . "</h3>
                                         <p>" . $texteEven['texteContenu'] . "</p>
                                     </div>
