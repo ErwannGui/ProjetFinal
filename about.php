@@ -109,55 +109,38 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 <div class="TeamTitle">
                     <h2>L'équipe</h2>
                 </div>
+                
                 <div class="CartesMembers">
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                        <div class="flipper">
-                            <div class="front">
-                                <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwann.jpg">
-                            </div>
-                            <div class="back">
-                                <div class="logo"><a href="#"><svg baseProfile="tiny" id="Layer_1" version="1.2" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></g></svg></a></div>
-                                <p>Erwann Guillevic</p>
-                                <img alt="Photo de profil Erwann" title="Erwann" src="images/pics/ProfilErwannSombre.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                        <div class="flipper">
-                            <div class="front">
-                                <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntonin.jpg">
-                            </div>
-                            <div class="back">
-                                <div class="logo"><a href="#"><svg baseProfile="tiny" id="Layer_1" version="1.2" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></g></svg></a></div>
-                                <p>Antonin Douillard</p>
-                                <img alt="Photo de profil Antonin" title="Antonin" src="images/pics/ProfilAntoninSombre.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                        <div class="flipper">
-                            <div class="front">
-                                <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffrey.jpg">
-                            </div>
-                            <div class="back">
-                                <div class="logo"><a href="#"><svg baseProfile="tiny" id="Layer_1" version="1.2" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></g></svg></a></div>
-                                <p>Geoffrey Moreau</p>
-                                <img alt="Photo de profil Geoffrey" title="Geoffrey" src="images/pics/ProfilGeoffreySombre.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                        <div class="flipper">
-                            <div class="front">
-                                <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentin.jpg">
-                            </div>
-                            <div class="back">
-                                <div class="logo"><a href="#"><svg baseProfile="tiny" id="Layer_1" version="1.2" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></g></svg></a></div>
-                                <p>Quentin Dijoux</p>
-                                <img alt="Photo de profil Quentin" title="Quentin" src="images/pics/ProfilQuentinSombre.jpg">
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <?php
+                    
+                        $equipe=$bdd->query("SELECT * FROM equipe");
+                        
+                        while($equ=$equipe->fetch()){
+                            $equipeImage=$bdd->query("SELECT imageSource FROM Image WHERE imageId=" . $equ['imageId']);
+                            
+                            while($equImage=$equipeImage->fetch()){
+                                
+                                print_r("
+                                     <div class='flip-container' ontouchstart='this.classList.toggle('hover');'>
+                                        <div class='flipper'>
+                                            <div class='front'>
+                                                <img alt='Photo de profil " . $equ['membrePrenom'] . "' title='" . $equ['membrePrenom'] . "' src='" . $equImage['imageSource'] . "'>
+                                            </div>
+                                            <div class='back'>
+                                                <div class='logo'><a href='http://www.facebook.com' 'target='_blank'><svg baseProfile='tiny' id='Layer_1' version='1.2'' viewBox='0 0 24 24'' xml:space='preserve'' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g><path d='M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z'/></g></svg></a></div>
+                                                <p>" . $equ['membrePrenom'] . " " . $equ['membreNom'] . "</p>
+                                                <img alt='Photo de profil Erwann' title='Erwann' src='images/pics/ProfilErwannSombre.jpg'>
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                "); 
+                            }
+                        }
+                    ?>
+                    
+
+
                 </div>                                    
             </section>
             <?php include "infos_comp.php"; ?>
