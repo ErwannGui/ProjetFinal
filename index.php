@@ -9,13 +9,13 @@ catch (PDOException $e) {
 $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
-<!DOCTYPE HTML  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html  xmlns="http://www.w3.org/1999/xhtml" >
+<!DOCTYPE HTML>
+<html>
 	<head>
         <meta name="google-site-verification" content="Fxtm-DxJiEOykJM75OTwQFudIwGYrnBZGzd9ttVPziI" />
 		<title>Chez FIFI - Food Truck Nantais | Cuisine réunionnaise simple et de qualité</title>
         <link rel="shortcut icon" href="images/icon/logo.ico">
-        <meta http-equiv="Content-Type" charset="utf-8" title="À propos de nous" content="Le Food Truck Chez FIFI vous propose des plats typiques réunionnais, simples et issus de produits de qualité tous les midis et soirs dans la région Nantaise.">
+        <meta charset="utf-8" title="À propos de nous" content="Le Food Truck Chez FIFI vous propose des plats typiques réunionnais, simples et issus de produits de qualité tous les midis et soirs dans la région Nantaise.">
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
         <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
