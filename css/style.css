@@ -408,7 +408,7 @@ h2 {
 .carousel{
     width: 100%;
     filter: brightness(0.5);
-    height:85vh;
+    height:80vh;
 }
 .single-item{
 
@@ -1156,13 +1156,14 @@ l'édition de la mise en page au niveau des différents partenaires */
 
 /* edition de la div interbox */
 .InterBox {
-    display: flex;
+    display: inline-block;
     align-content: space-around;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 25px;
     width: 25vw;
     height: auto;
+    vertical-align: top;
 }
 
 /* images contenues dans interbox */ 
