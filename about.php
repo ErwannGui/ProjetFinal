@@ -1,12 +1,11 @@
 <?php
-
-Try {
-    $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
-}
-catch (PDOException $e) {
-    die('Erreur : ' . $e->getMessage());
-}
-$bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    Try {
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+    }
+    catch (PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <!DOCTYPE HTML>
