@@ -1,7 +1,7 @@
 <?php
 
     Try {
-        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
     }
     catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage()); 
@@ -41,7 +41,9 @@
 
                 <div id="menuBackgroundImage"></div>
                 <div class="backgroundTitle">
-                    <h1>NOS MENUS</h1>
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=70');
+                    $sub= $subtitle->fetch();?>
+                    <h1><?php echo $sub['texteContenu']; ?></h1>
                     
                     <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=35'); 
                     $sub= $subtitle->fetch();?>

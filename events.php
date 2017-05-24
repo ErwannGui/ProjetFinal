@@ -1,7 +1,7 @@
 <?php
 
     Try {
-        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
     }
     catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage()); 
@@ -38,7 +38,11 @@
             <div id="EventsBackground">
                 <div id="EventsBackgroundImage"></div>
                 <div class="backgroundTitle">
-                    <h1>PRESTATIONS PRIVÉES</h1>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=73');
+                    $sub= $subtitle->fetch();?>
+                    <h1><?php echo $sub['texteContenu']; ?></h1>
+                    
                     <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=36'); 
                     $sub= $subtitle->fetch();?>
                     <h2><?php echo $sub['texteContenu']; ?></h2>
@@ -50,7 +54,12 @@
             <section class="Presentation">
                 <div id="Intro">
                     
-                    <p>Chez Fifi est un Food Truck proposant une offre à partir de produits frais, locaux et réunionnais. Pour vos événements nous élaborons avec vous une offre sur mesure: rougails saucisses, cari de poulet ... Notre camion au design original, notre cuisine faite maison et la qualité des produits utilisés laisseront un souvenir visuel et gustatif à vos convives. Ainsi si vous êtes intéressés par nos prestations de traiteur, n'hésitez plus pour apporter originalité et goût à votre réception, optez pour notre camion ! Pour permettre que cet évènement soit la plus belle des fêtes, et ce jusque dans vos assiettes!</p>
+                    <?php
+                        $informations=$bdd->query("SELECT texteId, texteContenu FROM texte WHERE texteId=69");
+                        $inf= $informations->fetch();
+                    ?>
+                    
+                    <p><?php echo $inf['texteContenu']; ?></p>
                 </div>    
                 <a title="Prenez rendez-vous !" href="contact.php">
                     <svg style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd;" version="1.1" viewBox="0 0 130 130" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Layer_x0020_1"><g id="_298675192"><g><path class="fil0" d="M68 31c19,3 28,12 30,30 0,1 0,1 0,1 0,2 0,4 2,4 2,0 2,-2 2,-3 0,-1 0,-1 0,-1 0,-18 -15,-34 -33,-35 -2,0 -4,-1 -5,2 0,2 3,2 4,2z"/><path class="fil0" d="M72 36c-2,0 -4,-1 -5,2 0,2 2,2 4,2 12,3 16,7 18,18 0,1 0,2 0,2 0,1 0,3 2,2 1,0 2,-1 2,-1 0,-1 0,-2 0,-3 0,-10 -10,-20 -21,-22z"/><path class="fil0" d="M73 45c-1,0 -2,0 -3,2 -1,2 1,2 2,2 5,1 8,4 8,8 0,1 0,2 1,2 0,0 1,1 1,1 1,0 1,-1 1,-1 1,0 1,-1 1,-3 0,-5 -6,-11 -11,-11z"/><path class="fil0" d="M97 82c-2,-2 -5,-4 -7,-5 -5,-4 -10,-4 -13,1 -2,4 -5,4 -8,2 -9,-3 -15,-9 -19,-17 -1,-2 -1,-3 -1,-4 0,-2 1,-4 3,-6 2,-1 4,-3 4,-6 0,-4 -10,-17 -13,-18 -2,-1 -4,-1 -5,0 -9,3 -13,10 -9,18 2,5 4,10 6,14 11,18 28,32 49,41 1,0 3,1 4,1 6,0 12,-6 14,-11 2,-5 -2,-8 -5,-10z"/></g><path class="fil0 str0" d="M130 65c-1,36 -29,65 -65,65 -36,0 -65,-29 -65,-65 0,-36 29,-65 65,-65l65 0 0 65 0 0zm-65 -58c32,0 58,26 58,58l0 0c0,32 -26,58 -58,58 -32,0 -58,-26 -58,-58 0,-32 26,-58 58,-58z"/></g></g></svg>
@@ -75,7 +84,7 @@
                                     print_r(" 
                                     
                                     <div class='InterBox'>
-                                        <img src" . $imageEven['imageSource'] . " alt='Evenement' title='Evenement'>
+                                        <img src=" . $imageEven['imageSource'] . " alt='Evenement' title='Evenement'>
                                         <h3>" . $even['eventTitre'] . "</h3>
                                         <p>" . $texteEven['texteContenu'] . "</p>
                                     </div>

@@ -1,7 +1,7 @@
 <?php
 
     Try {
-        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
     }
     catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage()); 
@@ -37,7 +37,10 @@
             <div id="blogBackground">
                 <div id="blogBackgroundImage"></div>
                 <div class="backgroundTitle">
-                    <h1>BLOG ET ACTUALITES</h1>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=72');
+                    $sub= $subtitle->fetch();?>
+                    <h1><?php echo $sub['texteContenu']; ?></h1>
                     
                     <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=38'); 
                     $sub= $subtitle->fetch();?>
@@ -62,25 +65,25 @@
                 
                 <div id="blogArticlesArticles">
                             
-                            <?php $article=$bdd->query('SELECT * FROM article');
-                                  
-                            
-                            while($art=$article->fetch()){
-                                $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=" . $art['imageId']);
-                                
-                                while($imageArt=$imageArticle->fetch()){
-                                
-                                    print_r(" 
-                                    
-                                        <a href='article.php?id=". $art['texteId'] ."' >
-                                            <div>
-                                                <article class=" /*. $art['ArticleCategorieAll'] */ . $art['ArticleCategorie'] . ">
-                                                    <img src=" . $imageArt['imageSource'] . " alt=" . $art['ArticleCategorie'] . " title=" . $art['ArticleCategorie'] . ">
-                                                    <p>" . $art['articleTitre'] . "</p>
-                                                </article>
-                                            </div>
-                                        </a>
-                                    "); } } ?>
+                    <?php $article=$bdd->query('SELECT * FROM article');
+
+
+                    while($art=$article->fetch()){
+                        $imageArticle=$bdd->query("SELECT imageSource FROM Image WHERE imageId=" . $art['imageId']);
+
+                        while($imageArt=$imageArticle->fetch()){
+
+                            print_r(" 
+
+                                <a href='article.php?id=". $art['texteId'] ."' >
+                                    <div>
+                                        <article class='" . $art['ArticleCategorie'] . "'>
+                                            <img src='" . $imageArt['imageSource'] . "' alt='" . $art['ArticleCategorie'] . "' title='" . $art['ArticleCategorie'] . "'>
+                                            <p>" . $art['articleTitre'] . "</p>
+                                        </article>
+                                    </div>
+                                </a>
+                            "); } } ?>
                 </div>
                 
             </div>
