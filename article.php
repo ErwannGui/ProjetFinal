@@ -25,9 +25,23 @@
                 include "headerFront.php"; ?>
         
         <?php $idarticle = $_GET['id'];
-              $contenu= $bdd->query('SELECT articleTitre, texteId FROM article WHERE id ='.$idarticle);
+              $contenu= $bdd->query('SELECT articleTitre, texteId FROM article WHERE texteId ='.$idarticle);
+        
         while ($article= $contenu->fetch()){
+              $texte=$bdd->query('SELECT texteContenu, texteId FROM texte WHERE texteId ='.$idarticle);
             
+              while ($texteArticle=$texte->fetch()){
+            
+                  print_r("
+                    <div id='container'>
+                        <div id='articleTotal'>
+                            
+                            <div id='articleTitle'>
+                                <h1>" . $article['articleTitre'] . "</h1>
+                            </div>
+                  
+                  "); } } 
+        
         ?>
 
         <div id="container">
