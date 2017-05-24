@@ -737,6 +737,7 @@ h2 {
     filter: brightness(70%);
 }
 
+/* Les images des articles */
 #blogArticlesArticles img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -945,7 +946,7 @@ h2 {
     position: relative;
 }
 
-#Partner01, #Partner02, #Partner03, #Partner04, #Partner05, #Partner06, #Partner07, #Partner08{
+.PartnersBox{
     border-style: ridge;
     border-color: gray;
     border-width: thin;
@@ -958,17 +959,17 @@ h2 {
     width: 220px;
 }
 
-#Partner01 p, #Partner02 p, #Partner03 p, #Partner04 p, #Partner05 p, #Partner06 p, #Partner07 p, #Partner08 p{
+.PartnersBox p{
     display: none;
 }
 
-#Partner01:hover p, #Partner02:hover p, #Partner03:hover p, #Partner04:hover p, #Partner05:hover p, #Partner06:hover p, #Partner07:hover p, #Partner08:hover p{
+.PartnersBox:hover p{
     display: block;
     color: aliceblue;
     text-align: center;
 }
 
-#Partner01:hover img, #Partner02:hover img, #Partner03:hover img, #Partner04:hover img, #Partner05:hover img, #Partner06:hover img, #Partner07:hover img, #Partner08:hover img{
+.PartnersBox:hover img{
     transition: 0.2s;
     filter: opacity(25%);
     height: 105%;

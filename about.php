@@ -66,63 +66,45 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                         </div>
                     </div>
             </section>
+            
             <section class="Partners">
                 <div id="PartnersBloc">
+                    
                     <div class="PartnersTitle">
                         <h2>Partenaires et fournisseurs</h2>
                     </div>
+                    
                     <div class="PartnersContainer">
-                        <a href="http://www.ladodo.com">
-                            <div class="PartnersBox" id="Partner01">
-                                <img alt="Logo Bourbon La Dodo" title="Bourbon La Dodo" src="images/logos/bourbon.png">
-                                <p>La Dodo, la bière préférée des Réunionnais !</p>
-                        </div>
-                        </a>
-                        <a href="http://www.lapetitefermecarquefou.fr/">
-                            <div class="PartnersBox" id="Partner02">
-                                <img alt="Logo La petite ferme" title="La Petite Ferme" src="images/logos/Ferme.png">
-                                <p>Notre petit producteur de volailles et boeuf !</p>
-                            </div>
-                        </a>
-                        <a href="http://www.curenantais.com/">
-                            <div class="PartnersBox" id="Partner03">
-                                <img alt="Logo Curé Nantais" title="Curé nantais" src="images/logos/curenantais.png">
-                                <p>Le Curé Nantais issu de la fromagerie artisanale à Pornic, en  Pays de Loire, est un fromage de tradition au lait cru affiné au Muscadet.</p>
-                            </div>
-                        </a>
-                        <a href="https://www.coca-cola-france.fr/">
-                            <div class="PartnersBox" id="Partner04">
-                                <img alt="Logo Coca Cola" title="Coca Cola" src="images/logos/coca.png">
-                                <p>Le seul et l'unique !</p>
-                            </div>
-                        </a>
-                        <a href="http://www.leffetpei.re/">
-                            <div class="PartnersBox" id="Partner05">
-                                <img alt="Logo l'effet Péi" title="L'Effet Péi" src="images/logos/leffet-pei.png">
-                                <p>Marque réunionnaise de prêt-à-porter, L'effet Péi représente la Réunion et la culture réunionnaise à travers ses collections.</p>
-                            </div>
-                        </a>
-                        <a href="https://ecologie-reunion.com/">
-                            <div class="PartnersBox" id="Partner06">
-                                <img alt="Logo Écologie Réunion" title="Écologie Réunion" src="images/logos/ecolo_reunion.png">
-                                <p>Association agréée au titre de la protection de l'environnement Ile de La Réunion.</p>
-                            </div>
-                        </a>
-                        <a href="https://www.distram.com/">
-                            <div class="PartnersBox" id="Partner07">
-                                <img alt="Logo Distram" title="Distram" src="images/logos/logo-vertical-distram.png">
-                                <p>Distram, expert et conseiller en restauration.</p>
-                            </div>
-                        </a>
-                        <a href="http://www.minnantes.com/">
-                            <div class="PartnersBox" id="Partner08">
-                                <img alt="Logo MIN de Nantes" title="MIN de Nantes" src="images/logos/min_nantes.png">
-                                <p>La marché d'intérêt national de Nantes, un acteur économique de l'agglomération nantaise.</p>
-                            </div>
-                        </a>
+                        
+                        <?php
+                        
+                            $partenaire=$bdd->query("SELECT * FROM partenaire");
+                        
+                            while($part=$partenaire->fetch()){
+                                $imagePartenaire=$bdd->query("SELECT imageSource FROM image WHERE imageId=" . $part['imageId']);
+                                
+                                while($imagePart=$imagePartenaire->fetch()){
+                                    $textePartenaire=$bdd->query("SELECT texteContenu FROM texte WHERE texteId=" . $part['texteId']);
+                                    
+                                    while($textePart=$textePartenaire->fetch()){
+                                    
+                                        print_r("
+                                           <a href='".$part['partenaireLien']."' target='_blank'>
+                                           <div class='PartnersBox'>
+                                                <img src='" . $imagePart['imageSource'] . "' title='". $part['partenaireNom']."' alt='". $part['partenaireNom']."' >
+                                                <p>" . $textePart['texteContenu'] . "</p>
+                                           </div>
+                                        ");
+                                    }
+                                }
+                            }
+                        
+                        ?>
+
                     </div>
                 </div>
             </section>
+            
             <section class="Team">
                 <div class="TeamTitle">
                     <h2>L'équipe</h2>
