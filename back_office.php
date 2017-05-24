@@ -2,6 +2,9 @@
 	ob_start();
 	session_start();
 	include_once 'dbconnect.php';
+	//include_once 'upload.php';
+	// tout ce qui commence ici s'applique partout sur le back-office
+
 ?>
 <!DOCTYPE HTML>
 <html lang="fr">
@@ -29,6 +32,6 @@
 	<script type="text/javascript" src="js/back_office.js"></script>
 </html>
 <?php 
-	mysql_close($conn);
+	mysql_close($conn); // fermeture de connexion à la bdd
 	ob_end_flush();
 ?>

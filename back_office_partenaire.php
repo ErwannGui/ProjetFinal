@@ -2,48 +2,66 @@
 	/* --- traitement du formulaire ajout de partenaire --- */
     if ( isset($_POST['btn-add_partenaire']) ) {
 
-        $nomPartenaire = htmlspecialchars($_POST['PartenaireNom']);
-        $imgPathPartenaire = htmlspecialchars($_POST['PartenaireLogoSource']);
-        $adressPartenaire = htmlspecialchars($_POST['PartenaireAdresse']);
-        $descriptionPartenaire = htmlspecialchars($_POST['PartenaireDescription']);
+		$dossier = 'images/'; // dossier où sera déplacé le fichier
 
-        $query = "INSERT INTO texte(texteContenu,textePage) VALUES('$descriptionPartenaire','A propos de nous')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+		$image = basename($_FILES['PartenaireImage']['name']);
 
-        $query = "INSERT INTO image(imageSource,imagePage) VALUES('$imgPathPartenaire','A propos de nous')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+		$extensions = array('.png', '.gif', '.jpg', '.jpeg');
+		$extension = strrchr($_FILES['PartenaireImage']['name'], '.');
+		if(!in_array($extension, $extensions))
+		{
+		     $errMSG_add_partenaire = 'Vous devez uploader un fichier de type png, gif, jpg, ou jpeg.';
+		} else {
+			if(move_uploaded_file($_FILES['PartenaireImage']['tmp_name'], $dossier.$image)) {
+				$errMSG_upload = "Le fichier a bien été sauvegardé.";
+			} else {
+				$errMSG_upload = "Impossible de copier le fichier dans ".$dossier;
+		        exit();
+			}
+	    	$imgPathPartenaire = $dossier.$image;
 
-        $query = "SELECT texteId FROM texte WHERE texteId = (SELECT MAX(texteId) FROM texte)";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
-        $texte = mysql_fetch_array($res);
-		$texteId = $texte['texteId'];
+	        $nomPartenaire = htmlspecialchars($_POST['PartenaireNom']);
+	        $adressPartenaire = htmlspecialchars($_POST['PartenaireAdresse']);
+	        $descriptionPartenaire = htmlspecialchars($_POST['PartenaireDescription']);
 
-        $query = "SELECT imageId FROM image WHERE imageId = (SELECT MAX(imageId) FROM image)";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
-        $image = mysql_fetch_array($res);
-		$imageId = $image['imageId'];
- 
-        $query = "INSERT INTO partenaire(partenaireNom,partenaireLieu,texteId,imageId) VALUES('$nomPartenaire','$adressPartenaire','$texteId','$imageId')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+	        $query = "INSERT INTO texte(texteContenu,textePage) VALUES('$descriptionPartenaire','A propos de nous')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
-        if ($res) {
-            $errTyp = "Succès";
-            $errMSG_add_partenaire = "Le nouveau partenaire a été enregistré.";
-            unset($nomPartenaire);
-            unset($imgPathPartenaire);
-            unset($adressPartenaire);
-            unset($descriptionPartenaire);
-        } else {
-            $errTyp = "danger";
-            $errMSG_add_partenaire = "Quelque chose a mal fonctionné, réessayez plus tard ...";
-        }
+	        $query = "INSERT INTO image(imageSource,imagePage) VALUES('$imgPathPartenaire','A propos de nous')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+
+	        $query = "SELECT texteId FROM texte WHERE texteId = (SELECT MAX(texteId) FROM texte)";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+	        $texte = mysql_fetch_array($res);
+			$texteId = $texte['texteId'];
+
+	        $query = "SELECT imageId FROM image WHERE imageId = (SELECT MAX(imageId) FROM image)";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+	        $image = mysql_fetch_array($res);
+			$imageId = $image['imageId'];
+	 
+	        $query = "INSERT INTO partenaire(partenaireNom,partenaireLieu,texteId,imageId) VALUES('$nomPartenaire','$adressPartenaire','$texteId','$imageId')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+
+	        if ($res) {
+	            $errTyp = "Succès";
+	            $errMSG_add_partenaire = $errMSG_upload." Le nouveau partenaire a été enregistré.";
+	            unset($nomPartenaire);
+	            unset($imgPathPartenaire);
+	            unset($adressPartenaire);
+	            unset($descriptionPartenaire);
+	        } else {
+	            $errTyp = "danger";
+	            $errMSG_add_partenaire = $errMSG_upload." Quelque chose a mal fonctionné, réessayez plus tard ...";
+	        }
+	    }
     }
 ?>
 <div class="back_content back_partenaire ">
 	<div class="back_left_content">
 		<div class="back_top_left_content">
 		<h2>Ajouter un nouveau partenaire</h2>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" enctype="multipart/form-data">
 				<?php
                     if ( isset($errMSG_add_partenaire) ) {
                 ?>
@@ -54,7 +72,7 @@
                     }
                 ?>
 				<input type="text" name="PartenaireNom" placeholder="Nom du partenaire">
-				<input type="text" name="PartenaireLogoSource" placeholder="Source du Logo partenaire (si existant)">
+				<input type="file" name="PartenaireImage">
 				<input type="text" name="PartenaireAdresse" placeholder="Adresse du partenaire">
 				<textarea name="PartenaireDescription" placeholder="Description de votre partenaire"></textarea>
 				<input type="submit" name="btn-add_partenaire" value="Valider">
@@ -115,7 +133,7 @@
                     }
 				}
 			?>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" enctype="multipart/form-data">
 				<label>Numéro du partenaire à supprimer :<br><span>(cette acion est irréverssible)</span></label>
 				<input type="number" name="PartenaireId">
 				<input type="submit" name="btn-suppr_partenaire" value="Valider">

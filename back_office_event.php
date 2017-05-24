@@ -2,50 +2,68 @@
 	/* --- traitement du formulaire ajout d'un évenement --- */
     if ( isset($_POST['btn-add_event']) ) {
 
-        $titreEvent = htmlspecialchars($_POST['EventTitre']);
-        //$dateEvent = htmlspecialchars($_POST['EventDate']);
-        $imgPathEvent = htmlspecialchars($_POST['EventImgSource']);
-        $typeEvent = htmlspecialchars($_POST['EventType']);
-        $descriptionEvent = htmlspecialchars($_POST['EventDescription']);
+    	$dossier = 'images/'; // dossier où sera déplacé le fichier
 
-        $query = "INSERT INTO texte(texteContenu,textePage) VALUES('$descriptionEvent','Prestations privee')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+		$image = basename($_FILES['EventImage']['name']);
 
-        $query = "INSERT INTO image(imageSource,imagePage) VALUES('$imgPathEvent','Prestations privee')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+		$extensions = array('.png', '.gif', '.jpg', '.jpeg');
+		$extension = strrchr($_FILES['EventImage']['name'], '.');
+		if(!in_array($extension, $extensions))
+		{
+		     $errMSG_add_event = 'Vous devez uploader un fichier de type png, gif, jpg, ou jpeg.';
+		} else {
+			if(move_uploaded_file($_FILES['EventImage']['tmp_name'], $dossier.$image)) {
+				$errMSG_upload = "Le fichier a bien été sauvegardé.";
+			} else {
+				$errMSG_upload = "Impossible de copier le fichier dans ".$dossier;
+		        exit();
+			}
+	    	$imgPathEvent = $dossier.$image;
 
-        $query = "SELECT texteId FROM texte WHERE texteId = (SELECT MAX(texteId) FROM texte)";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
-        $texte = mysql_fetch_array($res);
-		$texteId = $texte['texteId'];
+	        $titreEvent = htmlspecialchars($_POST['EventTitre']);
+	        //$dateEvent = htmlspecialchars($_POST['EventDate']);$errMSG_upload.
+ 	        $typeEvent = htmlspecialchars($_POST['EventType']);
+	        $descriptionEvent = htmlspecialchars($_POST['EventDescription']);
 
-        $query = "SELECT imageId FROM image WHERE imageId = (SELECT MAX(imageId) FROM image)";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
-        $image = mysql_fetch_array($res);
-		$imageId = $image['imageId'];
- 
-        $query = "INSERT INTO evenement(eventTitre,eventType,texteId,imageId) VALUES('$titreEvent','$typeEvent','$texteId','$imageId')";
-        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+	        $query = "INSERT INTO texte(texteContenu,textePage) VALUES('$descriptionEvent','Prestations privee')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 
-        if ($res) {
-            $errTyp = "Succès";
-            $errMSG_add_event = "Le nouvel évenement a été enregistré.";
-            unset($titreEvent);
-            unset($dateEvent);
-            unset($imgPathEvent);
-            unset($typeEvent);
-            unset($descriptionEvent);
-        } else {
-            $errTyp = "danger";
-            $errMSG_add_event = "Quelque chose a mal fonctionné, réessayez plus tard ...";
-        }
+	        $query = "INSERT INTO image(imageSource,imagePage) VALUES('$imgPathEvent','Prestations privee')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+
+	        $query = "SELECT texteId FROM texte WHERE texteId = (SELECT MAX(texteId) FROM texte)";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error());
+	        $texte = mysql_fetch_array($res);
+			$texteId = $texte['texteId'];
+
+	        $query = "SELECT imageId FROM image WHERE imageId = (SELECT MAX(imageId) FROM image)";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+	        $image = mysql_fetch_array($res);
+			$imageId = $image['imageId'];
+	 
+	        $query = "INSERT INTO evenement(eventTitre,eventType,texteId,imageId) VALUES('$titreEvent','$typeEvent','$texteId','$imageId')";
+	        $res = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
+
+	        if ($res) {
+	            $errTyp = "Succès";
+	            $errMSG_add_event = $errMSG_upload." Le nouvel évenement a été enregistré.";
+	            unset($titreEvent);
+	            unset($dateEvent);
+	            unset($imgPathEvent);
+	            unset($typeEvent);
+	            unset($descriptionEvent);
+	        } else {
+	            $errTyp = "danger";
+	            $errMSG_add_event = $errMSG_upload." Quelque chose a mal fonctionné, réessayez plus tard ...";
+	        }
+    	}
     }
 ?>
 <div class="back_content back_evenement">
 	<div class="back_left_content">
 		<div class="back_top_left_content">
 			<h2>Ajouter un nouvel évenement</h2>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" enctype="multipart/form-data">
 				<?php
                     if ( isset($errMSG_add_event) ) {
                 ?>
@@ -57,7 +75,7 @@
                 ?>
 				<input type="text" name="EventTitre" placeholder="Titre de l'évenement">
 				<input type="date" name="EventDate" placeholder="Date de l'évenement">
-				<input type="text" name="EventImgSource" placeholder="Source de l'image">
+				<input type="file" name="EventImage">
 				<input type="date" name="EventType" placeholder="Type d'évenement">
 				<textarea name="EventDescription" placeholder="Description de l'évenement"></textarea>
 				<input type="submit" name="btn-add_event" value="Valider">
@@ -118,7 +136,7 @@
                     }
 				}
 			?>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" enctype="multipart/form-data">
 				<label>Numéro de l'évenement à supprimer :<br><span>(cette acion est irréverssible)</span></label>
 				<input type="number" name="EventId">
 				<input type="submit" name="btn-suppr_event" value="Valider">

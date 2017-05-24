@@ -1,5 +1,6 @@
 <div class="back_content back_contact">
 	<?php
+		// récupération des données de messages envoyées via le formulaire dans la page contact et mise en forme du message pour chaque ligne du tableau
 		$query = 'SELECT * FROM message';
 		$messagereponse = mysql_query($query) or die('Erreur SQL !<br>'.$query.'<br>'.mysql_error()); 
 		while ($messagedonnees = mysql_fetch_array($messagereponse))

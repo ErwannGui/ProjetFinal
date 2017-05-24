@@ -88,8 +88,9 @@
             	<p>Vous pouvez aussi nous contacter directement via ce formulaire.</p>
             	<form method="post" action="trait_form_contact.php" enctype="multipart/form-data">
             		<?php
+                        // à partir du moment où les input sont remplis (et validés) un cookie est créé
 	                    if (isset($_POST['Nom'])) {
-	                        setcookie($_POST['nom']);
+	                        setcookie($_POST['nom']); // identique à $_COOKIE['nom'] = $_POST['nom'];
 	                    }
 	                    if (isset($_POST['Prenom'])) {
 	                        setcookie($_POST['prenom']);

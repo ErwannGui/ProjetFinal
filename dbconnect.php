@@ -12,13 +12,14 @@
 	$conn = mysql_connect(DBHOST,DBUSER,DBPASS);
 	$dbcon = mysql_select_db(DBNAME);
 	
-	if ( !$conn ) {
+	if ( !$conn ) { // verification de connexion à la bdd
 		die("Connection failed : " . mysql_error());
 	}
 	
-	if ( !$dbcon ) {
+	if ( !$dbcon ) { // verification de l'existence de la bdd
 		die("Database Connection failed : " . mysql_error());
 	}
 
-	$encode = mysql_query("SET NAMES UTF8");
+	$encode = mysql_query("SET NAMES UTF8"); // oblige l'encodage des caractères dans les input en utf-8
+	// sans ça nous avons des problèmes d'encodage et plusieurs caractères (apostrophes,é,è) ne sont pas pris en compte
 ?>
