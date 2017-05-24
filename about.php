@@ -1,3 +1,14 @@
+<?php
+
+Try {
+    $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+}
+catch (PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+$bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -25,8 +36,15 @@
             <div id="AProposBackground">
                 <div id="AProposBackgroundImage"></div>
                 <div class="backgroundTitle">
-                    <h1>À PROPOS DE NOUS</h1>
-                    <h2>Et si on vous parlait un peu de nous ?</h2>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=74');
+                    $sub= $subtitle->fetch();?>
+                    <h1><?php echo $sub['texteContenu']; ?></h1>
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=37');
+                    $sub= $subtitle->fetch(); ?>
+                    <h2><?php echo $sub['texteContenu']; ?></h2>
+                    
                 </div>
                 <div class="backgroundArrow" id="scroll_ancre">
                     <a class="js-scroll" href="#scroll_ancre"><svg enable-background="new 0 0 26 26" id="Layer_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon points="0.046,2.582 2.13,0.498 12.967,11.334 23.803,0.498 25.887,2.582 12.967,15.502  "/><polygon points="0.046,13.582 2.13,11.498 12.967,22.334 23.803,11.498 25.887,13.582 12.967,26.502"/></g></svg></a>
@@ -35,10 +53,16 @@
             <section class="Infos" id="scroll_ancre">
                     <div class="InfosBloc">
                         <div class="InfosTitle">
-                            <h2>Un food-truck, c'est quoi ?</h2>
+                            
+                        <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=76');
+                        $sub= $subtitle->fetch(); ?>
+                        <h2><?php echo $sub['texteContenu']; ?></h2>
+                            
                         </div>
                         <div class="InfosContainer">
-                            <p>Largement inspiré de la street food en provenance des Etats Unis, le food truck est un nouveau concept de restauration nomade qui propose un service de restauration de qualité à emporter à bord d’un camion dit « truck ».</p>
+                            <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=75');
+                            $sub= $subtitle->fetch(); ?>
+                            <p><?php echo $sub['texteContenu']; ?></p>
                         </div>
                     </div>
             </section>

@@ -38,7 +38,13 @@ $bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 <div id="contactBackgroundImage"></div>
                 <div class="backgroundTitle">
-                    <h1>CONTACT</h1>
+                    
+                    
+                    <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=71');
+                    $sub= $subtitle->fetch();?>
+                    <h1><?php echo $sub['texteContenu']; ?></h1>
+                    
+                    
                     <?php $subtitle= $bdd->query('SELECT texteId, texteContenu FROM texte WHERE texteId=39'); 
                     $sub= $subtitle->fetch();?>
                     <h2><?php echo $sub['texteContenu']; ?></h2>
