@@ -1,7 +1,7 @@
 <?php
 
     Try {
-        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', 'root');
+        $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
     }
     catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage()); 
@@ -54,7 +54,7 @@
                 
             </div>
             
-            <div id="menuSetMenu" id="scroll_ancre">
+            <div class="menuSetMenu" id="scroll_ancre">
                 
                 <div id="menuSetMenuTitle">
                     <h2>Nos formules</h2>
@@ -131,6 +131,8 @@
         </div>
         
         <?php include "footer.php"; ?>
+
+        <a href="#" class="top"><img src="images/trash/fleche.png" title="Retour en haut"/></a>
         
     </body>
     

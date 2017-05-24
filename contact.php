@@ -1,3 +1,14 @@
+<?php
+
+Try {
+    $bdd = new PDO('mysql:host=localhost;dbname=food_truck; charset=utf8', 'root', '');
+}
+catch (PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+$bdd ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -129,5 +140,6 @@
         </div>  
         <script type="text/javascript" src="js/map_contact.js"></script>
         <?php include "footer.php"; ?>
+        <a href="#" class="top"><img src="images/trash/fleche.png" title="Retour en haut"/></a>
     </body>
 </html>

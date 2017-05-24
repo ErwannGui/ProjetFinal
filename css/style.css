@@ -328,7 +328,7 @@ footer{
 }
 
 /* SVG flèche vers le bas */
-#indexBackgroundArrow svg{
+.indexBackgroundArrow svg{
     position: absolute;
     height: 5vh;
     bottom: 3%;
@@ -338,7 +338,7 @@ footer{
 }
 
 /* SVG flèche vers le bas lors du survol souris */
-#indexBackgroundArrow svg:hover{
+.indexBackgroundArrow svg:hover{
     fill: white;
 }
 
@@ -1382,7 +1382,7 @@ h2 {
 }
 
 /* Div contenant toute la partie des formules */
-#menuSetMenu{
+.menuSetMenu{
     background-color: #313539;
     padding-top: 30px;
     padding-bottom: 30px;

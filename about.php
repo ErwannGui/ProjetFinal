@@ -156,8 +156,9 @@
             </section>
             <?php include "infos_comp.php"; ?>
         </div>
-        <script type="text/javascript" src="js/map_contact.js"></script>
+
         <?php include "footer.php"; ?>
+        <a href="#" class="top"><img src="images/trash/fleche.png" title="Retour en haut"/></a>
     </body>
 </html>
 

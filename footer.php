@@ -5,9 +5,9 @@
 		<a href="connection.php">Administration</a>
 	</nav>
 </footer>
-<a href="#" class="top"><img src="images/fleche.png" title="Retour en haut"/></a>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/retourenhaut.js" type="text/javascript"></script>
 <script src="js/filtrage.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/retourenhaut.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsLNQJHQVGFYGTCzt6VxtBThhW7pGMdLE&callback=initMap" async defer></script>
