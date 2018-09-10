@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^article.php_6$ article.php?id=6 [L]
+RewriteRule ^article.php_5$ article.php?id=5 [L]
+RewriteRule ^article.php_9$ article.php?id=9 [L]
+RewriteRule ^article.php_7$ article.php?id=7 [L]
+RewriteRule ^article.php_8$ article.php?id=8 [L]
+RewriteRule ^article.php_10$ article.php?id=10 [L]

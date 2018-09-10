@@ -1,0 +1,13 @@
+<footer>
+	<nav class="foot">
+		<p>2017 - Copyright</p>
+		<a href="">Mentions légales</a>
+		<a href="connection.php">Administration</a>
+	</nav>
+</footer>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/retourenhaut.js" type="text/javascript"></script>
+<script src="js/filtrage.js"></script>
+<script src="js/scroll.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsLNQJHQVGFYGTCzt6VxtBThhW7pGMdLE&callback=initMap" async defer></script>

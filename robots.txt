@@ -1,0 +1,8 @@
+Sitemap: http://www.chezfifi.com/sitemap.xml
+
+User-agent: *
+Disallow: /back*
+Disallow: /bdd
+Disallow: /connection.php
+Disallow: /dbconnect.php
+Disallow: /logout.php

@@ -1,0 +1,100 @@
+/* page de connexion au back office */
+.connection{
+    width: 25%;
+    margin: auto;
+    display: table;
+}
+.connection-saisi{
+    display: flex;
+    width: 100%;
+    box-shadow: 1px 1px 12px 1px #C1C1C1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.connection-saisi .svg svg{
+    width: 20px;
+    height: 20px;
+}
+.contenue{
+    padding:15px;
+}
+.connection-saisi .svg{
+    display: inline-flex;
+    padding: 5px;
+    background-color: #EEEEEE;
+}
+.connection-saisi .connection-input{
+    width: 100%;
+    display: inline-flex;
+}
+.connection-saisi .connection-input input{
+    width: 100%;
+}
+.connection-btn{
+    text-align: center;
+}
+.connection-btn button{
+    width: 100%;
+    background-color: #337ab7;
+    color: white;
+    padding: 5px;
+}
+.connection-incription a{
+    text-decoration: none;
+    color: #23527c;
+}
+.register{
+     width: 60%;
+     margin: auto auto;
+    text-align: center;
+}
+.register button{
+    width: 50%;
+    background-color: #337ab7;
+    color: white;
+    padding: 5px;
+}
+.navbar a{
+text-align: center;
+}
+
+.navbar1 {
+    margin-right: 80%;
+}
+
+.container{
+    text-align: center;
+    margin: 35px;
+}
+.accueil-php{
+   padding-top: 300px;
+}
+
+/* --- Back-office --- */
+
+#back_office{
+    text-align: center;
+}
+
+#back_office h2{
+    text-transform: uppercase;
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 3vh;
+}
+
+#back_office input, #back_office textarea{
+    margin: 1.5vw;
+    width: 40%;
+    height: 30px;
+}
+
+#back_office textarea{
+    height: 60px;
+}
+
+.alert{
+    color: white;
+    font-size: 0.8vw;
+}
